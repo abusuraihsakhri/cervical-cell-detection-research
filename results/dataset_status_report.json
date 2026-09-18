@@ -1,0 +1,75 @@
+{
+  "sipakmed": {
+    "mirror_a": {
+      "dir": "C:\\Users\\abusu\\Desktop\\pap_ml_model\\pap-smear-cyto-algo\\data\\sipakmed\\mirror_a",
+      "train": {
+        "images": 1105,
+        "labels": 1105
+      },
+      "valid": {
+        "images": 193,
+        "labels": 193
+      },
+      "test": {
+        "images": 0,
+        "labels": 0
+      },
+      "classes": [
+        "Dyskeratotic",
+        "Koilocytotic",
+        "Metaplastic",
+        "Parabasal",
+        "Superficial-Intermediate"
+      ],
+      "nc": 5
+    },
+    "mirror_b": {
+      "error": "[mirror_b] project type is 'classification', which cannot export bounding-box YOLOv8 data (needs 'object-detection'). Skipping this mirror."
+    }
+  },
+  "phase2_dataset": "apcdata",
+  "phase2_dataset_ready": false,
+  "phase2_dataset_sources_considered": {
+    "apcdata": {
+      "name": "APCData: Cervical cytology cells",
+      "url": "https://data.mendeley.com/datasets/ytd568rh3p/1",
+      "doi": "10.17632/ytd568rh3p.1",
+      "annotation_format": "YOLO .txt bounding boxes (APCData_YOLO folder) \u2014 ready to use",
+      "images": 425,
+      "annotated_cells": 3619,
+      "classes_bethesda_6": [
+        "NILM",
+        "ASC-US",
+        "ASC-H",
+        "LSIL",
+        "HSIL",
+        "SCC"
+      ]
+    },
+    "hmchh_tct_celldet": {
+      "name": "HMCHH-TCT-CellDet",
+      "url": "https://doi.org/10.6084/m9.figshare.27901206",
+      "annotation_format": "XML bounding boxes \u2014 needs conversion to YOLO .txt",
+      "images": 8037,
+      "annotated_boxes": 15761,
+      "classes_binary": [
+        "Normal",
+        "Abnormal"
+      ]
+    },
+    "cric": {
+      "name": "CRIC Searchable Image Database",
+      "url": "https://database.cric.com.br",
+      "doi": "10.6084/m9.figshare.c.4960286.v2",
+      "annotation_format": "Point-click cell-center (x, y) \u2014 NOT bounding boxes; needs synthetic-box conversion",
+      "status": "verified unusable as-is for YOLO detection (Section 9 resolved)"
+    },
+    "mendeley_lbc": {
+      "name": "Liquid based-cytology Pap smear dataset",
+      "url": "https://data.mendeley.com/datasets/zddtpgzv63/2",
+      "doi": "10.17632/zddtpgzv63.2",
+      "annotation_format": "Classification folders (image-level label only) \u2014 NOT bounding boxes",
+      "status": "confirmed unusable for detection as-is"
+    }
+  }
+}

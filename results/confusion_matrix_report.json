@@ -1,0 +1,197 @@
+{
+  "5_class": {
+    "confusion_matrix": [
+      [
+        106,
+        12,
+        0,
+        0,
+        0,
+        60
+      ],
+      [
+        3,
+        122,
+        4,
+        0,
+        0,
+        46
+      ],
+      [
+        0,
+        6,
+        110,
+        0,
+        1,
+        31
+      ],
+      [
+        0,
+        0,
+        0,
+        100,
+        0,
+        17
+      ],
+      [
+        0,
+        3,
+        2,
+        0,
+        202,
+        52
+      ],
+      [
+        157,
+        317,
+        227,
+        152,
+        375,
+        0
+      ]
+    ],
+    "class_names": [
+      "Dyskeratotic",
+      "Koilocytotic",
+      "Metaplastic",
+      "Parabasal",
+      "Superficial-Intermediate"
+    ],
+    "metrics": {
+      "Dyskeratotic": {
+        "precision": 0.39849624060150374,
+        "recall": 0.5955056179775281,
+        "f1": 0.4774774774774775,
+        "support": 118
+      },
+      "Koilocytotic": {
+        "precision": 0.26521739130434785,
+        "recall": 0.6971428571428572,
+        "f1": 0.38425196850393706,
+        "support": 129
+      },
+      "Metaplastic": {
+        "precision": 0.3206997084548105,
+        "recall": 0.7432432432432432,
+        "f1": 0.4480651731160896,
+        "support": 117
+      },
+      "Parabasal": {
+        "precision": 0.3968253968253968,
+        "recall": 0.8547008547008547,
+        "f1": 0.5420054200542005,
+        "support": 100
+      },
+      "Superficial-Intermediate": {
+        "precision": 0.3494809688581315,
+        "recall": 0.7799227799227799,
+        "f1": 0.4826762246117085,
+        "support": 207
+      }
+    }
+  },
+  "3_class_rollup": {
+    "confusion_matrix": [
+      [
+        302,
+        2,
+        3,
+        69
+      ],
+      [
+        1,
+        110,
+        6,
+        31
+      ],
+      [
+        0,
+        4,
+        243,
+        106
+      ],
+      [
+        527,
+        227,
+        474,
+        0
+      ]
+    ],
+    "class_names": [
+      "Normal",
+      "Benign",
+      "Abnormal"
+    ],
+    "metrics": {
+      "Normal": {
+        "precision": 0.363855421686747,
+        "recall": 0.8031914893617021,
+        "f1": 0.5008291873963515,
+        "support": 307
+      },
+      "Benign": {
+        "precision": 0.3206997084548105,
+        "recall": 0.7432432432432432,
+        "f1": 0.4480651731160896,
+        "support": 117
+      },
+      "Abnormal": {
+        "precision": 0.3347107438016529,
+        "recall": 0.6883852691218131,
+        "f1": 0.4504170528266913,
+        "support": 247
+      }
+    }
+  },
+  "2_class_rollup": {
+    "confusion_matrix": [
+      [
+        415,
+        9,
+        100
+      ],
+      [
+        4,
+        243,
+        106
+      ],
+      [
+        754,
+        474,
+        0
+      ]
+    ],
+    "class_names": [
+      "Normal",
+      "Abnormal"
+    ],
+    "metrics": {
+      "Normal": {
+        "precision": 0.3537936913895993,
+        "recall": 0.7919847328244275,
+        "f1": 0.4890984089569829,
+        "support": 424
+      },
+      "Abnormal": {
+        "precision": 0.3347107438016529,
+        "recall": 0.6883852691218131,
+        "f1": 0.4504170528266913,
+        "support": 247
+      }
+    }
+  },
+  "watch_confusion_pairs": [
+    {
+      "pair": "Dyskeratotic <-> Koilocytotic",
+      "Dyskeratotic_predicted_as_Koilocytotic": 12,
+      "Koilocytotic_predicted_as_Dyskeratotic": 3,
+      "clinical_note": "Dyskeratotic is clinically significant; confusion with Koilocytotic should be reported explicitly, not folded into aggregate accuracy."
+    },
+    {
+      "pair": "Dyskeratotic <-> Metaplastic",
+      "Dyskeratotic_predicted_as_Metaplastic": 0,
+      "Metaplastic_predicted_as_Dyskeratotic": 0,
+      "clinical_note": "Dyskeratotic is clinically significant; confusion with Metaplastic should be reported explicitly, not folded into aggregate accuracy."
+    }
+  ]
+}

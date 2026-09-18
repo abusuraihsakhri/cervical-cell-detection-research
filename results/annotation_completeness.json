@@ -1,0 +1,416 @@
+{
+  "SIPaKMeD": {
+    "n_images_sampled": 30,
+    "total_gt_boxes": 135,
+    "total_detected_cells": 1860,
+    "pooled_annotated_fraction": 0.0726,
+    "per_image_annotated_fraction": {
+      "mean": 0.1711,
+      "median": 0.0949,
+      "p10": 0.012,
+      "p90": 0.355
+    },
+    "mean_gt_per_image": 4.5,
+    "mean_detected_per_image": 62.0,
+    "images_where_gt_exceeds_detected": 1,
+    "per_image": [
+      {
+        "image": "koil_00110_bmp_jpg.rf.879d94841769db5493b0564afaff4719.jpg",
+        "gt_boxes": 3,
+        "detected_cells": 124,
+        "annotated_fraction": 0.0242
+      },
+      {
+        "image": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+        "gt_boxes": 6,
+        "detected_cells": 5,
+        "annotated_fraction": 1.2
+      },
+      {
+        "image": "koil_00213_bmp_jpg.rf.4c4130a33f07f5182947a90e41add9da.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 43,
+        "annotated_fraction": 0.0233
+      },
+      {
+        "image": "para_0053_bmp_jpg.rf.d8c38111719de871288c1ab19bff6021.jpg",
+        "gt_boxes": 7,
+        "detected_cells": 78,
+        "annotated_fraction": 0.0897
+      },
+      {
+        "image": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+        "gt_boxes": 4,
+        "detected_cells": 37,
+        "annotated_fraction": 0.1081
+      },
+      {
+        "image": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+        "gt_boxes": 2,
+        "detected_cells": 44,
+        "annotated_fraction": 0.0455
+      },
+      {
+        "image": "meta_00212_bmp_jpg.rf.646339965c58d6fd78b6d8bd63cf0bff.jpg",
+        "gt_boxes": 4,
+        "detected_cells": 40,
+        "annotated_fraction": 0.1
+      },
+      {
+        "image": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+        "gt_boxes": 3,
+        "detected_cells": 46,
+        "annotated_fraction": 0.0652
+      },
+      {
+        "image": "koil_00173_bmp_jpg.rf.49e663012fd2b21bd3637e15a8b245df.jpg",
+        "gt_boxes": 2,
+        "detected_cells": 33,
+        "annotated_fraction": 0.0606
+      },
+      {
+        "image": "meta_0040_bmp_jpg.rf.fea8514417bce4684cf60fde5cc27f77.jpg",
+        "gt_boxes": 2,
+        "detected_cells": 37,
+        "annotated_fraction": 0.0541
+      },
+      {
+        "image": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+        "gt_boxes": 5,
+        "detected_cells": 9,
+        "annotated_fraction": 0.5556
+      },
+      {
+        "image": "meta_00177_bmp_jpg.rf.753b7a6b8efb2a46025bf0de932b3d8e.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 83,
+        "annotated_fraction": 0.012
+      },
+      {
+        "image": "dysk_00164_bmp_jpg.rf.df588dd9b1d926377754b183c40c164d.jpg",
+        "gt_boxes": 24,
+        "detected_cells": 162,
+        "annotated_fraction": 0.1481
+      },
+      {
+        "image": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+        "gt_boxes": 6,
+        "detected_cells": 57,
+        "annotated_fraction": 0.1053
+      },
+      {
+        "image": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+        "gt_boxes": 6,
+        "detected_cells": 55,
+        "annotated_fraction": 0.1091
+      },
+      {
+        "image": "koil_0059_bmp_jpg.rf.b15f53064ccaf5b1b8873ef5aaf6b908.jpg",
+        "gt_boxes": 3,
+        "detected_cells": 9,
+        "annotated_fraction": 0.3333
+      },
+      {
+        "image": "koil_002_bmp_jpg.rf.ef08d32b9fe2325c7657df204c10d6c7.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 175,
+        "annotated_fraction": 0.0057
+      },
+      {
+        "image": "cell_2_8400_1184_8900_1684_jpg.rf.26a38ae6f475205584f33f06f106ff97.jpg",
+        "gt_boxes": 2,
+        "detected_cells": 28,
+        "annotated_fraction": 0.0714
+      },
+      {
+        "image": "dysk_00190_bmp_jpg.rf.d1b0e87d858e9927c45f10d3441dfd2c.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 52,
+        "annotated_fraction": 0.0192
+      },
+      {
+        "image": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+        "gt_boxes": 4,
+        "detected_cells": 17,
+        "annotated_fraction": 0.2353
+      },
+      {
+        "image": "meta_00229_bmp_jpg.rf.8070cba6b8fb70418d08107253483766.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 86,
+        "annotated_fraction": 0.0116
+      },
+      {
+        "image": "koil_0042_bmp_jpg.rf.a31daca9927d18be90b2d87ec2f70fec.jpg",
+        "gt_boxes": 3,
+        "detected_cells": 14,
+        "annotated_fraction": 0.2143
+      },
+      {
+        "image": "cell_2_8000_1184_8500_1684_jpg.rf.9c8b27a9a0730a9d3a56976af7a0e10b.jpg",
+        "gt_boxes": 7,
+        "detected_cells": 22,
+        "annotated_fraction": 0.3182
+      },
+      {
+        "image": "meta_00251_bmp_jpg.rf.c774ccf9714e49ec654ed116d82f5d24.jpg",
+        "gt_boxes": 2,
+        "detected_cells": 169,
+        "annotated_fraction": 0.0118
+      },
+      {
+        "image": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 7,
+        "annotated_fraction": 0.1429
+      },
+      {
+        "image": "dysk_00172_bmp_jpg.rf.c041c2ce1bf97acc608f86f1b2198569.jpg",
+        "gt_boxes": 1,
+        "detected_cells": 71,
+        "annotated_fraction": 0.0141
+      },
+      {
+        "image": "para_0019_bmp_jpg.rf.0445fdea2a91fd400a5911d254d508b6.jpg",
+        "gt_boxes": 11,
+        "detected_cells": 20,
+        "annotated_fraction": 0.55
+      },
+      {
+        "image": "para_0011_bmp_jpg.rf.5f458d33cec8e965189a379a5dba0d95.jpg",
+        "gt_boxes": 13,
+        "detected_cells": 52,
+        "annotated_fraction": 0.25
+      },
+      {
+        "image": "supe_0047_bmp_jpg.rf.5a8524abd7a84732ca8bf4cb970d4a6e.jpg",
+        "gt_boxes": 5,
+        "detected_cells": 21,
+        "annotated_fraction": 0.2381
+      },
+      {
+        "image": "para_0068_bmp_jpg.rf.cb52b1abd752103bed9336545cd7eab0.jpg",
+        "gt_boxes": 4,
+        "detected_cells": 264,
+        "annotated_fraction": 0.0152
+      }
+    ]
+  },
+  "APCData": {
+    "n_images_sampled": 30,
+    "total_gt_boxes": 253,
+    "total_detected_cells": 1641,
+    "pooled_annotated_fraction": 0.1542,
+    "per_image_annotated_fraction": {
+      "mean": 0.3509,
+      "median": 0.2281,
+      "p10": 0.0407,
+      "p90": 0.7389
+    },
+    "mean_gt_per_image": 8.433,
+    "mean_detected_per_image": 54.7,
+    "images_where_gt_exceeds_detected": 2,
+    "per_image": [
+      {
+        "image": "0335 ASC H C915 18 (5).jpg",
+        "gt_boxes": 4,
+        "detected_cells": 192,
+        "annotated_fraction": 0.0208
+      },
+      {
+        "image": "0346 ASC H C1108 18 (4).jpg",
+        "gt_boxes": 11,
+        "detected_cells": 125,
+        "annotated_fraction": 0.088
+      },
+      {
+        "image": "0269 HSIL K28576 19 (3).jpg",
+        "gt_boxes": 19,
+        "detected_cells": 81,
+        "annotated_fraction": 0.2346
+      },
+      {
+        "image": "0057 L SIL C313 19 (4).jpg",
+        "gt_boxes": 4,
+        "detected_cells": 17,
+        "annotated_fraction": 0.2353
+      },
+      {
+        "image": "0173 L SIL C150 19 (11).jpg",
+        "gt_boxes": 8,
+        "detected_cells": 55,
+        "annotated_fraction": 0.1455
+      },
+      {
+        "image": "0015 ASC US C593 19 (3).jpg",
+        "gt_boxes": 5,
+        "detected_cells": 155,
+        "annotated_fraction": 0.0323
+      },
+      {
+        "image": "0334 ASC H C915 18 (4).jpg",
+        "gt_boxes": 6,
+        "detected_cells": 145,
+        "annotated_fraction": 0.0414
+      },
+      {
+        "image": "0497 ASCUS K25712 18(2).jpg",
+        "gt_boxes": 6,
+        "detected_cells": 30,
+        "annotated_fraction": 0.2
+      },
+      {
+        "image": "0123 H SIL C814 19 (11).jpg",
+        "gt_boxes": 17,
+        "detected_cells": 48,
+        "annotated_fraction": 0.3542
+      },
+      {
+        "image": "0197 H SIL C221 19 (3).jpg",
+        "gt_boxes": 5,
+        "detected_cells": 27,
+        "annotated_fraction": 0.1852
+      },
+      {
+        "image": "0271 HSIL K28576 19 (5).jpg",
+        "gt_boxes": 16,
+        "detected_cells": 71,
+        "annotated_fraction": 0.2254
+      },
+      {
+        "image": "0133 H SIL C1633 19 (9).jpg",
+        "gt_boxes": 5,
+        "detected_cells": 4,
+        "annotated_fraction": 1.25
+      },
+      {
+        "image": "0327 ASC H C719 18 (13).jpg",
+        "gt_boxes": 6,
+        "detected_cells": 174,
+        "annotated_fraction": 0.0345
+      },
+      {
+        "image": "0115 H SIL C814 19 (3).jpg",
+        "gt_boxes": 4,
+        "detected_cells": 18,
+        "annotated_fraction": 0.2222
+      },
+      {
+        "image": "0568 HSIL K26955 18 (7).jpg",
+        "gt_boxes": 11,
+        "detected_cells": 6,
+        "annotated_fraction": 1.8333
+      },
+      {
+        "image": "0206 H SIL C221 19 (12).jpg",
+        "gt_boxes": 14,
+        "detected_cells": 33,
+        "annotated_fraction": 0.4242
+      },
+      {
+        "image": "0539 ASCH K 26177 18 (11).jpg",
+        "gt_boxes": 3,
+        "detected_cells": 18,
+        "annotated_fraction": 0.1667
+      },
+      {
+        "image": "0408 H SIL K 25208 18 (21).jpg",
+        "gt_boxes": 8,
+        "detected_cells": 12,
+        "annotated_fraction": 0.6667
+      },
+      {
+        "image": "0154 ASC H C223 19 (3).jpg",
+        "gt_boxes": 3,
+        "detected_cells": 13,
+        "annotated_fraction": 0.2308
+      },
+      {
+        "image": "0114 H SIL C329 19 (8).jpg",
+        "gt_boxes": 5,
+        "detected_cells": 12,
+        "annotated_fraction": 0.4167
+      },
+      {
+        "image": "0559 HSIL K 29023 19 (5).jpg",
+        "gt_boxes": 12,
+        "detected_cells": 58,
+        "annotated_fraction": 0.2069
+      },
+      {
+        "image": "0465 Carcinoma asse).jpg",
+        "gt_boxes": 9,
+        "detected_cells": 82,
+        "annotated_fraction": 0.1098
+      },
+      {
+        "image": "0391 H SIL K 25208 18 (4).jpg",
+        "gt_boxes": 8,
+        "detected_cells": 9,
+        "annotated_fraction": 0.8889
+      },
+      {
+        "image": "0163 L SIL C150 19 (1).jpg",
+        "gt_boxes": 8,
+        "detected_cells": 28,
+        "annotated_fraction": 0.2857
+      },
+      {
+        "image": "0245 ASCUS C3212 19 (2).jpg",
+        "gt_boxes": 4,
+        "detected_cells": 11,
+        "annotated_fraction": 0.3636
+      },
+      {
+        "image": "0454 ASCUS K25160 18 (2).jpg",
+        "gt_boxes": 15,
+        "detected_cells": 109,
+        "annotated_fraction": 0.1376
+      },
+      {
+        "image": "0456 L SIL C1006 18.jpg",
+        "gt_boxes": 12,
+        "detected_cells": 30,
+        "annotated_fraction": 0.4
+      },
+      {
+        "image": "0067 L SIL C630 19 (2).jpg",
+        "gt_boxes": 4,
+        "detected_cells": 31,
+        "annotated_fraction": 0.129
+      },
+      {
+        "image": "0545 ASCH K 26177 18 (17).jpg",
+        "gt_boxes": 13,
+        "detected_cells": 18,
+        "annotated_fraction": 0.7222
+      },
+      {
+        "image": "0166 L SIL C150 19 (4).jpg",
+        "gt_boxes": 8,
+        "detected_cells": 29,
+        "annotated_fraction": 0.2759
+      }
+    ]
+  },
+  "_method": {
+    "detector": "Local maxima of the haematoxylin channel (skimage rgb2hed colour deconvolution), Gaussian-smoothed, peaks separated by at least one nucleus radius and above a threshold set between the Otsu stain/background cut and the 99th percentile of stained pixels. Two alternatives (Otsu + connected components; difference-of-Gaussians with a scale filter) were tried and rejected on visual inspection \u2014 see the detect_nuclei docstring.",
+    "independence": "Deliberately does not use the trained YOLO model, so its counts cannot inherit the model's blind spots.",
+    "known_biases": "Counts leukocyte and inflammatory nuclei, which are not annotatable epithelial cells, so counts run high in inflammatory fields. Undercounts in pale sparse fields and in dense overlapping clumps. This is an order-of-magnitude estimate only. The decisive evidence for the conclusion is documentary, not this detector \u2014 see the dataset_provenance field.",
+    "interpretation": "annotated_fraction = ground-truth boxes / detected cells. 1.0 means every visible cell carries a label. Values well below 1.0 mean model 'false positives' may be correct detections of unlabelled cells, so measured precision is a lower bound."
+  },
+  "_dataset_provenance": {
+    "source": "data/sipakmed/mirror_a/README.dataset.txt (Roboflow export of SIPaKMeD)",
+    "quote": "The SIPaKMeD Database consists of 4049 images of isolated cells that have been manually extracted from 966 cluster cell images of Pap smear slides. This dataset is a subset of the SIPaKMeD. Only the single-cell images are rearranged for purpose of experiment.",
+    "arithmetic": "4049 manually extracted cells / 966 cluster images = 4.19 annotated cells per field. Measured ground-truth density in this project's splits is 4.86 (train) and 4.54 (valid) boxes per image, consistent with that.",
+    "conclusion": "SIPaKMeD is a CLASSIFICATION dataset of hand-picked isolated cells, retrofitted into detection boxes. It was never built as exhaustive detection ground truth. The cells carrying boxes were selected for being cleanly isolated and unambiguously classifiable, which is a biased subset of the cells present, not a random one."
+  },
+  "_manual_verification": {
+    "image": "cell_2_9600_400_10100_900_jpg.rf.df8dcd1...",
+    "figure": "results/manualcount_cell_2_9600_400_10100_.png",
+    "ground_truth_boxes": 2,
+    "cells_visible_by_eye": "approximately 55-70 squamous epithelial cells with clearly visible nuclei",
+    "annotated_fraction": "roughly 0.03",
+    "observation": "Both annotated cells are isolated, well-separated and sit in clear space, while dozens of cells in overlapping sheets carry no label. This matches the provenance exactly: the selection is biased toward isolated cells."
+  }
+}

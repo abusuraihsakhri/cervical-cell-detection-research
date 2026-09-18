@@ -1,0 +1,168 @@
+{
+  "conf": 0.111,
+  "models": {
+    "A_sipakmed_5class": {
+      "weights": "models/best.pt",
+      "classes": {
+        "0": "Dyskeratotic",
+        "1": "Koilocytotic",
+        "2": "Metaplastic",
+        "3": "Parabasal",
+        "4": "Superficial-Intermediate"
+      },
+      "on": {
+        "SIPaKMeD": {
+          "images": 193,
+          "gt_boxes": 877,
+          "pred_boxes": 1899,
+          "matched": 671,
+          "firing_ratio_pred_per_gt": 2.1653,
+          "recall": 0.7651,
+          "precision_lower_bound": 0.3533,
+          "mean_pred_per_image": 9.839,
+          "images_with_zero_predictions": 1
+        },
+        "APCData": {
+          "images": 63,
+          "gt_boxes": 549,
+          "pred_boxes": 299,
+          "matched": 118,
+          "firing_ratio_pred_per_gt": 0.5446,
+          "recall": 0.2149,
+          "precision_lower_bound": 0.3946,
+          "mean_pred_per_image": 4.746,
+          "images_with_zero_predictions": 2
+        }
+      }
+    },
+    "A_apcdata_6class": {
+      "weights": "results/runs/expA_apcdata/weights/best.pt",
+      "classes": {
+        "0": "NILM",
+        "1": "ASCUS",
+        "2": "ASCH",
+        "3": "LSIL",
+        "4": "HSIL",
+        "5": "SCC"
+      },
+      "on": {
+        "SIPaKMeD": {
+          "images": 193,
+          "gt_boxes": 877,
+          "pred_boxes": 3663,
+          "matched": 533,
+          "firing_ratio_pred_per_gt": 4.1767,
+          "recall": 0.6078,
+          "precision_lower_bound": 0.1455,
+          "mean_pred_per_image": 18.979,
+          "images_with_zero_predictions": 1
+        },
+        "APCData": {
+          "images": 63,
+          "gt_boxes": 549,
+          "pred_boxes": 742,
+          "matched": 352,
+          "firing_ratio_pred_per_gt": 1.3515,
+          "recall": 0.6412,
+          "precision_lower_bound": 0.4744,
+          "mean_pred_per_image": 11.778,
+          "images_with_zero_predictions": 0
+        }
+      }
+    },
+    "C1_sipakmed_2class": {
+      "weights": "results/runs/expC1_sipakmed_2class/weights/best.pt",
+      "classes": {
+        "0": "Normal",
+        "1": "Abnormal"
+      },
+      "on": {
+        "SIPaKMeD": {
+          "images": 193,
+          "gt_boxes": 877,
+          "pred_boxes": 2266,
+          "matched": 708,
+          "firing_ratio_pred_per_gt": 2.5838,
+          "recall": 0.8073,
+          "precision_lower_bound": 0.3124,
+          "mean_pred_per_image": 11.741,
+          "images_with_zero_predictions": 1
+        },
+        "APCData": {
+          "images": 63,
+          "gt_boxes": 549,
+          "pred_boxes": 375,
+          "matched": 132,
+          "firing_ratio_pred_per_gt": 0.6831,
+          "recall": 0.2404,
+          "precision_lower_bound": 0.352,
+          "mean_pred_per_image": 5.952,
+          "images_with_zero_predictions": 4
+        }
+      }
+    },
+    "C2_combined_2class": {
+      "weights": "results/runs/expC2_combined_2class/weights/best.pt",
+      "classes": {
+        "0": "Normal",
+        "1": "Abnormal"
+      },
+      "on": {
+        "SIPaKMeD": {
+          "images": 193,
+          "gt_boxes": 877,
+          "pred_boxes": 1720,
+          "matched": 657,
+          "firing_ratio_pred_per_gt": 1.9612,
+          "recall": 0.7491,
+          "precision_lower_bound": 0.382,
+          "mean_pred_per_image": 8.912,
+          "images_with_zero_predictions": 1
+        },
+        "APCData": {
+          "images": 63,
+          "gt_boxes": 549,
+          "pred_boxes": 1102,
+          "matched": 472,
+          "firing_ratio_pred_per_gt": 2.0073,
+          "recall": 0.8597,
+          "precision_lower_bound": 0.4283,
+          "mean_pred_per_image": 17.492,
+          "images_with_zero_predictions": 0
+        }
+      }
+    },
+    "C2b_combined_150": {
+      "weights": "results/runs/expC2b_combined_150/weights/best.pt",
+      "classes": {
+        "0": "Normal",
+        "1": "Abnormal"
+      },
+      "on": {
+        "SIPaKMeD": {
+          "images": 193,
+          "gt_boxes": 877,
+          "pred_boxes": 1927,
+          "matched": 671,
+          "firing_ratio_pred_per_gt": 2.1973,
+          "recall": 0.7651,
+          "precision_lower_bound": 0.3482,
+          "mean_pred_per_image": 9.984,
+          "images_with_zero_predictions": 1
+        },
+        "APCData": {
+          "images": 63,
+          "gt_boxes": 549,
+          "pred_boxes": 1130,
+          "matched": 469,
+          "firing_ratio_pred_per_gt": 2.0583,
+          "recall": 0.8543,
+          "precision_lower_bound": 0.415,
+          "mean_pred_per_image": 17.937,
+          "images_with_zero_predictions": 0
+        }
+      }
+    }
+  },
+  "_caveat": "Class-agnostic (IoU>=0.5, class identity ignored) because the models compared have different class counts and taxonomies. precision_lower_bound is NOT a precision measurement: both datasets annotate only a fraction of the cells present (see results/annotation_completeness.json), so unlabelled-but-correct detections are counted against it. Read recall and firing_ratio_pred_per_gt."
+}

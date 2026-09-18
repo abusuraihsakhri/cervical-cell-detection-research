@@ -1,0 +1,9 @@
+{
+  "model": "yolov8n.pt",
+  "batch_used": 16,
+  "total_wall_clock_seconds": 1706.4529666900635,
+  "epochs_ceiling": 200,
+  "patience": 30,
+  "epochs_run": 101,
+  "note": "Compare epochs_run against --patience/--epochs ceiling to see whether training plateaued early or hit the cap. Check the training log's printed per-epoch time directly for wall-clock figures; results.csv format varies by ultralytics version."
+}

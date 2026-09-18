@@ -1,0 +1,175 @@
+{
+  "SIPaKMeD (train)": {
+    "n_images": 1105,
+    "n_label_files": 1105,
+    "pixel_sample_size": 400,
+    "resolutions": {
+      "2048x1536": 291,
+      "500x500": 61,
+      "1400x1400": 48
+    },
+    "channel_mean_rgb": [
+      0.6926,
+      0.6886,
+      0.7521
+    ],
+    "channel_std_rgb": [
+      0.1395,
+      0.1536,
+      0.1307
+    ],
+    "channel_mean_spread_rgb": [
+      0.1703,
+      0.1715,
+      0.1714
+    ],
+    "gray_mean": 0.711,
+    "gray_contrast_std": 0.1361,
+    "texture_energy_mean": 0.002833,
+    "boxes_total": 5371,
+    "boxes_per_image": {
+      "mean": 4.861,
+      "median": 3.0,
+      "p90": 11.0,
+      "max": 39,
+      "zero_box_images": 2
+    },
+    "box_area_fraction": {
+      "mean": 0.01162,
+      "median": 0.00817,
+      "p10": 0.00238,
+      "p90": 0.02773
+    },
+    "box_aspect_ratio_median": 0.866
+  },
+  "SIPaKMeD (valid)": {
+    "n_images": 193,
+    "n_label_files": 193,
+    "pixel_sample_size": 193,
+    "resolutions": {
+      "2048x1536": 148,
+      "500x500": 27,
+      "1400x1400": 18
+    },
+    "channel_mean_rgb": [
+      0.6808,
+      0.6894,
+      0.754
+    ],
+    "channel_std_rgb": [
+      0.14,
+      0.151,
+      0.1272
+    ],
+    "channel_mean_spread_rgb": [
+      0.167,
+      0.1646,
+      0.1637
+    ],
+    "gray_mean": 0.708,
+    "gray_contrast_std": 0.1344,
+    "texture_energy_mean": 0.002762,
+    "boxes_total": 877,
+    "boxes_per_image": {
+      "mean": 4.544,
+      "median": 3.0,
+      "p90": 9.0,
+      "max": 32,
+      "zero_box_images": 0
+    },
+    "box_area_fraction": {
+      "mean": 0.01133,
+      "median": 0.00899,
+      "p10": 0.00225,
+      "p90": 0.02493
+    },
+    "box_aspect_ratio_median": 0.889
+  },
+  "APCData (train)": {
+    "n_images": 354,
+    "n_label_files": 354,
+    "pixel_sample_size": 354,
+    "resolutions": {
+      "2048x1532": 354
+    },
+    "channel_mean_rgb": [
+      0.6576,
+      0.7633,
+      0.8141
+    ],
+    "channel_std_rgb": [
+      0.1233,
+      0.0974,
+      0.0892
+    ],
+    "channel_mean_spread_rgb": [
+      0.0796,
+      0.0613,
+      0.0631
+    ],
+    "gray_mean": 0.7449,
+    "gray_contrast_std": 0.099,
+    "texture_energy_mean": 0.001429,
+    "boxes_total": 2999,
+    "boxes_per_image": {
+      "mean": 8.472,
+      "median": 8.0,
+      "p90": 15.0,
+      "max": 25,
+      "zero_box_images": 0
+    },
+    "box_area_fraction": {
+      "mean": 0.0191,
+      "median": 0.0179,
+      "p10": 0.00303,
+      "p90": 0.0375
+    },
+    "box_aspect_ratio_median": 0.742
+  },
+  "APCData (valid)": {
+    "n_images": 63,
+    "n_label_files": 63,
+    "pixel_sample_size": 63,
+    "resolutions": {
+      "2048x1532": 63
+    },
+    "channel_mean_rgb": [
+      0.6664,
+      0.7718,
+      0.8231
+    ],
+    "channel_std_rgb": [
+      0.117,
+      0.0904,
+      0.0815
+    ],
+    "channel_mean_spread_rgb": [
+      0.0719,
+      0.0611,
+      0.0628
+    ],
+    "gray_mean": 0.7536,
+    "gray_contrast_std": 0.092,
+    "texture_energy_mean": 0.001319,
+    "boxes_total": 549,
+    "boxes_per_image": {
+      "mean": 8.714,
+      "median": 8.0,
+      "p90": 15.800000000000004,
+      "max": 22,
+      "zero_box_images": 0
+    },
+    "box_area_fraction": {
+      "mean": 0.01708,
+      "median": 0.01527,
+      "p10": 0.00284,
+      "p90": 0.03441
+    },
+    "box_aspect_ratio_median": 0.769
+  },
+  "_notes": {
+    "hmchh_tct": "Not analysed. Prepared data lives on D:\\pap_model\\HMCHH_YOLO_prepared, which is not readable from this session (permission denied).",
+    "method": "Pixel statistics from a random sample of up to 400 images per split, downsampled to 256px. Geometry statistics from every label file in the split. Polygon labels converted to axis-aligned boxes via vertex min/max.",
+    "texture_energy": "Mean variance of first-order gradient magnitude on the grayscale image. A rough proxy for how much high-frequency structure the imagery carries; higher means busier, more textured fields."
+  }
+}

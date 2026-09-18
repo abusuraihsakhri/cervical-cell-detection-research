@@ -1,0 +1,87 @@
+{
+  "benchmark_comparison": {
+    "citation": "Coskun et al., Bioengineering, 2026",
+    "accuracy": 0.91,
+    "macro_f1": 0.91,
+    "note": "Combined SIPaKMeD + Herlev + CRIC + 416 proprietary multi-center WSIs; ResNet50 classification (not detection); used proprietary data this project does not have access to. A lower number here is the expected public-data-only, YOLO-detection ceiling, not a failure \u2014 see Section 0 of the spec."
+  },
+  "phase1_sipakmed_indistribution": {
+    "accuracy": 0.9538002980625931,
+    "macro_f1": 0.46689525275268257,
+    "per_class": {
+      "Dyskeratotic": {
+        "precision": 0.39849624060150374,
+        "recall": 0.5955056179775281,
+        "f1": 0.4774774774774775,
+        "support": 118
+      },
+      "Koilocytotic": {
+        "precision": 0.26521739130434785,
+        "recall": 0.6971428571428572,
+        "f1": 0.38425196850393706,
+        "support": 129
+      },
+      "Metaplastic": {
+        "precision": 0.3206997084548105,
+        "recall": 0.7432432432432432,
+        "f1": 0.4480651731160896,
+        "support": 117
+      },
+      "Parabasal": {
+        "precision": 0.3968253968253968,
+        "recall": 0.8547008547008547,
+        "f1": 0.5420054200542005,
+        "support": 100
+      },
+      "Superficial-Intermediate": {
+        "precision": 0.3494809688581315,
+        "recall": 0.7799227799227799,
+        "f1": 0.4826762246117085,
+        "support": 207
+      }
+    }
+  },
+  "phase2_cross_dataset": {
+    "dataset_name": "HMCHH-TCT (binary)",
+    "accuracy": 0.2588357588357588,
+    "macro_f1": 0.08718487394957983,
+    "per_class": {
+      "Abnormal": {
+        "precision": 0.06806998359759431,
+        "recall": 0.12122687439143136,
+        "f1": 0.08718487394957983,
+        "support": 249
+      }
+    },
+    "delta_vs_phase1": {
+      "accuracy_delta": -0.6949645392268343,
+      "macro_f1_delta": -0.37971037880310277
+    },
+    "delta_vs_coskun_2026_benchmark": {
+      "accuracy_delta": -0.6511642411642412,
+      "macro_f1_delta": -0.8228151260504202
+    },
+    "framing_note": "The Coskun et al. 2026 benchmark used proprietary multi-center WSI data in addition to public sources. A lower number here should be discussed as the public-data-only, YOLO-detection ceiling, not treated as a failure (spec Section 0 / 6b).",
+    "class_agnostic_detection": {
+      "phase1_sipakmed": {
+        "precision": 0.35334386519220645,
+        "recall": 0.7651083238312428,
+        "f1": 0.48342939481268016,
+        "matched": 671,
+        "total_gt_boxes": 877,
+        "total_pred_boxes": 1899,
+        "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
+      },
+      "caveat": "SIPaKMeD's classes (cell morphology) and HMCHH-TCT (binary)'s classes are different taxonomies with no defensible 1:1 mapping, so the accuracy/macro_f1 numbers above conflate 'wrong class' with 'meaningless class comparison'. These class-agnostic precision/recall/F1 numbers instead measure only whether the detector localizes a cell-like object at all (IoU>=0.5), independent of class identity, isolating true cross-dataset domain shift from the taxonomy mismatch.",
+      "phase2_target": {
+        "precision": 0.03655709671290139,
+        "recall": 0.46835443037974683,
+        "f1": 0.06782050830131482,
+        "matched": 962,
+        "total_gt_boxes": 2054,
+        "total_pred_boxes": 26315,
+        "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
+      }
+    }
+  }
+}

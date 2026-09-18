@@ -1,0 +1,16 @@
+.env
+data/
+models/*
+!models/.gitkeep
+!models/best.pt
+results/runs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.venv-labelstudio/
+.commandcode/
+.impeccable/
+logs/
+*.pt
+!models/best.pt

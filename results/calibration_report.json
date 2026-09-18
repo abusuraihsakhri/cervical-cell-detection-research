@@ -1,0 +1,196 @@
+{
+  "raw_ece": 0.06516142145532076,
+  "raw_reliability_bins": [
+    {
+      "range": [
+        0.0,
+        0.1
+      ],
+      "count": 751,
+      "avg_confidence": 0.07118718936225864,
+      "accuracy": 0.05193075898801598
+    },
+    {
+      "range": [
+        0.1,
+        0.2
+      ],
+      "count": 582,
+      "avg_confidence": 0.1422870024603462,
+      "accuracy": 0.12027491408934708
+    },
+    {
+      "range": [
+        0.2,
+        0.30000000000000004
+      ],
+      "count": 329,
+      "avg_confidence": 0.2468761086554513,
+      "accuracy": 0.16109422492401215
+    },
+    {
+      "range": [
+        0.30000000000000004,
+        0.4
+      ],
+      "count": 220,
+      "avg_confidence": 0.3491860888221047,
+      "accuracy": 0.2772727272727273
+    },
+    {
+      "range": [
+        0.4,
+        0.5
+      ],
+      "count": 159,
+      "avg_confidence": 0.44912829189180575,
+      "accuracy": 0.25157232704402516
+    },
+    {
+      "range": [
+        0.5,
+        0.6000000000000001
+      ],
+      "count": 167,
+      "avg_confidence": 0.548693018045254,
+      "accuracy": 0.4251497005988024
+    },
+    {
+      "range": [
+        0.6000000000000001,
+        0.7000000000000001
+      ],
+      "count": 159,
+      "avg_confidence": 0.6565947480171731,
+      "accuracy": 0.5345911949685535
+    },
+    {
+      "range": [
+        0.7000000000000001,
+        0.8
+      ],
+      "count": 177,
+      "avg_confidence": 0.7500446607164071,
+      "accuracy": 0.5875706214689266
+    },
+    {
+      "range": [
+        0.8,
+        0.9
+      ],
+      "count": 152,
+      "avg_confidence": 0.8492308831528613,
+      "accuracy": 0.8026315789473685
+    },
+    {
+      "range": [
+        0.9,
+        1.0
+      ],
+      "count": 49,
+      "avg_confidence": 0.9238696207805556,
+      "accuracy": 0.9183673469387755
+    }
+  ],
+  "fitted_temperature": 0.9807821150185856,
+  "scaled_ece": 0.06340950357707284,
+  "scaled_reliability_bins": [
+    {
+      "range": [
+        0.0,
+        0.1
+      ],
+      "count": 788,
+      "avg_confidence": 0.0693923802741776,
+      "accuracy": 0.050761421319796954
+    },
+    {
+      "range": [
+        0.1,
+        0.2
+      ],
+      "count": 557,
+      "avg_confidence": 0.14204731915633145,
+      "accuracy": 0.12746858168761221
+    },
+    {
+      "range": [
+        0.2,
+        0.30000000000000004
+      ],
+      "count": 323,
+      "avg_confidence": 0.24557246848098738,
+      "accuracy": 0.15789473684210525
+    },
+    {
+      "range": [
+        0.30000000000000004,
+        0.4
+      ],
+      "count": 218,
+      "avg_confidence": 0.3487383840440735,
+      "accuracy": 0.28440366972477066
+    },
+    {
+      "range": [
+        0.4,
+        0.5
+      ],
+      "count": 155,
+      "avg_confidence": 0.44940578703243433,
+      "accuracy": 0.25161290322580643
+    },
+    {
+      "range": [
+        0.5,
+        0.6000000000000001
+      ],
+      "count": 162,
+      "avg_confidence": 0.5480512294402836,
+      "accuracy": 0.41975308641975306
+    },
+    {
+      "range": [
+        0.6000000000000001,
+        0.7000000000000001
+      ],
+      "count": 157,
+      "avg_confidence": 0.6556927418928069,
+      "accuracy": 0.5477707006369427
+    },
+    {
+      "range": [
+        0.7000000000000001,
+        0.8
+      ],
+      "count": 179,
+      "avg_confidence": 0.7506027613673082,
+      "accuracy": 0.5754189944134078
+    },
+    {
+      "range": [
+        0.8,
+        0.9
+      ],
+      "count": 150,
+      "avg_confidence": 0.8494979193121213,
+      "accuracy": 0.8
+    },
+    {
+      "range": [
+        0.9,
+        1.0
+      ],
+      "count": 56,
+      "avg_confidence": 0.9240021613192708,
+      "accuracy": 0.8928571428571429
+    }
+  ],
+  "n_predictions": 2745,
+  "comparison_point": {
+    "citation": "Fuzzy ensemble framework, 2026 (see Section 6c)",
+    "ece": 0.03,
+    "note": "Classification-based approach; comparison point for this project's detection-based ECE."
+  },
+  "method_note": "Temperature fit is a simplified 1D scaling over YOLO's exported box confidence (treated as a sigmoid probability), not a full multi-class logit temperature scaling. Documented as a known simplification, not a full calibration-literature implementation."
+}

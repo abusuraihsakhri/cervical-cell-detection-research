@@ -1,0 +1,28 @@
+{
+  "mirror_a": {
+    "dir": "C:\\Users\\abusu\\Desktop\\pap_ml_model\\pap-smear-cyto-algo\\data\\sipakmed\\mirror_a",
+    "train": {
+      "images": 1298,
+      "labels": 1298
+    },
+    "valid": {
+      "images": 0,
+      "labels": 0
+    },
+    "test": {
+      "images": 0,
+      "labels": 0
+    },
+    "classes": [
+      "Dyskeratotic",
+      "Koilocytotic",
+      "Metaplastic",
+      "Parabasal",
+      "Superficial-Intermediate"
+    ],
+    "nc": 5
+  },
+  "mirror_b": {
+    "error": "[mirror_b] project type is 'classification', which cannot export bounding-box YOLOv8 data (needs 'object-detection'). Skipping this mirror."
+  }
+}

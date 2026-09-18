@@ -1,0 +1,84 @@
+{
+  "sipakmed_only": {
+    "train": {
+      "sipakmed": {
+        "images": 1105,
+        "boxes": 5371,
+        "per_class": {
+          "Normal": 3347,
+          "Abnormal": 2024
+        }
+      }
+    },
+    "valid": {
+      "sipakmed": {
+        "images": 193,
+        "boxes": 877,
+        "per_class": {
+          "Normal": 524,
+          "Abnormal": 353
+        }
+      }
+    }
+  },
+  "apcdata_only": {
+    "train": {
+      "apcdata": {
+        "images": 354,
+        "boxes": 2999,
+        "per_class": {
+          "Normal": 1789,
+          "Abnormal": 1210
+        }
+      }
+    },
+    "valid": {
+      "apcdata": {
+        "images": 63,
+        "boxes": 549,
+        "per_class": {
+          "Normal": 286,
+          "Abnormal": 263
+        }
+      }
+    }
+  },
+  "combined": {
+    "train": {
+      "sipakmed": {
+        "images": 1105,
+        "boxes": 5371,
+        "per_class": {
+          "Normal": 3347,
+          "Abnormal": 2024
+        }
+      },
+      "apcdata": {
+        "images": 354,
+        "boxes": 2999,
+        "per_class": {
+          "Normal": 1789,
+          "Abnormal": 1210
+        }
+      }
+    },
+    "valid": {
+      "sipakmed": {
+        "images": 193,
+        "boxes": 877,
+        "per_class": {
+          "Normal": 524,
+          "Abnormal": 353
+        }
+      },
+      "apcdata": {
+        "images": 63,
+        "boxes": 549,
+        "per_class": {
+          "Normal": 286,
+          "Abnormal": 263
+        }
+      }
+    }
+  }
+}

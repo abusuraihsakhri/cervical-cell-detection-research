@@ -1,0 +1,10 @@
+{
+  "model": "yolov8n.pt",
+  "data": "data/apcdata/APCData_YOLO_prepared/data.yaml",
+  "batch_used": 16,
+  "total_wall_clock_seconds": 335.6083519458771,
+  "epochs_ceiling": 100,
+  "patience": 25,
+  "epochs_run": 57,
+  "note": "Compare epochs_run against --patience/--epochs ceiling to see whether training plateaued early or hit the cap. Check the training log's printed per-epoch time directly for wall-clock figures; results.csv format varies by ultralytics version."
+}

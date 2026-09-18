@@ -1,0 +1,1308 @@
+{
+  "SIPaKMeD": {
+    "n_images": 193,
+    "total_gt": 877,
+    "total_pred": 1899,
+    "pred_to_gt_ratio": 2.1653,
+    "mean_gt_per_image": 4.544,
+    "mean_pred_per_image": 9.839,
+    "images_with_zero_predictions": 1,
+    "pct_images_with_zero_predictions": 0.5,
+    "images_where_pred_exceeds_gt": 162,
+    "per_image": [
+      {
+        "image": "cell_1_1200_1188_1700_1688_jpg.rf.f3f9731310c4a8bd50e487bf7f822cb6.jpg",
+        "gt": 9,
+        "pred": 20
+      },
+      {
+        "image": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+        "gt": 9,
+        "pred": 13
+      },
+      {
+        "image": "cell_1_1600_1188_2100_1688_jpg.rf.18091d31f6d4a927ce7a79639774bfbf.jpg",
+        "gt": 10,
+        "pred": 32
+      },
+      {
+        "image": "cell_1_2000_0_2500_500_jpg.rf.7a9a0d2a807977beb33e00917daeaef6.jpg",
+        "gt": 10,
+        "pred": 23
+      },
+      {
+        "image": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+        "gt": 1,
+        "pred": 17
+      },
+      {
+        "image": "cell_1_3052_0_3552_500_jpg.rf.a2129409ad5680798f0a89c6d492cd64.jpg",
+        "gt": 7,
+        "pred": 13
+      },
+      {
+        "image": "cell_2_0_1184_500_1684_jpg.rf.0bc6c0d3973ed89fc094ed71cc7dc3b2.jpg",
+        "gt": 32,
+        "pred": 24
+      },
+      {
+        "image": "cell_2_1200_1184_1700_1684_jpg.rf.99b1e0d619f069fcc19e26172b0f7ed3.jpg",
+        "gt": 26,
+        "pred": 25
+      },
+      {
+        "image": "cell_2_3600_1184_4100_1684_jpg.rf.2f425ded0ebe0c1aed9de526371a42d8.jpg",
+        "gt": 8,
+        "pred": 12
+      },
+      {
+        "image": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+        "gt": 6,
+        "pred": 14
+      },
+      {
+        "image": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+        "gt": 4,
+        "pred": 7
+      },
+      {
+        "image": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+        "gt": 6,
+        "pred": 9
+      },
+      {
+        "image": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+        "gt": 4,
+        "pred": 14
+      },
+      {
+        "image": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+        "gt": 1,
+        "pred": 12
+      },
+      {
+        "image": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+        "gt": 5,
+        "pred": 11
+      },
+      {
+        "image": "cell_2_8000_1184_8500_1684_jpg.rf.9c8b27a9a0730a9d3a56976af7a0e10b.jpg",
+        "gt": 7,
+        "pred": 21
+      },
+      {
+        "image": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+        "gt": 4,
+        "pred": 1
+      },
+      {
+        "image": "cell_2_8400_1184_8900_1684_jpg.rf.26a38ae6f475205584f33f06f106ff97.jpg",
+        "gt": 2,
+        "pred": 10
+      },
+      {
+        "image": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "cell_2_9652_800_10152_1300_jpg.rf.c035ce84baaea03a78be06c376897fda.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+        "gt": 4,
+        "pred": 13
+      },
+      {
+        "image": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+        "gt": 4,
+        "pred": 16
+      },
+      {
+        "image": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+        "gt": 6,
+        "pred": 10
+      },
+      {
+        "image": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+        "gt": 4,
+        "pred": 11
+      },
+      {
+        "image": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+        "gt": 3,
+        "pred": 10
+      },
+      {
+        "image": "Cito-4_0_0_500_500_jpg.rf.40680b06e462e1b26a111d15b5926dc2.jpg",
+        "gt": 3,
+        "pred": 11
+      },
+      {
+        "image": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+        "gt": 6,
+        "pred": 9
+      },
+      {
+        "image": "CV1_0_3920_1400_5320_jpg.rf.d03188122fadb0f9dc941c08a5e36eb5.jpg",
+        "gt": 2,
+        "pred": 6
+      },
+      {
+        "image": "CV1_1960_4900_3360_6300_jpg.rf.46f92d46c5b939191e4c4c3f48d3da87.jpg",
+        "gt": 1,
+        "pred": 4
+      },
+      {
+        "image": "CV1_2940_0_4340_1400_jpg.rf.f89894b3d0c1ad351c7c337847c598b2.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+        "gt": 3,
+        "pred": 4
+      },
+      {
+        "image": "CV1_7157_7496_8557_8896_jpg.rf.c415ebb11b42c5141cb7048d7352459e.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "CV1_980_1960_2380_3360_jpg.rf.1a482e787c566038b4dec4106e5c2b85.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+        "gt": 1,
+        "pred": 3
+      },
+      {
+        "image": "CV1_980_980_2380_2380_jpg.rf.0531b2cc4785f48727229eabb47d4963.jpg",
+        "gt": 4,
+        "pred": 6
+      },
+      {
+        "image": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+        "gt": 6,
+        "pred": 11
+      },
+      {
+        "image": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+        "gt": 3,
+        "pred": 7
+      },
+      {
+        "image": "cv2_4900_0_6300_1400_jpg.rf.6fa10ebb7f48cf9fe780cf29bf2a5e27.jpg",
+        "gt": 3,
+        "pred": 2
+      },
+      {
+        "image": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+        "gt": 4,
+        "pred": 5
+      },
+      {
+        "image": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+        "gt": 4,
+        "pred": 12
+      },
+      {
+        "image": "cv2_4900_9609_6300_11009_jpg.rf.b03d25465776fe24a46d1280b90b2655.jpg",
+        "gt": 5,
+        "pred": 6
+      },
+      {
+        "image": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+        "gt": 5,
+        "pred": 8
+      },
+      {
+        "image": "dysk_00103_bmp_jpg.rf.4c24fb464bba702496840474d92e7de1.jpg",
+        "gt": 5,
+        "pred": 26
+      },
+      {
+        "image": "dysk_00105_bmp_jpg.rf.731aac90e5b32b8b551cd112ca1d89b4.jpg",
+        "gt": 4,
+        "pred": 16
+      },
+      {
+        "image": "dysk_00119_bmp_jpg.rf.6af8a7032add0f3894883f8e30ce95be.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "dysk_00130_bmp_jpg.rf.292b7293f9aecc45b837c59943847edf.jpg",
+        "gt": 2,
+        "pred": 6
+      },
+      {
+        "image": "dysk_00134_bmp_jpg.rf.200379438c3abfed5d654852867e7cde.jpg",
+        "gt": 3,
+        "pred": 10
+      },
+      {
+        "image": "dysk_00137_bmp_jpg.rf.573a93ff298b7319209e909de2c797fc.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "dysk_00138_bmp_jpg.rf.d46b732f4a152a256fe2010fde4665b2.jpg",
+        "gt": 6,
+        "pred": 5
+      },
+      {
+        "image": "dysk_00140_bmp_jpg.rf.a03e21aba3b3cb809d76185ea910c9b8.jpg",
+        "gt": 1,
+        "pred": 5
+      },
+      {
+        "image": "dysk_00146_bmp_jpg.rf.dda47b1a55323a6466a4ad453ef94948.jpg",
+        "gt": 4,
+        "pred": 3
+      },
+      {
+        "image": "dysk_00164_bmp_jpg.rf.df588dd9b1d926377754b183c40c164d.jpg",
+        "gt": 24,
+        "pred": 54
+      },
+      {
+        "image": "dysk_0016_bmp_jpg.rf.2607562382cb13add64aff28ca16e3e5.jpg",
+        "gt": 4,
+        "pred": 11
+      },
+      {
+        "image": "dysk_00170_bmp_jpg.rf.41eefbd03e34ed0a007ea01146b621db.jpg",
+        "gt": 2,
+        "pred": 11
+      },
+      {
+        "image": "dysk_00172_bmp_jpg.rf.c041c2ce1bf97acc608f86f1b2198569.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "dysk_00177_bmp_jpg.rf.4bd4e8e985729b7279664a050b5edecb.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "dysk_0017_bmp_jpg.rf.9994f59b101507d0f99cb12201655f66.jpg",
+        "gt": 1,
+        "pred": 7
+      },
+      {
+        "image": "dysk_00180_bmp_jpg.rf.d4cafe822d5a7f380adcad1f13fc70db.jpg",
+        "gt": 1,
+        "pred": 3
+      },
+      {
+        "image": "dysk_00190_bmp_jpg.rf.d1b0e87d858e9927c45f10d3441dfd2c.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "dysk_00199_bmp_jpg.rf.ed76b10c246d1143cf9a79401472499e.jpg",
+        "gt": 7,
+        "pred": 10
+      },
+      {
+        "image": "dysk_00201_bmp_jpg.rf.31d141cce64ea5f1c090b72eaeb3147d.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "dysk_0025_bmp_jpg.rf.545fce822f6f66904838321dee286005.jpg",
+        "gt": 5,
+        "pred": 10
+      },
+      {
+        "image": "dysk_0028_bmp_jpg.rf.b0778e350173f2e5534b1cd235694acd.jpg",
+        "gt": 3,
+        "pred": 10
+      },
+      {
+        "image": "dysk_0034_bmp_jpg.rf.8586bbdee10d3ef1a5880a0ccbb7041f.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "dysk_0040_bmp_jpg.rf.609f664c74076636b8e06f1f53747dd9.jpg",
+        "gt": 3,
+        "pred": 7
+      },
+      {
+        "image": "dysk_0042_bmp_jpg.rf.6521bd229658eaa2184bb0d82b2d63bd.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "dysk_0048_bmp_jpg.rf.9a00df1ea6e72607d3082dcae51dd8d5.jpg",
+        "gt": 2,
+        "pred": 5
+      },
+      {
+        "image": "dysk_0064_bmp_jpg.rf.56ccc4e6c77a4626af8a5688ab494810.jpg",
+        "gt": 4,
+        "pred": 3
+      },
+      {
+        "image": "dysk_0067_bmp_jpg.rf.53d62992f224cba40e9e8f5e45f6a866.jpg",
+        "gt": 21,
+        "pred": 18
+      },
+      {
+        "image": "dysk_006_bmp_jpg.rf.1154080e280db62d14bcf932fdc3d5df.jpg",
+        "gt": 6,
+        "pred": 7
+      },
+      {
+        "image": "dysk_0085_bmp_jpg.rf.7677c696943924fe8923bd49ee0b0e01.jpg",
+        "gt": 1,
+        "pred": 5
+      },
+      {
+        "image": "dysk_0088_bmp_jpg.rf.e1266fbbc71e569915442bd15cb75257.jpg",
+        "gt": 3,
+        "pred": 4
+      },
+      {
+        "image": "dysk_0089_bmp_jpg.rf.fd1386324a9474b0375a82b0dc83154b.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "dysk_0091_bmp_jpg.rf.21d8447f5f15882e6ecb05fb19b8d958.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "dysk_0094_bmp_jpg.rf.0c44b95de9b6d96989e8f32730d710e6.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "dysk_0095_bmp_jpg.rf.7e480e5c05004155b9b1e90fb0555567.jpg",
+        "gt": 2,
+        "pred": 9
+      },
+      {
+        "image": "dysk_009_bmp_jpg.rf.7189d730679930b3d99bff79a5e42a34.jpg",
+        "gt": 9,
+        "pred": 11
+      },
+      {
+        "image": "HSIL_5-1-_jpg.rf.c3a62a050e5d7853943164bb02b604ee.jpg",
+        "gt": 17,
+        "pred": 70
+      },
+      {
+        "image": "HSIL_5-3-_jpg.rf.82112264bc36138f7961125984409570.jpg",
+        "gt": 20,
+        "pred": 37
+      },
+      {
+        "image": "koil_00110_bmp_jpg.rf.879d94841769db5493b0564afaff4719.jpg",
+        "gt": 3,
+        "pred": 9
+      },
+      {
+        "image": "koil_00111_bmp_jpg.rf.a9341502364cc869feaed697a4f2420e.jpg",
+        "gt": 9,
+        "pred": 17
+      },
+      {
+        "image": "koil_00117_bmp_jpg.rf.37428390f2a312343386883e551d7192.jpg",
+        "gt": 9,
+        "pred": 14
+      },
+      {
+        "image": "koil_0011_bmp_jpg.rf.0dc5ef68171ff8d6eea47e2d5ad0faf2.jpg",
+        "gt": 6,
+        "pred": 15
+      },
+      {
+        "image": "koil_00144_bmp_jpg.rf.37a8a81cc47e6d7a65f5c0d08627e376.jpg",
+        "gt": 4,
+        "pred": 3
+      },
+      {
+        "image": "koil_00148_bmp_jpg.rf.9b76aaf405f0eb03e4b7e598dc3a6a45.jpg",
+        "gt": 3,
+        "pred": 1
+      },
+      {
+        "image": "koil_0014_bmp_jpg.rf.8d97a04cb26c07c83e5ccc7f504a5788.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "koil_00153_bmp_jpg.rf.226e872bbeb3477a3d495c263d775c24.jpg",
+        "gt": 2,
+        "pred": 8
+      },
+      {
+        "image": "koil_00160_bmp_jpg.rf.b108c4456b5bfdd0709dcf5365bed233.jpg",
+        "gt": 5,
+        "pred": 18
+      },
+      {
+        "image": "koil_00170_bmp_jpg.rf.ebf763f28d1aae9849c3ea4cf1b15c3c.jpg",
+        "gt": 1,
+        "pred": 0
+      },
+      {
+        "image": "koil_00171_bmp_jpg.rf.b4ebc58ab70aa0b4968dfff3a3f91359.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "koil_00173_bmp_jpg.rf.49e663012fd2b21bd3637e15a8b245df.jpg",
+        "gt": 2,
+        "pred": 1
+      },
+      {
+        "image": "koil_00175_bmp_jpg.rf.3562ee865760bdbd642e2caf35f863fd.jpg",
+        "gt": 1,
+        "pred": 9
+      },
+      {
+        "image": "koil_00178_bmp_jpg.rf.81a8bf5cd2038b2d70254bd556153771.jpg",
+        "gt": 3,
+        "pred": 6
+      },
+      {
+        "image": "koil_00181_bmp_jpg.rf.37ff4e302ce191bc2b611412b688d22a.jpg",
+        "gt": 1,
+        "pred": 7
+      },
+      {
+        "image": "koil_00186_bmp_jpg.rf.2e87de1cca97bf2839566426da0e5871.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "koil_0018_bmp_jpg.rf.1e580a46b1de0e44a68bc8fa718316ec.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "koil_00191_bmp_jpg.rf.cead4fa7d7052e8fd7a5cca8a21baa40.jpg",
+        "gt": 2,
+        "pred": 5
+      },
+      {
+        "image": "koil_00204_bmp_jpg.rf.f024519bc719d491835eb53536df276c.jpg",
+        "gt": 2,
+        "pred": 6
+      },
+      {
+        "image": "koil_00213_bmp_jpg.rf.4c4130a33f07f5182947a90e41add9da.jpg",
+        "gt": 1,
+        "pred": 3
+      },
+      {
+        "image": "koil_00216_bmp_jpg.rf.192a1afe86a03c61c056964285193ddf.jpg",
+        "gt": 1,
+        "pred": 4
+      },
+      {
+        "image": "koil_00223_bmp_jpg.rf.f7f9c5f69012956a4f1ffdb6d42977f5.jpg",
+        "gt": 2,
+        "pred": 2
+      },
+      {
+        "image": "koil_0022_bmp_jpg.rf.d9e3144a35c2001e57902879ef1566a1.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "koil_0023_bmp_jpg.rf.910fcb04d02e3d6aa28a5589bfd0dee2.jpg",
+        "gt": 4,
+        "pred": 10
+      },
+      {
+        "image": "koil_0028_bmp_jpg.rf.eca7012d5f705c8f53b4b0c9e83506d5.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "koil_002_bmp_jpg.rf.ef08d32b9fe2325c7657df204c10d6c7.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "koil_0042_bmp_jpg.rf.a31daca9927d18be90b2d87ec2f70fec.jpg",
+        "gt": 3,
+        "pred": 7
+      },
+      {
+        "image": "koil_0044_bmp_jpg.rf.df81a66175b03d89e10337afb4697bf9.jpg",
+        "gt": 3,
+        "pred": 6
+      },
+      {
+        "image": "koil_0049_bmp_jpg.rf.b720444f6ba417141b338d034bd83a73.jpg",
+        "gt": 4,
+        "pred": 6
+      },
+      {
+        "image": "koil_0059_bmp_jpg.rf.b15f53064ccaf5b1b8873ef5aaf6b908.jpg",
+        "gt": 3,
+        "pred": 4
+      },
+      {
+        "image": "koil_0061_bmp_jpg.rf.2fa5bbae8cd81ca0ccd7d3f2d041428a.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "koil_006_bmp_jpg.rf.f08712439e6809b41652e6fe5dc632e2.jpg",
+        "gt": 2,
+        "pred": 5
+      },
+      {
+        "image": "koil_0073_bmp_jpg.rf.cae6e40428cac2ada55af2251b359ed7.jpg",
+        "gt": 2,
+        "pred": 10
+      },
+      {
+        "image": "koil_0079_bmp_jpg.rf.14bbef130e6e7fe07bbf0694e7e87922.jpg",
+        "gt": 1,
+        "pred": 4
+      },
+      {
+        "image": "koil_007_bmp_jpg.rf.749c4a5cd7110cab01547dac9421104e.jpg",
+        "gt": 3,
+        "pred": 15
+      },
+      {
+        "image": "koil_0088_bmp_jpg.rf.7ae1de6e0a40e29cc82816ac8fa3f6be.jpg",
+        "gt": 11,
+        "pred": 29
+      },
+      {
+        "image": "koil_0095_bmp_jpg.rf.e21fff6e0c88e27884b7f6a987d8170a.jpg",
+        "gt": 19,
+        "pred": 27
+      },
+      {
+        "image": "meta_00114_bmp_jpg.rf.cf67139f1a5ee2d3e596f68977cac41b.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "meta_0011_bmp_jpg.rf.29ab1fce2d756ca750609cbc76cef9f3.jpg",
+        "gt": 2,
+        "pred": 6
+      },
+      {
+        "image": "meta_0012_bmp_jpg.rf.fba9cbb85965eb4843cf47abac2ceb64.jpg",
+        "gt": 1,
+        "pred": 5
+      },
+      {
+        "image": "meta_00130_bmp_jpg.rf.c406f739f84ae4dc10ce25206fdc920a.jpg",
+        "gt": 1,
+        "pred": 5
+      },
+      {
+        "image": "meta_00133_bmp_jpg.rf.6a640fee98821f962c63b9b2e5a59b0e.jpg",
+        "gt": 1,
+        "pred": 8
+      },
+      {
+        "image": "meta_00136_bmp_jpg.rf.643549b292708dca137d226221aff524.jpg",
+        "gt": 1,
+        "pred": 8
+      },
+      {
+        "image": "meta_00153_bmp_jpg.rf.8bb08dca28500d38f69e6e2eeb5928a7.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "meta_00163_bmp_jpg.rf.2897ffbb1a8af6a49930747fd79fe3f9.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "meta_00165_bmp_jpg.rf.dd1c0a2be6164f7c6e7084630a2c8ebc.jpg",
+        "gt": 1,
+        "pred": 5
+      },
+      {
+        "image": "meta_00168_bmp_jpg.rf.63a7129a5aa37b265c1be225c5fb60f6.jpg",
+        "gt": 1,
+        "pred": 14
+      },
+      {
+        "image": "meta_00177_bmp_jpg.rf.753b7a6b8efb2a46025bf0de932b3d8e.jpg",
+        "gt": 1,
+        "pred": 7
+      },
+      {
+        "image": "meta_00182_bmp_jpg.rf.ede7f0fe921411f7db4ef9774ca69142.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "meta_00190_bmp_jpg.rf.8ea3169f03181feba8cef0ea00eec9f7.jpg",
+        "gt": 1,
+        "pred": 4
+      },
+      {
+        "image": "meta_00193_bmp_jpg.rf.9bafdddf38618e3a8d43b6c37277762a.jpg",
+        "gt": 7,
+        "pred": 7
+      },
+      {
+        "image": "meta_00201_bmp_jpg.rf.d171c6f1c61cf5744176625526236bd2.jpg",
+        "gt": 8,
+        "pred": 11
+      },
+      {
+        "image": "meta_00205_bmp_jpg.rf.389880b2d530346637115c571c48a14c.jpg",
+        "gt": 3,
+        "pred": 18
+      },
+      {
+        "image": "meta_00206_bmp_jpg.rf.d17cd25cc0329e45b08eaebbe7da0424.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "meta_00207_bmp_jpg.rf.08ba52df34726b0179723641c5fe70b1.jpg",
+        "gt": 3,
+        "pred": 8
+      },
+      {
+        "image": "meta_00212_bmp_jpg.rf.646339965c58d6fd78b6d8bd63cf0bff.jpg",
+        "gt": 4,
+        "pred": 7
+      },
+      {
+        "image": "meta_00213_bmp_jpg.rf.d308de5e59a0abd404f66874091b6d44.jpg",
+        "gt": 2,
+        "pred": 10
+      },
+      {
+        "image": "meta_00217_bmp_jpg.rf.3bf3fb71f2b2cded41195906beef1228.jpg",
+        "gt": 9,
+        "pred": 6
+      },
+      {
+        "image": "meta_00222_bmp_jpg.rf.97a1780f8c47bf0b50e41bdaa7cc3cc6.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "meta_00229_bmp_jpg.rf.8070cba6b8fb70418d08107253483766.jpg",
+        "gt": 1,
+        "pred": 2
+      },
+      {
+        "image": "meta_00237_bmp_jpg.rf.45c8f7eeb94af5942f80c0b6c46c381f.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "meta_00244_bmp_jpg.rf.39847e5340885d554e9565e0a9441636.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "meta_00251_bmp_jpg.rf.c774ccf9714e49ec654ed116d82f5d24.jpg",
+        "gt": 2,
+        "pred": 7
+      },
+      {
+        "image": "meta_00256_bmp_jpg.rf.914e8cf8515ec936cd21406c38ad2818.jpg",
+        "gt": 4,
+        "pred": 7
+      },
+      {
+        "image": "meta_00264_bmp_jpg.rf.51f8108121652b6a2503a92afcc8f6a1.jpg",
+        "gt": 9,
+        "pred": 5
+      },
+      {
+        "image": "meta_00268_bmp_jpg.rf.58a07b019e6d97ef50a6940decf4af20.jpg",
+        "gt": 5,
+        "pred": 8
+      },
+      {
+        "image": "meta_0032_bmp_jpg.rf.231d55f4dee3a8ef864b770a01000058.jpg",
+        "gt": 1,
+        "pred": 6
+      },
+      {
+        "image": "meta_0040_bmp_jpg.rf.fea8514417bce4684cf60fde5cc27f77.jpg",
+        "gt": 2,
+        "pred": 5
+      },
+      {
+        "image": "meta_0052_bmp_jpg.rf.26aec5179a0dee25208f38efd4b49ed4.jpg",
+        "gt": 2,
+        "pred": 6
+      },
+      {
+        "image": "meta_0054_bmp_jpg.rf.2cefe1b9dbf3771a4a750fe56f2ce148.jpg",
+        "gt": 1,
+        "pred": 3
+      },
+      {
+        "image": "meta_0061_bmp_jpg.rf.aa6ac89059fc9b8d3f7b8ff690737bfc.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "meta_0066_bmp_jpg.rf.a0b0297651b9151b2290a594ef81bd83.jpg",
+        "gt": 2,
+        "pred": 11
+      },
+      {
+        "image": "meta_0069_bmp_jpg.rf.31dd67af6bafca91cdd2c5a733c72bb2.jpg",
+        "gt": 7,
+        "pred": 15
+      },
+      {
+        "image": "meta_0073_bmp_jpg.rf.0fb7610081aaebbfe40d461503758f4a.jpg",
+        "gt": 7,
+        "pred": 15
+      },
+      {
+        "image": "meta_0076_bmp_jpg.rf.bb0b1692bfee7274b263b69e9c68c413.jpg",
+        "gt": 2,
+        "pred": 4
+      },
+      {
+        "image": "meta_0088_bmp_jpg.rf.de0e8951cda40aedf047b586621cb3af.jpg",
+        "gt": 6,
+        "pred": 11
+      },
+      {
+        "image": "meta_0095_bmp_jpg.rf.97eb8d801e5e9dca9acbf2693df140c6.jpg",
+        "gt": 3,
+        "pred": 8
+      },
+      {
+        "image": "para_00108_bmp_jpg.rf.4f5c95dde04703b508d893502ef0977c.jpg",
+        "gt": 3,
+        "pred": 5
+      },
+      {
+        "image": "para_0011_bmp_jpg.rf.5f458d33cec8e965189a379a5dba0d95.jpg",
+        "gt": 13,
+        "pred": 21
+      },
+      {
+        "image": "para_0019_bmp_jpg.rf.0445fdea2a91fd400a5911d254d508b6.jpg",
+        "gt": 11,
+        "pred": 25
+      },
+      {
+        "image": "para_0021_bmp_jpg.rf.e3b065df9d0abf4489b4814cc8303ce8.jpg",
+        "gt": 8,
+        "pred": 18
+      },
+      {
+        "image": "para_0038_bmp_jpg.rf.f08392081fc41b882de9906e33796698.jpg",
+        "gt": 7,
+        "pred": 26
+      },
+      {
+        "image": "para_0042_bmp_jpg.rf.4ee6bfebc443a664387b363c39c92266.jpg",
+        "gt": 13,
+        "pred": 26
+      },
+      {
+        "image": "para_0048_bmp_jpg.rf.2d6b89e4fd1df757a47c061038387a0e.jpg",
+        "gt": 9,
+        "pred": 25
+      },
+      {
+        "image": "para_0053_bmp_jpg.rf.d8c38111719de871288c1ab19bff6021.jpg",
+        "gt": 7,
+        "pred": 29
+      },
+      {
+        "image": "para_0054_bmp_jpg.rf.24afd8a22e762713c39a2f2a30487eff.jpg",
+        "gt": 8,
+        "pred": 8
+      },
+      {
+        "image": "para_005_bmp_jpg.rf.d94f8b33b4fb632deffff7f2551245f5.jpg",
+        "gt": 6,
+        "pred": 15
+      },
+      {
+        "image": "para_0061_bmp_jpg.rf.fd7b91e4b31ec3d05a5c397a58e6d8e3.jpg",
+        "gt": 4,
+        "pred": 4
+      },
+      {
+        "image": "para_0068_bmp_jpg.rf.cb52b1abd752103bed9336545cd7eab0.jpg",
+        "gt": 4,
+        "pred": 6
+      },
+      {
+        "image": "para_0079_bmp_jpg.rf.7de193337c4194dbe323b496e2cb6f06.jpg",
+        "gt": 4,
+        "pred": 3
+      },
+      {
+        "image": "para_0085_bmp_jpg.rf.b7e76068e0487db54d9688175ee59bd4.jpg",
+        "gt": 2,
+        "pred": 2
+      },
+      {
+        "image": "para_0086_bmp_jpg.rf.e6ab0f8201d1507f88746e3cd61108bb.jpg",
+        "gt": 11,
+        "pred": 15
+      },
+      {
+        "image": "para_009_bmp_jpg.rf.eb0f4be025d8f2834e175678b4404161.jpg",
+        "gt": 6,
+        "pred": 25
+      },
+      {
+        "image": "supe_00106_bmp_jpg.rf.498d915353d16517f6c4b6e79dd04267.jpg",
+        "gt": 13,
+        "pred": 26
+      },
+      {
+        "image": "supe_00117_bmp_jpg.rf.2523f1822314202e5ab0b49db8c4a992.jpg",
+        "gt": 4,
+        "pred": 13
+      },
+      {
+        "image": "supe_00123_bmp_jpg.rf.adf264ebf220e32f093a3c41f176e4a3.jpg",
+        "gt": 8,
+        "pred": 14
+      },
+      {
+        "image": "supe_00126_bmp_jpg.rf.d71b8fc215800cde7e64b485f2cb0bbc.jpg",
+        "gt": 7,
+        "pred": 18
+      },
+      {
+        "image": "supe_0013_bmp_jpg.rf.b9ba1e8a79424539749b4ece11128979.jpg",
+        "gt": 5,
+        "pred": 4
+      },
+      {
+        "image": "supe_0015_bmp_jpg.rf.4780e8232d892b104d8dbb95e18afd13.jpg",
+        "gt": 4,
+        "pred": 5
+      },
+      {
+        "image": "supe_0023_bmp_jpg.rf.4bc0a8c1e36dd6f7f1a9b2ead550ab25.jpg",
+        "gt": 12,
+        "pred": 30
+      },
+      {
+        "image": "supe_0032_bmp_jpg.rf.106ef4846446e27ff168c24c89d82fdf.jpg",
+        "gt": 10,
+        "pred": 26
+      },
+      {
+        "image": "supe_0047_bmp_jpg.rf.5a8524abd7a84732ca8bf4cb970d4a6e.jpg",
+        "gt": 5,
+        "pred": 21
+      },
+      {
+        "image": "supe_0064_bmp_jpg.rf.45eb7483ca7ea16205f1496e99f25d93.jpg",
+        "gt": 5,
+        "pred": 8
+      },
+      {
+        "image": "supe_0068_bmp_jpg.rf.9ae250cc83f31d89994094735cd9e759.jpg",
+        "gt": 9,
+        "pred": 18
+      },
+      {
+        "image": "supe_0085_bmp_jpg.rf.e6a241a41ea19b733032dd8f699d8c5d.jpg",
+        "gt": 3,
+        "pred": 8
+      },
+      {
+        "image": "supe_0086_bmp_jpg.rf.e90acd365af8ea131a70db1b9f45aa2d.jpg",
+        "gt": 4,
+        "pred": 1
+      },
+      {
+        "image": "supe_0087_bmp_jpg.rf.e896046494998fa1b5cecbde2c61d3bf.jpg",
+        "gt": 3,
+        "pred": 2
+      },
+      {
+        "image": "supe_0090_bmp_jpg.rf.673391ad718240730e3b178057a0da18.jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "supe_0091_bmp_jpg.rf.c41ab60fce08fb7d25a8187df11a0dd5.jpg",
+        "gt": 1,
+        "pred": 1
+      },
+      {
+        "image": "supe_0094_bmp_jpg.rf.66dd304797eea2854410e8284e9c2a98.jpg",
+        "gt": 10,
+        "pred": 8
+      },
+      {
+        "image": "supe_0098_bmp_jpg.rf.9bc50f2fb4e7648f1bcea660cca0a296.jpg",
+        "gt": 9,
+        "pred": 18
+      }
+    ]
+  },
+  "APCData": {
+    "n_images": 63,
+    "total_gt": 549,
+    "total_pred": 299,
+    "pred_to_gt_ratio": 0.5446,
+    "mean_gt_per_image": 8.714,
+    "mean_pred_per_image": 4.746,
+    "images_with_zero_predictions": 2,
+    "pct_images_with_zero_predictions": 3.2,
+    "images_where_pred_exceeds_gt": 15,
+    "per_image": [
+      {
+        "image": "0008 ASC US C494 19 (2).jpg",
+        "gt": 6,
+        "pred": 7
+      },
+      {
+        "image": "0010 ASC US C554 19 (1).jpg",
+        "gt": 8,
+        "pred": 1
+      },
+      {
+        "image": "0015 ASC US C593 19 (3).jpg",
+        "gt": 5,
+        "pred": 8
+      },
+      {
+        "image": "0057 L SIL C313 19 (4).jpg",
+        "gt": 4,
+        "pred": 2
+      },
+      {
+        "image": "0067 L SIL C630 19 (2).jpg",
+        "gt": 4,
+        "pred": 4
+      },
+      {
+        "image": "0100 L SIL K29126 (3).jpg",
+        "gt": 7,
+        "pred": 3
+      },
+      {
+        "image": "0114 H SIL C329 19 (8).jpg",
+        "gt": 5,
+        "pred": 5
+      },
+      {
+        "image": "0115 H SIL C814 19 (3).jpg",
+        "gt": 4,
+        "pred": 1
+      },
+      {
+        "image": "0123 H SIL C814 19 (11).jpg",
+        "gt": 17,
+        "pred": 2
+      },
+      {
+        "image": "0133 H SIL C1633 19 (9).jpg",
+        "gt": 5,
+        "pred": 1
+      },
+      {
+        "image": "0137 H SIL C1633 19(7).jpg",
+        "gt": 7,
+        "pred": 2
+      },
+      {
+        "image": "0154 ASC H C223 19 (3).jpg",
+        "gt": 3,
+        "pred": 4
+      },
+      {
+        "image": "0163 L SIL C150 19 (1).jpg",
+        "gt": 8,
+        "pred": 9
+      },
+      {
+        "image": "0166 L SIL C150 19 (4).jpg",
+        "gt": 8,
+        "pred": 2
+      },
+      {
+        "image": "0173 L SIL C150 19 (11).jpg",
+        "gt": 8,
+        "pred": 3
+      },
+      {
+        "image": "0175 L SIL C150 19 (13).jpg",
+        "gt": 7,
+        "pred": 8
+      },
+      {
+        "image": "0179 L SIL C150 19 (17).jpg",
+        "gt": 9,
+        "pred": 4
+      },
+      {
+        "image": "0193 L SIL K28897 19 (2).jpg",
+        "gt": 13,
+        "pred": 5
+      },
+      {
+        "image": "0197 H SIL C221 19 (3).jpg",
+        "gt": 5,
+        "pred": 8
+      },
+      {
+        "image": "0206 H SIL C221 19 (12).jpg",
+        "gt": 14,
+        "pred": 8
+      },
+      {
+        "image": "0211 H SIL C221 19 (17).jpg",
+        "gt": 15,
+        "pred": 9
+      },
+      {
+        "image": "0216 HSIL K28788 19 (4).jpg",
+        "gt": 13,
+        "pred": 3
+      },
+      {
+        "image": "0241 ASCUS C219 19 (5).jpg",
+        "gt": 11,
+        "pred": 14
+      },
+      {
+        "image": "0245 ASCUS C3212 19 (2).jpg",
+        "gt": 4,
+        "pred": 4
+      },
+      {
+        "image": "0255 L SIL C071 19 (4).jpg",
+        "gt": 5,
+        "pred": 7
+      },
+      {
+        "image": "0269 HSIL K28576 19 (3).jpg",
+        "gt": 19,
+        "pred": 1
+      },
+      {
+        "image": "0271 HSIL K28576 19 (5).jpg",
+        "gt": 16,
+        "pred": 6
+      },
+      {
+        "image": "0272 HSIL K28576 19 (6).jpg",
+        "gt": 17,
+        "pred": 3
+      },
+      {
+        "image": "0280 LSIL K29322 20 (1).jpg",
+        "gt": 2,
+        "pred": 3
+      },
+      {
+        "image": "0310 ASCUS C335 18 (4).jpg",
+        "gt": 9,
+        "pred": 14
+      },
+      {
+        "image": "0314 ASCUS C335 18 (8).jpg",
+        "gt": 6,
+        "pred": 5
+      },
+      {
+        "image": "0316 ASC H C719 18 (2).jpg",
+        "gt": 6,
+        "pred": 0
+      },
+      {
+        "image": "0320 ASC H C719 18 (6).jpg",
+        "gt": 22,
+        "pred": 5
+      },
+      {
+        "image": "0326 ASC H C719 18 (12).jpg",
+        "gt": 9,
+        "pred": 1
+      },
+      {
+        "image": "0327 ASC H C719 18 (13).jpg",
+        "gt": 6,
+        "pred": 4
+      },
+      {
+        "image": "0334 ASC H C915 18 (4).jpg",
+        "gt": 6,
+        "pred": 6
+      },
+      {
+        "image": "0335 ASC H C915 18 (5).jpg",
+        "gt": 4,
+        "pred": 5
+      },
+      {
+        "image": "0346 ASC H C1108 18 (4).jpg",
+        "gt": 11,
+        "pred": 4
+      },
+      {
+        "image": "0384 L SIL C241 18 (7).jpg",
+        "gt": 3,
+        "pred": 4
+      },
+      {
+        "image": "0385 L SIL C241 18 (8).jpg",
+        "gt": 6,
+        "pred": 6
+      },
+      {
+        "image": "0391 H SIL K 25208 18 (4).jpg",
+        "gt": 8,
+        "pred": 6
+      },
+      {
+        "image": "0396 H SIL K 25208 18 (9).jpg",
+        "gt": 1,
+        "pred": 10
+      },
+      {
+        "image": "0397 H SIL K 25208 18 (10).jpg",
+        "gt": 5,
+        "pred": 2
+      },
+      {
+        "image": "0408 H SIL K 25208 18 (21).jpg",
+        "gt": 8,
+        "pred": 18
+      },
+      {
+        "image": "0453 ASCUS C 1002 18.jpg",
+        "gt": 10,
+        "pred": 13
+      },
+      {
+        "image": "0454 ASCUS K25160 18 (2).jpg",
+        "gt": 15,
+        "pred": 6
+      },
+      {
+        "image": "0456 L SIL C1006 18.jpg",
+        "gt": 12,
+        "pred": 6
+      },
+      {
+        "image": "0463 L SIL K 25652 18(2).jpg",
+        "gt": 5,
+        "pred": 1
+      },
+      {
+        "image": "0465 Carcinoma asse).jpg",
+        "gt": 9,
+        "pred": 1
+      },
+      {
+        "image": "0468 Carcinoma C345 21 (3).jpg",
+        "gt": 19,
+        "pred": 3
+      },
+      {
+        "image": "0473 Carcinoma C345 21 (8).jpg",
+        "gt": 13,
+        "pred": 2
+      },
+      {
+        "image": "0480 Carcinoma C345 21 (15).jpg",
+        "gt": 8,
+        "pred": 2
+      },
+      {
+        "image": "0488 L SIL K28792 19 (3).jpg",
+        "gt": 4,
+        "pred": 1
+      },
+      {
+        "image": "0494 ASCUS K25277 18 (7).jpg",
+        "gt": 6,
+        "pred": 4
+      },
+      {
+        "image": "0497 ASCUS K25712 18(2).jpg",
+        "gt": 6,
+        "pred": 0
+      },
+      {
+        "image": "0532 ASCH K 26177 18 (4).jpg",
+        "gt": 16,
+        "pred": 2
+      },
+      {
+        "image": "0539 ASCH K 26177 18 (11).jpg",
+        "gt": 3,
+        "pred": 3
+      },
+      {
+        "image": "0542 ASCH K 26177 18 (14).jpg",
+        "gt": 9,
+        "pred": 1
+      },
+      {
+        "image": "0543 ASCH K 26177 18 (15).jpg",
+        "gt": 12,
+        "pred": 6
+      },
+      {
+        "image": "0545 ASCH K 26177 18 (17).jpg",
+        "gt": 13,
+        "pred": 4
+      },
+      {
+        "image": "0547 ASCH K 26177 18 (19).jpg",
+        "gt": 7,
+        "pred": 6
+      },
+      {
+        "image": "0559 HSIL K 29023 19 (5).jpg",
+        "gt": 12,
+        "pred": 4
+      },
+      {
+        "image": "0568 HSIL K26955 18 (7).jpg",
+        "gt": 11,
+        "pred": 7
+      }
+    ]
+  }
+}
