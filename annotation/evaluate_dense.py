@@ -45,9 +45,10 @@ def parse_labelstudio_export(json_path: Path, images_dir: Path, out_dir: Path) -
     verified_count = 0
     for task in data:
         # Find image file
-        raw_img_path = task.get("data", {}).get("image", "")
-        # Could be /data/local-files/?d=sipakmed_dense40/images/foo.jpg or local path
-        img_name = Path(raw_img_path.split("=")[-1]).name if "=" in raw_img_path else Path(raw_img_path).name
+        img_name = task.get("data", {}).get("image_name")
+        if not img_name:
+            raw_img_path = task.get("data", {}).get("image", "")
+            img_name = Path(raw_img_path.split("=")[-1]).name if "=" in raw_img_path else Path(raw_img_path).name
         src_img = images_dir / img_name
         if not src_img.exists():
             # Search recursively in dense_eval
