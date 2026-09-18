@@ -123,7 +123,7 @@ def evaluate_models(verified_yaml: Path, conf: float = 0.111, iou_thresh: float 
             continue
         try:
             config.verify_model_checksum(weights_path)
-            cm, names = build_confusion_matrix(str(weights_path), str(verified_yaml), conf=conf)
+            cm, names = build_confusion_matrix(str(weights_path), str(verified_yaml), conf_thresh=conf)
             metrics = class_agnostic_detection_metrics(cm)
             per_class = per_class_precision_recall(cm, names)
 

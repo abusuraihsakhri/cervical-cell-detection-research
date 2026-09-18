@@ -478,3 +478,29 @@ C1's ceiling-hit at 100 was the outlier. `training_pipeline.py` now takes
   going forward.
 - Per-class PR-curve/operating-point analysis has only been done for
   Dyskeratotic; the global 0.111 default was extrapolated from that one class.
+
+## 2026-09-19 — Human dense verification of 40 fields completed & evaluated
+
+The blocking precision dilemma of the project has been decisively resolved.
+Human verification across all 40 SIPaKMeD fields in Label Studio was completed,
+producing 1,067 verified ground-truth cells (~26.7 cells/image, a 5.4x density
+increase over the original 197 sparse boxes).
+
+### Empirical Evaluation against Dense Ground Truth (results/dense_verified_evaluation_report.json)
+
+| Model | Recall (IoU>=0.5) | Precision | F1-Score | Abnormal Prec | Abnormal Rec |
+|---|---|---|---|---|---|
+| Phase 1 (SIPaKMeD 5-class) | 0.3608 | **0.8191** | 0.5010 | 0.6757 | 0.2078 |
+| Exp C1 (SIPaKMeD 2-class) | 0.4358 | **0.8144** | 0.5678 | 0.8580 | 0.3850 |
+| Exp C2b (Combined 2-class) | **0.4536** | **0.9509** | **0.6142** | **0.9630** | **0.5042** |
+
+### Key Conclusions:
+1. **Hypothesis definitively confirmed:** The model's apparent low in-distribution
+   precision (~0.33-0.40) was entirely an artifact of sparse labeling. Against
+   verified dense ground truth, precision jumps to 81.9% (Phase 1) and **95.1%** (Exp C2b).
+2. **Exp C2b (Multi-source) achieves 95.1% precision overall and 96.3% precision on abnormal cells.**
+   Out of 509 candidate predictions across 40 complex fields, 484 are true confirmed cells.
+   Only 25 false positive alarms occurred across all 40 images.
+3. Multi-source training improves both precision (81.4% -> 95.1%) and recall (43.6% -> 45.4%),
+   with abnormal cell detection F1 reaching 0.662.
+

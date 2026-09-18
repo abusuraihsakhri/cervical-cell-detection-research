@@ -1,0 +1,84 @@
+{
+  "conf_threshold": 0.111,
+  "iou_threshold": 0.5,
+  "models": {
+    "Phase 1 (SIPaKMeD 5-class)": {
+      "weights": "models\\best.pt",
+      "class_agnostic": {
+        "precision": 0.8191489361702128,
+        "recall": 0.36082474226804123,
+        "f1": 0.5009759271307743,
+        "matched": 385,
+        "total_gt_boxes": 1067,
+        "total_pred_boxes": 470,
+        "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
+      },
+      "per_class": {
+        "Normal": {
+          "precision": 0.018518518518518517,
+          "recall": 0.00141643059490085,
+          "f1": 0.002631578947368421,
+          "support": 7
+        },
+        "Abnormal": {
+          "precision": 0.6756756756756757,
+          "recall": 0.2077562326869806,
+          "f1": 0.3177966101694915,
+          "support": 120
+        }
+      }
+    },
+    "Exp C1 (SIPaKMeD 2-class)": {
+      "weights": "results\\runs\\expC1_sipakmed_2class\\weights\\best.pt",
+      "class_agnostic": {
+        "precision": 0.8143607705779334,
+        "recall": 0.43580131208997186,
+        "f1": 0.5677655677655676,
+        "matched": 465,
+        "total_gt_boxes": 1067,
+        "total_pred_boxes": 571,
+        "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
+      },
+      "per_class": {
+        "Normal": {
+          "precision": 0.7555012224938875,
+          "recall": 0.4376770538243626,
+          "f1": 0.5542600896860986,
+          "support": 313
+        },
+        "Abnormal": {
+          "precision": 0.8580246913580247,
+          "recall": 0.3850415512465374,
+          "f1": 0.5315487571701721,
+          "support": 152
+        }
+      }
+    },
+    "Exp C2b (Combined 2-class)": {
+      "weights": "results\\runs\\expC2b_combined_150\\weights\\best.pt",
+      "class_agnostic": {
+        "precision": 0.9508840864440079,
+        "recall": 0.4536082474226804,
+        "f1": 0.6142131979695431,
+        "matched": 484,
+        "total_gt_boxes": 1067,
+        "total_pred_boxes": 509,
+        "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
+      },
+      "per_class": {
+        "Normal": {
+          "precision": 0.915625,
+          "recall": 0.415014164305949,
+          "f1": 0.571150097465887,
+          "support": 295
+        },
+        "Abnormal": {
+          "precision": 0.9629629629629629,
+          "recall": 0.5041551246537396,
+          "f1": 0.6618181818181817,
+          "support": 189
+        }
+      }
+    }
+  }
+}

@@ -73,7 +73,9 @@ def get_roboflow_key() -> str:
 KNOWN_WEIGHTS_SHA256 = {
     "yolov8n.pt": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
     "yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
-    "best.pt": "9f6245bf9d80870155c7edcb4292e3f87deb989e30e7fc0499ebf17aac9597e1",
+    "models/best.pt": "9f6245bf9d80870155c7edcb4292e3f87deb989e30e7fc0499ebf17aac9597e1",
+    "expc1_sipakmed_2class/weights/best.pt": "4a68db84841262b6299b1ef5b0b5dc412b69616c5adc0c21aa08c07c2adcda97",
+    "expc2b_combined_150/weights/best.pt": "1d3e0ca25376b9a25b41a93511f063ec8ea22688feff523cdd4569703e59669e",
 }
 
 
@@ -90,16 +92,22 @@ def verify_model_checksum(weights_path: Path | str, expected_sha256: str | None 
     """
     Verify the cryptographic SHA-256 integrity of model weights before loading.
     
-    If expected_sha256 is not explicitly passed, looks up known weights by filename.
+    If expected_sha256 is not explicitly passed, looks up known weights by normalized path ending.
     If enforce=True, raises ValueError on mismatch. Otherwise logs a warning.
     """
     p = Path(weights_path)
     if not is_path_accessible(p):
         return False
 
-    expected = expected_sha256 or KNOWN_WEIGHTS_SHA256.get(p.name)
+    expected = expected_sha256
     if not expected:
-        # Custom or checkpoint weight without a recorded hash
+        norm_str = str(p.resolve()).replace("\\", "/").lower()
+        for k, v in KNOWN_WEIGHTS_SHA256.items():
+            if norm_str.endswith(k.lower()):
+                expected = v
+                break
+    if not expected:
+        # Custom checkpoint without a pre-registered hash
         return True
 
     actual = compute_file_sha256(p)
