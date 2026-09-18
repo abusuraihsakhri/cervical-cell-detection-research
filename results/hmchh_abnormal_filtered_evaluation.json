@@ -1,0 +1,82 @@
+{
+  "dataset_name": "HMCHH-TCT-CellDet (Figshare DOI 10.6084/m9.figshare.27901206)",
+  "images_evaluated": 500,
+  "conf_threshold": 0.111,
+  "models": {
+    "Exp C2b (Combined 2-class)": {
+      "model_name": "Exp C2b (Combined 2-class)",
+      "weights": "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\runs\\expC2b_combined_150\\weights\\best.pt",
+      "total_gt_boxes": 809,
+      "elapsed_seconds": 75.52660799026489,
+      "unfiltered": {
+        "predicted_boxes": 14098,
+        "true_positives": 348,
+        "precision": 0.02468435239040999,
+        "recall": 0.43016069221260816,
+        "f1": 0.046689474743409135
+      },
+      "abnormal_filtered": {
+        "predicted_boxes": 2787,
+        "true_positives": 200,
+        "precision": 0.07176175098672408,
+        "recall": 0.24721878862793573,
+        "f1": 0.11123470522803115
+      },
+      "suppression_analysis": {
+        "normal_detections_suppressed": 11311,
+        "suppression_percentage": 80.23123847354235,
+        "precision_gain_ratio": 2.907175762674816
+      }
+    },
+    "Exp C1 (SIPaKMeD 2-class)": {
+      "model_name": "Exp C1 (SIPaKMeD 2-class)",
+      "weights": "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\runs\\expC1_sipakmed_2class\\weights\\best.pt",
+      "total_gt_boxes": 809,
+      "elapsed_seconds": 68.0395896434784,
+      "unfiltered": {
+        "predicted_boxes": 15570,
+        "true_positives": 390,
+        "precision": 0.025048169556840076,
+        "recall": 0.4820766378244747,
+        "f1": 0.04762195494230417
+      },
+      "abnormal_filtered": {
+        "predicted_boxes": 5345,
+        "true_positives": 263,
+        "precision": 0.04920486435921422,
+        "recall": 0.32509270704573545,
+        "f1": 0.08547286317842054
+      },
+      "suppression_analysis": {
+        "normal_detections_suppressed": 10225,
+        "suppression_percentage": 65.67116249197173,
+        "precision_gain_ratio": 1.9644095848024756
+      }
+    },
+    "Phase 1 (SIPaKMeD 5-class)": {
+      "model_name": "Phase 1 (SIPaKMeD 5-class)",
+      "weights": "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\models\\best.pt",
+      "total_gt_boxes": 809,
+      "elapsed_seconds": 67.53800415992737,
+      "unfiltered": {
+        "predicted_boxes": 12292,
+        "true_positives": 467,
+        "precision": 0.03799219004230394,
+        "recall": 0.5772558714462299,
+        "f1": 0.07129226776581941
+      },
+      "abnormal_filtered": {
+        "predicted_boxes": 2744,
+        "true_positives": 145,
+        "precision": 0.05284256559766764,
+        "recall": 0.1792336217552534,
+        "f1": 0.08162116521249649
+      },
+      "suppression_analysis": {
+        "normal_detections_suppressed": 9548,
+        "suppression_percentage": 77.67653758542141,
+        "precision_gain_ratio": 1.390879692348031
+      }
+    }
+  }
+}

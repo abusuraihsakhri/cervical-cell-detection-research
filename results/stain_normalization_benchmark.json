@@ -1,0 +1,94 @@
+{
+  "method": "Reinhard CIELAB Color Transfer",
+  "noise_floor_reference": 0.03,
+  "results": {
+    "Exp C1 (SIPaKMeD 2-class)": {
+      "APCData": {
+        "raw": {
+          "total_gt": 549,
+          "total_pred": 375,
+          "tp": 132,
+          "precision": 0.352,
+          "recall": 0.24043715846994534,
+          "f1": 0.28571428571428575
+        },
+        "normalized": {
+          "total_gt": 549,
+          "total_pred": 351,
+          "tp": 155,
+          "precision": 0.4415954415954416,
+          "recall": 0.28233151183970856,
+          "f1": 0.34444444444444444
+        },
+        "delta_recall": 0.041894353369763215,
+        "delta_f1": 0.05873015873015869,
+        "significant_improvement": true
+      },
+      "SIPaKMeD_Dense": {
+        "raw": {
+          "total_gt": 1067,
+          "total_pred": 571,
+          "tp": 465,
+          "precision": 0.8143607705779334,
+          "recall": 0.43580131208997186,
+          "f1": 0.5677655677655676
+        },
+        "normalized": {
+          "total_gt": 1067,
+          "total_pred": 535,
+          "tp": 418,
+          "precision": 0.7813084112149533,
+          "recall": 0.3917525773195876,
+          "f1": 0.5218476903870163
+        },
+        "delta_recall": -0.044048734770384235,
+        "delta_f1": -0.04591787737855135,
+        "significant_improvement": false
+      }
+    },
+    "Exp C2b (Combined 2-class)": {
+      "APCData": {
+        "raw": {
+          "total_gt": 549,
+          "total_pred": 1130,
+          "tp": 469,
+          "precision": 0.4150442477876106,
+          "recall": 0.8542805100182149,
+          "f1": 0.5586658725431805
+        },
+        "normalized": {
+          "total_gt": 549,
+          "total_pred": 714,
+          "tp": 341,
+          "precision": 0.47759103641456585,
+          "recall": 0.6211293260473588,
+          "f1": 0.5399841646872526
+        },
+        "delta_recall": -0.2331511839708561,
+        "delta_f1": -0.01868170785592782,
+        "significant_improvement": false
+      },
+      "SIPaKMeD_Dense": {
+        "raw": {
+          "total_gt": 1067,
+          "total_pred": 509,
+          "tp": 484,
+          "precision": 0.9508840864440079,
+          "recall": 0.4536082474226804,
+          "f1": 0.6142131979695431
+        },
+        "normalized": {
+          "total_gt": 1067,
+          "total_pred": 413,
+          "tp": 366,
+          "precision": 0.8861985472154964,
+          "recall": 0.3430178069353327,
+          "f1": 0.49459459459459454
+        },
+        "delta_recall": -0.11059044048734773,
+        "delta_f1": -0.11961860337494856,
+        "significant_improvement": false
+      }
+    }
+  }
+}
