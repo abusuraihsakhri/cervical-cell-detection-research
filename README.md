@@ -103,14 +103,15 @@ python publication/scripts/verify_release.py
 
 ---
 
-## 📜 Publication Package & Artifacts
+## 📜 Research Package & Open Artifacts
 
-- `publication/manuscript/`: Manuscript markdown and compiled Word documents.
-- `publication/supplementary/`: Supplementary materials, statistical methods, and proof of overlap.
+> **Note:** The full manuscript and supplementary appendix are currently in preparation for formal peer review and journal submission. The open research artifacts, code, checkpoints, and benchmark evidence are structured as follows:
+
 - `publication/figures/`: High-resolution vector PDF and PNG figures (Figures 1–4, Figure S1).
 - `publication/tables/`: Complete numerical tables in CSV format (Tables 1–3, Tables S2–S7).
 - `publication/weights/`: Certified PyTorch `.pt` checkpoints, args.yaml, and training summaries.
 - `publication/reproducibility/`: Automated audit reports, data manifests, and SHA-256 sums.
+- `publication/code/`: Complete data preparation, training, evaluation, and visualization scripts.
 
 ---
 

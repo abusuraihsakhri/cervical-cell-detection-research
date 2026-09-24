@@ -67,7 +67,7 @@ def main():
     for label in labels.glob('*.txt'):
         copy(label, PUB / 'reproducibility/dense_reference_labels' / label.name)
     files = [p for p in sorted(PUB.rglob('*')) if p.is_file() and p.name != 'SHA256SUMS.txt'
-             and '__pycache__' not in p.parts]
+             and '__pycache__' not in p.parts and 'manuscript' not in p.parts and 'supplementary' not in p.parts]
     names = [str(p.relative_to(PUB)).replace('\\', '/') for p in files]
     images = [n for n in names if n.lower().endswith(('.jpg', '.jpeg', '.bmp')) or
               (n.lower().endswith('.png') and not n.startswith('figures/'))]

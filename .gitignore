@@ -34,6 +34,11 @@ publication/reproducibility/overlap_calibration/
 results/research_v3/field_overlap.json
 publication/reproducibility/field_overlap.json
 
+# Unpublished manuscript and supplementary drafts (protected prior to formal publication)
+publication/manuscript/
+publication/supplementary/*.docx
+publication/supplementary/*.md
+
 # Checkpoints & Weights safeguard:
 # Block untracked exploratory / temporary checkpoints, but explicitly PRESERVE all
 # canonical research publication weights and baselines so they are NEVER lost on git push.

@@ -31,7 +31,7 @@
         <a href="#study">Study</a>
         <a href="#findings">Findings</a>
         <a href="#evidence">Visual Evidence</a>
-        <a href="#documents">Publications</a>
+        <a href="#concepts">Concepts</a>
         <a href="#checkpoints">Model Weights</a>
         <a href="#performance">Table 2 Data</a>
       </nav>
@@ -64,8 +64,8 @@
               <span>Explore Visual Evidence (11)</span>
               <span aria-hidden="true">→</span>
             </a>
-            <a class="btn btn-secondary" href="#documents">
-              <span>Read Manuscripts</span>
+            <a class="btn btn-secondary" href="#concepts">
+              <span>Study Concepts</span>
               <span aria-hidden="true">↓</span>
             </a>
             <a class="btn btn-secondary" href="#checkpoints">
@@ -527,68 +527,68 @@
       </div>
     </div>
 
-    <!-- Research Documents & Publication Chamber -->
-    <section class="section wrap" id="documents" aria-labelledby="docs-heading">
+    <!-- Core Research Concepts & Study Architecture -->
+    <section class="section wrap" id="concepts" aria-labelledby="concepts-heading">
       <div class="section-head">
-        <h2 id="docs-heading">Research Publications & Archival Documents</h2>
+        <h2 id="concepts-heading">Core Research Concepts & Study Architecture</h2>
         <p class="section-desc">
-          Every manuscript, protocol document, independent ground-truth attestation, and cryptographic verification suite is packaged in open formats (.md, .docx, .json) for peer review and replication.
+          The full scientific manuscript and supplementary appendix are currently in preparation for formal peer-reviewed publication. Below is an overview of the core concepts, study design, independent attestations, and security audit reports.
         </p>
       </div>
 
       <div class="documents-grid">
-        <!-- Manuscript Card -->
+        <!-- Concepts Card -->
         <article class="document-sheet-card">
           <div>
             <div class="doc-sheet-header">
-              <span class="doc-sheet-type">Primary Research Manuscript</span>
-              <span class="doc-sheet-badge">Peer-Review Ready</span>
+              <span class="doc-sheet-type">Theoretical Framework</span>
+              <span class="doc-sheet-badge">Manuscript in Preparation</span>
             </div>
-            <h3>An Empirical Cytopathology Study of Deep Learning Object Detectors for Cervical Smear Screening Under Real-World Data Scarcity and Artifact Constraints</h3>
+            <h3>Empirical Cytopathology Study: Field Overlap, Reference Incompleteness & Generalization</h3>
             <p class="doc-abstract-preview">
-              <strong>Abstract:</strong> Automated screening algorithms for cervical liquid-based cytology and conventional smears frequently report high precision and recall on public benchmarks. Here we show that standard evaluation protocols suffer from three hidden vulnerabilities: microscope field overlap across splits, severe metric distortion from unannotated reference cells, and low cross-center transfer.
+              <strong>Conceptual Overview:</strong> Automated screening algorithms for cervical liquid-based cytology and conventional smears frequently report high precision and recall on public benchmarks. This study investigates how microscope field overlap, incomplete reference annotations, and label conversion assumptions alter the measured performance of lightweight object detectors across multi-center datasets.
             </p>
             <ul class="doc-sections-list">
-              <li>Section 1: The Microscope Field Overlap Fallacy</li>
-              <li>Section 2: Connected-Component Partitioning of 791 Field Pairs</li>
-              <li>Section 3: Dense Human Reference of 1,067 Verified Cells</li>
-              <li>Section 4: Cross-Center Generalization on 1,077 HMCHH Fields</li>
+              <li>Microscope Field Overlap Fallacy: 791 field pairs identified & grouped</li>
+              <li>Sparse vs. Dense Reference: 1,067 cells human-verified to expose penalty errors</li>
+              <li>Decoupled Operating Points: Thresholds frozen on separate development fields</li>
+              <li>External Generalization: 1,077 multi-center HMCHH slides tested</li>
             </ul>
           </div>
           <div class="doc-actions-row">
-            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/cervical-cell-detection-research/blob/main/publication/manuscript/manuscript.md" target="_blank" rel="noopener">
-              <span>Read Manuscript (Markdown) ↗</span>
+            <a class="btn btn-primary btn-sm" href="#findings">
+              <span>Explore Findings & Analysis →</span>
             </a>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/cervical-cell-detection-research/raw/main/publication/manuscript/manuscript.docx" target="_blank" rel="noopener">
-              <span>Download DOCX (38 KB) ↓</span>
+            <a class="btn btn-secondary btn-sm" href="#performance">
+              <span>Inspect Table 2 Data ↓</span>
             </a>
           </div>
         </article>
 
-        <!-- Supplementary Appendix Card -->
+        <!-- Methodological Protocol Card -->
         <article class="document-sheet-card">
           <div>
             <div class="doc-sheet-header">
-              <span class="doc-sheet-type">Supplementary Appendix</span>
-              <span class="doc-sheet-badge">Tables S1–S7 & Protocols</span>
+              <span class="doc-sheet-type">Methodological Protocol</span>
+              <span class="doc-sheet-badge">Protocols in Preparation</span>
             </div>
-            <h3>Supplementary Materials & Methodological Appendix</h3>
+            <h3>Mathematical Foundations & Quality Control Protocols</h3>
             <p class="doc-abstract-preview">
-              <strong>Overview:</strong> Contains complete empirical registers: full dataset distributions (Table S1), sparse heldout tests (Table S2), sparse versus dense reference comparison (Table S3), confidence calibration metrics (Table S4), seed-to-seed variability audits (Table S6), and algorithmic stain normalization sensitivity sweeps (Table S7).
+              <strong>Methodological Overview:</strong> Details the mathematical formulation of normalized cross-correlation (NCC $\ge 0.90$) for overlap detection, 64-bit dHash perceptual screening (Hamming $\le 4$), 95% cluster bootstrap resampling over microscope fields, and post-hoc temperature scaling calibration.
             </p>
             <ul class="doc-sections-list">
               <li>Mathematical formulations of Normalized Cross-Correlation (NCC)</li>
               <li>Connected-component partition definitions & hash tables</li>
-              <li>Temperature scaling calibration parameters</li>
               <li>Cluster bootstrap confidence interval calculation methods</li>
+              <li>Post-hoc temperature scaling calibration bringing ECE &lt; 0.05</li>
             </ul>
           </div>
           <div class="doc-actions-row">
-            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/cervical-cell-detection-research/blob/main/publication/supplementary/supplementary_material.md" target="_blank" rel="noopener">
-              <span>Read Supplementary (MD) ↗</span>
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/cervical-cell-detection-research/blob/main/publication/reproducibility/data_manifest.json" target="_blank" rel="noopener">
+              <span>View Data Manifest (JSON) ↗</span>
             </a>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/cervical-cell-detection-research/raw/main/publication/supplementary/supplementary_material.docx" target="_blank" rel="noopener">
-              <span>Download DOCX (297 KB) ↓</span>
+            <a class="btn btn-secondary btn-sm" href="#evidence">
+              <span>Inspect Visual Exhibits →</span>
             </a>
           </div>
         </article>
