@@ -1,4 +1,4 @@
-# Cervical Cell Detection Research: Retrospective Evaluation & Reproducibility
+# Cervical Smear Cell Detection Research: Retrospective Evaluation & Reproducibility
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Research%20Site-14685e?style=flat&logo=github)](https://abusuraihsakhri.github.io/cervical-cell-detection-research/)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)

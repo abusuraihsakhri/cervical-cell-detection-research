@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#fbfbfa">
   <meta name="description" content="A retrospective empirical cytopathology study of deep learning cervical-cell detectors: microscope field overlap mitigation, dense vs sparse reference, and cross-dataset evaluation. Complete code, evidence gallery, manuscripts, and certified model checkpoints.">
   <meta name="author" content="abusuraihsakhri">
-  <meta property="og:title" content="Cervical Cell Detection Research | Evidence Portal & Model Weights">
+  <meta property="og:title" content="Cervical Smear Cell Detection Research | Evidence Portal & Model Weights">
   <meta property="og:description" content="Empirical cytopathology study of deep learning cervical-cell detectors under real-world data scarcity and artifact constraints.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abusuraihsakhri.github.io/cervical-cell-detection-research/">
-  <title>Cervical Cell Detection Research | Retrospective Multi-Source Evaluation & Certified Model Weights</title>
+  <title>Cervical Smear Cell Detection Research | Retrospective Multi-Source Evaluation & Certified Model Weights</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -21,15 +21,16 @@
   <header class="site-header">
     <div class="wrap-wide header-inner">
       <div class="brand-group">
-        <a class="wordmark" href="#top" aria-label="Cervical cell detection research, back to top">
+        <a class="wordmark" href="#top" aria-label="Cervical smear cell detection research, back to top">
           <span class="mark-symbol" aria-hidden="true">◎</span>
-          <span>Cell Detection Research</span>
+          <span>Cervical Smear Cell Detection Research</span>
         </a>
       </div>
 
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#study">Study</a>
         <a href="#findings">Findings</a>
+        <a href="#progress">Progress &amp; Inferences</a>
         <a href="#evidence">Visual Evidence</a>
         <a href="#concepts">Concepts</a>
         <a href="#checkpoints">Model Weights</a>
@@ -226,8 +227,165 @@
       </div>
     </section>
 
+    <!-- Research Evolution: Methodological Progress & Core Inferences -->
+    <section class="section section-band" id="progress" aria-labelledby="progress-title">
+      <div class="wrap-wide">
+        <div class="section-head centered">
+          <h2 id="progress-title">Methodological Progress &amp; Core Empirical Inferences</h2>
+          <p class="section-desc">
+            How auditing the initial baseline exposed latent dataset leakage and sparse reference penalties, and the resulting four scientific inferences that redefine how cervical cytopathology object detectors must be validated.
+          </p>
+        </div>
+
+        <!-- 4 Methodological Evolution Cards -->
+        <div class="evolution-grid">
+          <!-- Milestone 01 -->
+          <article class="evolution-card">
+            <span class="evolution-phase">Milestone 01 · Data Split Leakage</span>
+            <h3>From Filename Splitting to Connected-Component Partitions</h3>
+            <p>
+              Initial cytology baselines split images at random by filename, assuming distinct filenames represented distinct specimens. Cross-correlation analysis revealed 791 heavily overlapping field pairs (&ge; 0.90 normalized cross-correlation), causing 10 out of 20 evaluation fields to leak into training.
+            </p>
+            <div class="evolution-vs">
+              <div class="evolution-col before">
+                <strong>Before (Baseline Flaw)</strong>
+                Naive 80/20 filename split leaked identical cell clusters across train and test sets, inflating apparent validation accuracy.
+              </div>
+              <div class="evolution-col after">
+                <strong>After (Rigorous Protocol)</strong>
+                Graph connected-component partitioning grouped all overlapping fields into strict disjoint components before any split.
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 02 -->
+          <article class="evolution-card">
+            <span class="evolution-phase">Milestone 02 · Ground-Truth Reference</span>
+            <h3>From Sparse Benchmark Penalties to 1,067-Cell Dense Human Attestation</h3>
+            <p>
+              Standard benchmark annotations labeled only 1–3 salient cells per field. Model predictions for unannotated true squamous cells were penalized as false positives, distorting baseline precision down to 20.4–45.7%.
+            </p>
+            <div class="evolution-vs">
+              <div class="evolution-col before">
+                <strong>Before (Sparse Artifact)</strong>
+                Evaluating against sparse ground truth produced an artificial 20.4% precision ceiling due to unannotated true cells.
+              </div>
+              <div class="evolution-col after">
+                <strong>After (Dense Attestation)</strong>
+                Label Studio re-annotation of 40 evaluation fields (1,067 cells: 706 normal, 361 abnormal) restored true precision to 52.4–87.1%.
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 03 -->
+          <article class="evolution-card">
+            <span class="evolution-phase">Milestone 03 · Threshold Optimization</span>
+            <h3>From In-Sample Peeking to Decoupled Operating Thresholds</h3>
+            <p>
+              Prior workflows peeked at test set precision-recall curves to report optimal confidence thresholds. We decoupled the protocol: confidence thresholds are tuned strictly on 20 development fields and frozen before evaluating test sets.
+            </p>
+            <div class="evolution-vs">
+              <div class="evolution-col before">
+                <strong>Before (In-Sample Peeking)</strong>
+                Post-hoc threshold hunting on test fields generated overly optimistic precision-recall operating points.
+              </div>
+              <div class="evolution-col after">
+                <strong>After (Frozen Decoupled)</strong>
+                Operating threshold frozen at 0.08 on 20 dev fields; tested blindly against 20 reserved fields and 1,077 external HMCHH fields.
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 04 -->
+          <article class="evolution-card">
+            <span class="evolution-phase">Milestone 04 · Artifact Integrity</span>
+            <h3>From Vulnerable Checkpoints to Cryptographic Integrity Vault</h3>
+            <p>
+              Raw PyTorch checkpoints posed remote code execution (RCE) deserialization risks and silent weight degradation. We implemented automated SHA-256 seal verification, strict torch.serialization checks, and git LFS tracking.
+            </p>
+            <div class="evolution-vs">
+              <div class="evolution-col before">
+                <strong>Before (Unverified Serialization)</strong>
+                Vulnerable pickle loading, untracked large weights at risk of silent loss or truncation during repo transfers.
+              </div>
+              <div class="evolution-col after">
+                <strong>After (Audited Model Vault)</strong>
+                9 verified weights tracked in publication vault, verified via automated <code>verify_weights.py</code> SHA-256 integrity suite.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4 Core Empirical Inferences -->
+        <div class="section-head centered" style="margin-top: 56px; margin-bottom: 28px;">
+          <h2 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">Four Empirical Inferences for Cervical Cytopathology AI</h2>
+          <p class="section-desc" style="max-width: 680px;">
+            Key scientific takeaways establishing empirical realities of deep learning object detectors in automated cervical smear screening.
+          </p>
+        </div>
+
+        <div class="inference-matrix">
+          <!-- Inference 01 -->
+          <article class="inference-card">
+            <span class="inference-tag">Inference 01 · Annotation Completeness</span>
+            <h3>High Benchmark Precision is Frequently an Artifact of Incomplete Labels</h3>
+            <div class="inference-quote">
+              "When reference annotations are incomplete, standard object detection metrics evaluate false negative annotations as false positive predictions."
+            </div>
+            <p>
+              Our multi-seed experiments prove that evaluating detectors against native sparse annotations causes up to a 50 percentage point collapse in apparent abnormal precision (52.4% vs 20.4%). Academic claims of poor precision in published literature often reflect benchmark ground-truth incompleteness rather than model failure.
+            </p>
+          </article>
+
+          <!-- Inference 02 -->
+          <article class="inference-card">
+            <span class="inference-tag">Inference 02 · Domain Shift</span>
+            <h3>Co-Training Heterogeneous Datasets Does Not Resolve Cross-Center Shift</h3>
+            <div class="inference-quote">
+              "Pooling multi-source training data improves intra-domain diversity but fails to bridge clinical preparation divergence across centers."
+            </div>
+            <p>
+              Adding APCData to SIPaKMeD training sets yielded modest intra-domain gains, but external evaluation on 1,077 HMCHH slides revealed severely impaired generalization: abnormal recall remained between 20.8% and 51.8%, while reference-matched precision collapsed to 3.8%–6.7%. Institutional staining variance remains the primary deployment bottleneck.
+            </p>
+          </article>
+
+          <!-- Inference 03 -->
+          <article class="inference-card">
+            <span class="inference-tag">Inference 03 · Spatial Overlap</span>
+            <h3>Digital Microscopy Datasets Harbor Severe Latent Field Duplication</h3>
+            <div class="inference-quote">
+              "Microscope field overlap invalidates random train-test splitting unless explicitly resolved through spatial correlation clustering."
+            </div>
+            <p>
+              In SIPaKMeD, 791 field pairs shared &ge; 90% normalized cross-correlation. Naive splitting placed identical cell clusters in both training and test sets. Rigorous spatial de-duplication is an absolute prerequisite for credible performance claims in digitized microscopy.
+            </p>
+          </article>
+
+          <!-- Inference 04 -->
+          <article class="inference-card">
+            <span class="inference-tag">Inference 04 · Stain Normalization</span>
+            <h3>Algorithmic Stain Transfer is Sensitive to Reference Slide Selection</h3>
+            <div class="inference-quote">
+              "Stain normalization algorithms (Reinhard, Macenko, Vahadane) alter detector activations unpredictably depending on target reference choice."
+            </div>
+            <p>
+              Evaluating cross-center transfer under chromatic normalization showed that target reference selection introduces substantial variance in abnormal sensitivity. Uncalibrated color transfer cannot substitute for domain-adversarial representations or localized cytologist-in-the-loop screening.
+            </p>
+          </article>
+        </div>
+
+        <!-- Editorial Callout -->
+        <div class="editorial-callout">
+          <h3>The Clinical Translation Imperative</h3>
+          <p>
+            Autonomous diagnostic screening cannot rely on standard academic benchmark metrics without rigorous field deduplication, dense expert verification, and decoupled operating calibration. This research repository provides the full reproducibility codebase, audit tools, and certified weights to advance reproducible standards in digital cytopathology.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Interactive Scientific Evidence & Microscopy Explorer -->
-    <section class="section section-band" id="evidence" aria-labelledby="evidence-title">
+    <section class="section wrap-wide" id="evidence" aria-labelledby="evidence-title">
       <div class="wrap-wide">
         <div class="section-head centered">
           <h2 id="evidence-title">Visual Evidence & Microscopy Explorer</h2>
@@ -952,7 +1110,7 @@ python publication/scripts/verify_release.py</code></pre>
   <footer class="site-footer">
     <div class="wrap-wide footer-inner">
       <div>
-        <strong>Cell Detection Research · Retrospective Study</strong>
+        <strong>Cervical Smear Cell Detection Research · Retrospective Study</strong>
         <p style="margin:4px 0 0; font-size:0.84rem; color:var(--color-ink-subtle);">
           Sole Author & Maintainer: abusuraihsakhri &lt;abusuraihsakhri@gmail.com&gt;
         </p>
