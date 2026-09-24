@@ -1,6 +1,6 @@
 # Cervical Cell Detection Research: Retrospective Evaluation & Reproducibility
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Research%20Site-14685e?style=flat&logo=github)](https://abusuraihsakhri.github.io/pap-smear-cyto-algo/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Research%20Site-14685e?style=flat&logo=github)](https://abusuraihsakhri.github.io/cervical-cell-detection-research/)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Release Verification](https://img.shields.io/badge/Verification-29%2F29%20PASS-success)](publication/reproducibility/release_verification.json)
 [![Weights Integrity](https://img.shields.io/badge/Model%20Weights-SHA--256%20Certified-blue)](publication/weights/WEIGHTS_MANIFEST.json)
@@ -13,7 +13,7 @@
 
 An interactive, editorial presentation of this research project, including interactive figure viewers, full metrics tables, and direct checkpoint download cards, is hosted on GitHub Pages:
 
-👉 **[https://abusuraihsakhri.github.io/pap-smear-cyto-algo/](https://abusuraihsakhri.github.io/pap-smear-cyto-algo/)** (source in `docs/`)
+👉 **[https://abusuraihsakhri.github.io/cervical-cell-detection-research/](https://abusuraihsakhri.github.io/cervical-cell-detection-research/)** (source in `docs/`)
 
 ---
 

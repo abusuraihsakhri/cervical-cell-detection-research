@@ -14,7 +14,7 @@ Download the public sources and place them as follows:
 |---|---|
 | SIPaKMeD derivative (Roboflow export, YOLO polygon format) | `data/sipakmed/mirror_a/{train,valid}` |
 | APCData V1, YOLO labels (doi:10.17632/ytd568rh3p.1) | `data/apcdata/APCData cervical cytology cells/`, then `python prepare_apcdata.py` |
-| HMCHH-TCT-CellDet (doi:10.6084/m9.figshare.27901206) | images and XML under `D:/pap_model/` (edit paths in `prepare_hmchh.py` and `prepare_hmchh_abnormal_reference.py`) |
+| HMCHH-TCT-CellDet (doi:10.6084/m9.figshare.27901206) | images and XML placed in `data/hmchh/` (configured in `prepare_hmchh.py`) |
 | Dense reference (40 fields) | `data/dense_eval/sipakmed_dense40_verified/` rebuilt from the released Label Studio export with `annotation/evaluate_dense.py` |
 
 `reproducibility/data_manifest.json` lists every field with its SHA-256, so you can confirm that your downloads match ours.

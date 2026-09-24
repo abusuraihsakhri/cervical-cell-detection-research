@@ -30,7 +30,7 @@ CODE = ['config.py', '_logging_setup.py', 'training_pipeline.py', 'prepare_apcda
         'publication/scripts/build_docx.py', 'publication/scripts/assemble_package.py',
         'publication/scripts/run_pipeline_v3.sh']
 EVIDENCE = ['evaluation_protocol.json', 'analysis_protocol.json', 'protocol.json', 'data_manifest.json',
-            'dense_split.json', 'field_overlap.json', 'overlap_photometric.json', 'hmchh_reference_summary.json',
+            'dense_split.json', 'field_overlap.json.gz', 'overlap_photometric.json', 'hmchh_reference_summary.json',
             'training_status.json']
 RESULTS = ['evaluation_summary.json', 'paired_seed_comparisons.json', 'stain_reference_sensitivity.json']
 

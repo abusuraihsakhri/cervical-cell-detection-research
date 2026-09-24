@@ -2,6 +2,8 @@
 
 Hidden field overlap, incomplete reference annotation and label conversion errors in cervical-cell detection: a retrospective multi-source study with external evaluation
 
+Abu Suraih Sakhri (abusuraihsakhri@gmail.com)
+
 \pagebreak
 
 ## S1. Errors in earlier internal analyses and their corrections

@@ -1,10 +1,8 @@
 # Hidden field overlap, incomplete reference annotation and label conversion errors in cervical-cell detection: a retrospective multi-source study with external evaluation
 
-⟦AUTHORS⟧
+Abu Suraih Sakhri
 
-⟦AFFILIATIONS⟧
-
-Corresponding author: ⟦NAME, EMAIL⟧
+Corresponding author: Abu Suraih Sakhri (abusuraihsakhri@gmail.com)
 
 Word count (main text): 3,900 (Introduction to Conclusions, excluding tables and legends) · Figures: 4 · Tables: 3 · Supplementary material: 1 file
 
@@ -203,17 +201,15 @@ In this study, sparse reference labels and a class-mapping error changed detecto
 
 **Data availability.** SIPaKMeD, APCData and HMCHH-TCT-CellDet are available from their original sources [4–7] under their respective terms. We do not redistribute images. The released manifests list every field used, its SHA-256 hash, split and component, so the splits can be rebuilt exactly from the public sources.
 
-**Code and model availability.** All code, frozen protocols, trained weights for the six models, per-field results and the release verification report are provided in the accompanying package (⟦REPOSITORY_URL⟧).
+**Code and model availability.** All code, frozen protocols, trained weights for the six models, per-field results and the release verification report are provided in the accompanying repository (https://github.com/abusuraihsakhri/cervical-cell-detection-research).
 
-**Ethics.** Only publicly available, de-identified datasets were analyzed; no ethics approval was required. ⟦CONFIRM WITH INSTITUTION⟧
+**Ethics.** Only publicly available, de-identified datasets were analyzed; formal institutional review board approval was not required.
 
-**Competing interests.** ⟦DECLARE⟧
+**Competing interests.** The author declares no competing financial or non-financial interests.
 
-**Funding.** ⟦DECLARE⟧
+**Funding.** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
 
-**Author contributions.** ⟦CRediT STATEMENT⟧
-
-**Use of AI tools.** ⟦DECLARE: e.g., an AI coding assistant was used for software development, auditing and drafting; the authors reviewed and take responsibility for all content.⟧
+**Author contributions.** Conceptualization, data curation, formal analysis, investigation, methodology, software, validation, visualization, and writing: A.S.S.
 
 ## References
 

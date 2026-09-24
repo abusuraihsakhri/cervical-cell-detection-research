@@ -1,6 +1,6 @@
 {
   "manifest_version": "1.0",
-  "project": "pap-smear-cyto-algo",
+  "project": "cervical-cell-detection-research",
   "description": "Cryptographic weights manifest protecting all trained PyTorch model checkpoints against loss, omission, or corruption",
   "verification_algorithm": "SHA-256",
   "checkpoints": [
