@@ -90,5 +90,7 @@
         "significant_improvement": false
       }
     }
-  }
+  },
+  "_audit_status": "SUPERSEDED: historical result; see Critical_Audit_2026-09-19.md and research_v2. Do not cite as corrected validation.",
+  "_historical_archive": "results\\archive_before_corrections_20260919\\stain_normalization_benchmark.json"
 }

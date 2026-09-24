@@ -1,0 +1,639 @@
+{
+  "status": "Secondary post hoc descriptive analysis; same predictions and thresholds, only the reference differs.",
+  "reference_cells": {
+    "earlier": 2054,
+    "corrected": 1837
+  },
+  "models": {
+    "v3_sipakmed_only_seed17": {
+      "threshold": 0.06,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.019479148674842153,
+          "localization_recall": 0.49415774099318405,
+          "localization_f1": 0.03748084414984952,
+          "abnormal_precision": 0.042069102857711836,
+          "abnormal_recall": 0.41139240506329117,
+          "abnormal_f1": 0.07633242999096658,
+          "abnormal_false_detections_per_field": 17.865366759517176
+        },
+        "counts": {
+          "localization_tp": 1015,
+          "predictions": 52107,
+          "reference_cells": 2054,
+          "abnormal_tp": 845,
+          "abnormal_predictions": 20086,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.0154746084862609,
+            0.02364762776368078
+          ],
+          "localization_recall": [
+            0.3937589088669018,
+            0.5876584583632629
+          ],
+          "localization_f1": [
+            0.029898302484813597,
+            0.045247493360097334
+          ],
+          "abnormal_precision": [
+            0.033508146081158874,
+            0.051821505230339016
+          ],
+          "abnormal_recall": [
+            0.3240722844186035,
+            0.4936106375094005
+          ],
+          "abnormal_f1": [
+            0.061525720182767966,
+            0.09209896533666738
+          ],
+          "abnormal_false_detections_per_field": [
+            14.50681422076282,
+            21.83901195534533
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.019632678910702975,
+          "localization_recall": 0.5568862275449101,
+          "localization_f1": 0.03792822185970636,
+          "abnormal_precision": 0.04306482126854526,
+          "abnormal_recall": 0.4708764289602613,
+          "abnormal_f1": 0.07891255758792136,
+          "abnormal_false_detections_per_field": 17.846796657381617
+        },
+        "counts": {
+          "localization_tp": 1023,
+          "predictions": 52107,
+          "reference_cells": 1837,
+          "abnormal_tp": 865,
+          "abnormal_predictions": 20086,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.015704757280417737,
+            0.023854734286808843
+          ],
+          "localization_recall": [
+            0.4821488714593437,
+            0.6334819266039721
+          ],
+          "localization_f1": [
+            0.030482003894770626,
+            0.04592142666853927
+          ],
+          "abnormal_precision": [
+            0.03387788234961859,
+            0.053983837893008056
+          ],
+          "abnormal_recall": [
+            0.41331696377960364,
+            0.5249915003921376
+          ],
+          "abnormal_f1": [
+            0.06306087571809026,
+            0.09678121227965378
+          ],
+          "abnormal_false_detections_per_field": [
+            14.484390867261073,
+            21.866409009321984
+          ]
+        }
+      }
+    },
+    "v3_combined_seed17": {
+      "threshold": 0.08,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.01909043748919246,
+          "localization_recall": 0.5374878286270691,
+          "localization_f1": 0.036871284483334446,
+          "abnormal_precision": 0.06457076320525035,
+          "abnormal_recall": 0.29698149951314506,
+          "abnormal_f1": 0.10607773237109816,
+          "abnormal_false_detections_per_field": 8.205199628597958
+        },
+        "counts": {
+          "localization_tp": 1104,
+          "predictions": 57830,
+          "reference_cells": 2054,
+          "abnormal_tp": 610,
+          "abnormal_predictions": 9447,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.014647538498318813,
+            0.024070207684952993
+          ],
+          "localization_recall": [
+            0.4300910954901029,
+            0.6431420302206321
+          ],
+          "localization_f1": [
+            0.028500307870405618,
+            0.046219014721126266
+          ],
+          "abnormal_precision": [
+            0.051379181191735575,
+            0.08209509442395799
+          ],
+          "abnormal_recall": [
+            0.22014459817364196,
+            0.38261525459627144
+          ],
+          "abnormal_f1": [
+            0.08659117569159465,
+            0.13004660759743833
+          ],
+          "abnormal_false_detections_per_field": [
+            5.8944864770596865,
+            10.628541627663857
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.01888293273387515,
+          "localization_recall": 0.5944474686989657,
+          "localization_f1": 0.0366031474684499,
+          "abnormal_precision": 0.06711125224939134,
+          "abnormal_recall": 0.3451279259662493,
+          "abnormal_f1": 0.11237149946827366,
+          "abnormal_false_detections_per_field": 8.182915506035283
+        },
+        "counts": {
+          "localization_tp": 1092,
+          "predictions": 57830,
+          "reference_cells": 1837,
+          "abnormal_tp": 634,
+          "abnormal_predictions": 9447,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.014855194858186899,
+            0.02349168170343639
+          ],
+          "localization_recall": [
+            0.5063102888931018,
+            0.6874469558331996
+          ],
+          "localization_f1": [
+            0.02890187605169459,
+            0.045239089649196554
+          ],
+          "abnormal_precision": [
+            0.053783233249177935,
+            0.08570022758630035
+          ],
+          "abnormal_recall": [
+            0.27413527727806664,
+            0.42304365694914936
+          ],
+          "abnormal_f1": [
+            0.09295429006096305,
+            0.1360665788458472
+          ],
+          "abnormal_false_detections_per_field": [
+            5.865188092241195,
+            10.58923754189702
+          ]
+        }
+      }
+    },
+    "v3_sipakmed_only_seed43": {
+      "threshold": 0.14,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.020707487723262787,
+          "localization_recall": 0.46397273612463485,
+          "localization_f1": 0.03964556119477494,
+          "abnormal_precision": 0.03761533002129169,
+          "abnormal_recall": 0.30963972736124634,
+          "abnormal_f1": 0.06708153148402067,
+          "abnormal_false_detections_per_field": 15.108635097493035
+        },
+        "counts": {
+          "localization_tp": 953,
+          "predictions": 46022,
+          "reference_cells": 2054,
+          "abnormal_tp": 636,
+          "abnormal_predictions": 16908,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.01631520426995034,
+            0.025350646428450356
+          ],
+          "localization_recall": [
+            0.3657719856993818,
+            0.5597802741027603
+          ],
+          "localization_f1": [
+            0.03143789635235465,
+            0.04839703665427952
+          ],
+          "abnormal_precision": [
+            0.029065085244308366,
+            0.049471085730008024
+          ],
+          "abnormal_recall": [
+            0.2303151271972923,
+            0.3907769430229199
+          ],
+          "abnormal_f1": [
+            0.052264711907419624,
+            0.0853507860187112
+          ],
+          "abnormal_false_detections_per_field": [
+            10.728387931034483,
+            20.095133109434247
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.020924775107557254,
+          "localization_recall": 0.5242242787152966,
+          "localization_f1": 0.040243214442424624,
+          "abnormal_precision": 0.03879820203453986,
+          "abnormal_recall": 0.35710397387044096,
+          "abnormal_f1": 0.06999199786609762,
+          "abnormal_false_detections_per_field": 15.090064995357475
+        },
+        "counts": {
+          "localization_tp": 963,
+          "predictions": 46022,
+          "reference_cells": 1837,
+          "abnormal_tp": 656,
+          "abnormal_predictions": 16908,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.016502129125019173,
+            0.025415689062612004
+          ],
+          "localization_recall": [
+            0.43644015891465276,
+            0.6046801119366978
+          ],
+          "localization_f1": [
+            0.03199065753774349,
+            0.048744912229083316
+          ],
+          "abnormal_precision": [
+            0.02911288850481234,
+            0.0515201231423805
+          ],
+          "abnormal_recall": [
+            0.284129337777786,
+            0.42663090629523476
+          ],
+          "abnormal_f1": [
+            0.053615954426060285,
+            0.09047187255953482
+          ],
+          "abnormal_false_detections_per_field": [
+            10.695062695924765,
+            20.068977560177338
+          ]
+        }
+      }
+    },
+    "v3_combined_seed43": {
+      "threshold": 0.18,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.02404081527480739,
+          "localization_recall": 0.4542356377799416,
+          "localization_f1": 0.045664782321415465,
+          "abnormal_precision": 0.053725662421314595,
+          "abnormal_recall": 0.17867575462512172,
+          "abnormal_f1": 0.08261114237478898,
+          "abnormal_false_detections_per_field": 6.001857010213556
+        },
+        "counts": {
+          "localization_tp": 933,
+          "predictions": 38809,
+          "reference_cells": 2054,
+          "abnormal_tp": 367,
+          "abnormal_predictions": 6831,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.018453621290946975,
+            0.030089515852024875
+          ],
+          "localization_recall": [
+            0.36221226129512374,
+            0.5369296063563563
+          ],
+          "localization_f1": [
+            0.035060888454209856,
+            0.05666738239380104
+          ],
+          "abnormal_precision": [
+            0.037855343340971216,
+            0.0789337112807915
+          ],
+          "abnormal_recall": [
+            0.13581226742790414,
+            0.23714048823033815
+          ],
+          "abnormal_f1": [
+            0.06285743348246978,
+            0.11081917956353798
+          ],
+          "abnormal_false_detections_per_field": [
+            3.754570728275424,
+            8.502514610389609
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.023911979180087094,
+          "localization_recall": 0.5051714752313554,
+          "localization_f1": 0.04566254982040053,
+          "abnormal_precision": 0.05592153418240375,
+          "abnormal_recall": 0.20794774088187262,
+          "abnormal_f1": 0.08814028610982926,
+          "abnormal_false_detections_per_field": 5.9879294336118845
+        },
+        "counts": {
+          "localization_tp": 928,
+          "predictions": 38809,
+          "reference_cells": 1837,
+          "abnormal_tp": 382,
+          "abnormal_predictions": 6831,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.018711453989049963,
+            0.02972980290891346
+          ],
+          "localization_recall": [
+            0.44202234217535585,
+            0.5703735855443742
+          ],
+          "localization_f1": [
+            0.03594796165093942,
+            0.056252428286185374
+          ],
+          "abnormal_precision": [
+            0.039947956256139255,
+            0.08379174203253409
+          ],
+          "abnormal_recall": [
+            0.16767638421567838,
+            0.26393492232943444
+          ],
+          "abnormal_f1": [
+            0.06668703886337991,
+            0.11863926392054189
+          ],
+          "abnormal_false_detections_per_field": [
+            3.7227889387187023,
+            8.485690746753246
+          ]
+        }
+      }
+    },
+    "v3_sipakmed_only_seed101": {
+      "threshold": 0.09,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.02738120050020842,
+          "localization_recall": 0.5116845180136319,
+          "localization_f1": 0.0519808101290865,
+          "abnormal_precision": 0.04183177233429395,
+          "abnormal_recall": 0.45228821811100295,
+          "abnormal_f1": 0.07658066111614871,
+          "abnormal_false_detections_per_field": 19.75766016713092
+        },
+        "counts": {
+          "localization_tp": 1051,
+          "predictions": 38384,
+          "reference_cells": 2054,
+          "abnormal_tp": 929,
+          "abnormal_predictions": 22208,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.022460118492906467,
+            0.03244486775306488
+          ],
+          "localization_recall": [
+            0.4086563077176458,
+            0.6134617611535926
+          ],
+          "localization_f1": [
+            0.042882462777128844,
+            0.06126650421375966
+          ],
+          "abnormal_precision": [
+            0.0336664107805825,
+            0.0508217451986887
+          ],
+          "abnormal_recall": [
+            0.3584049253037083,
+            0.5410741099071207
+          ],
+          "abnormal_f1": [
+            0.06256627460894885,
+            0.09156224101213768
+          ],
+          "abnormal_false_detections_per_field": [
+            16.369211717275086,
+            23.55297532948929
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.02766777824093372,
+          "localization_recall": 0.5781164942841589,
+          "localization_f1": 0.052808234504363394,
+          "abnormal_precision": 0.042867435158501443,
+          "abnormal_recall": 0.5182362547632009,
+          "abnormal_f1": 0.07918486171761281,
+          "abnormal_false_detections_per_field": 19.736304549675022
+        },
+        "counts": {
+          "localization_tp": 1062,
+          "predictions": 38384,
+          "reference_cells": 1837,
+          "abnormal_tp": 952,
+          "abnormal_predictions": 22208,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.022715605672095136,
+            0.03258409350936163
+          ],
+          "localization_recall": [
+            0.4970391933573142,
+            0.6594042990060904
+          ],
+          "localization_f1": [
+            0.043647765402247116,
+            0.06175767905618725
+          ],
+          "abnormal_precision": [
+            0.034470601671523174,
+            0.05227796584399716
+          ],
+          "abnormal_recall": [
+            0.4465947068203023,
+            0.5850438360643673
+          ],
+          "abnormal_f1": [
+            0.06466945116219398,
+            0.09517113919934302
+          ],
+          "abnormal_false_detections_per_field": [
+            16.324268221677222,
+            23.534982706766915
+          ]
+        }
+      }
+    },
+    "v3_combined_seed101": {
+      "threshold": 0.02,
+      "earlier_reference": {
+        "metrics": {
+          "localization_precision": 0.015073634885722482,
+          "localization_recall": 0.6139240506329114,
+          "localization_f1": 0.029424804573562013,
+          "abnormal_precision": 0.035778728669381865,
+          "abnormal_recall": 0.33787731256085685,
+          "abnormal_f1": 0.0647056081301571,
+          "abnormal_false_detections_per_field": 17.365831012070565
+        },
+        "counts": {
+          "localization_tp": 1261,
+          "predictions": 83656,
+          "reference_cells": 2054,
+          "abnormal_tp": 694,
+          "abnormal_predictions": 19397,
+          "abnormal_reference_cells": 2054,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.011695935040315929,
+            0.018944299644763567
+          ],
+          "localization_recall": [
+            0.500938178068911,
+            0.7070968957524565
+          ],
+          "localization_f1": [
+            0.02296520420378984,
+            0.03677991622839614
+          ],
+          "abnormal_precision": [
+            0.027041687512284727,
+            0.04868307969055161
+          ],
+          "abnormal_recall": [
+            0.2609273834511915,
+            0.41980626685748623
+          ],
+          "abnormal_f1": [
+            0.049802578733334844,
+            0.08462573238941065
+          ],
+          "abnormal_false_detections_per_field": [
+            12.500608744620388,
+            23.080961558733616
+          ]
+        }
+      },
+      "corrected_reference": {
+        "metrics": {
+          "localization_precision": 0.015109496031366548,
+          "localization_recall": 0.6880783886771911,
+          "localization_f1": 0.02956967237083738,
+          "abnormal_precision": 0.03835644687322782,
+          "abnormal_recall": 0.4050081654872074,
+          "abnormal_f1": 0.0700762927380616,
+          "abnormal_false_detections_per_field": 17.319405756731662
+        },
+        "counts": {
+          "localization_tp": 1264,
+          "predictions": 83656,
+          "reference_cells": 1837,
+          "abnormal_tp": 744,
+          "abnormal_predictions": 19397,
+          "abnormal_reference_cells": 1837,
+          "fields": 1077
+        },
+        "groups": 116,
+        "conditional_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.01188206634229492,
+            0.01886907050009977
+          ],
+          "localization_recall": [
+            0.6329570441638719,
+            0.7511839296507342
+          ],
+          "localization_f1": [
+            0.023347044559544193,
+            0.03674986685379936
+          ],
+          "abnormal_precision": [
+            0.027951038351056265,
+            0.05311657292291236
+          ],
+          "abnormal_recall": [
+            0.34392738439520015,
+            0.47255631390880665
+          ],
+          "abnormal_f1": [
+            0.0522849269028738,
+            0.0934201429463963
+          ],
+          "abnormal_false_detections_per_field": [
+            12.42064160986263,
+            23.010167157765807
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "0b96a8beb56a54d5cfa947d3f81d83eabcf95ba364cf95fbd687229255d4a38c",
+  "seeds": [
+    17,
+    43,
+    101
+  ],
+  "variants": [
+    "sipakmed_only",
+    "combined"
+  ],
+  "epochs_ceiling": 150,
+  "patience": 30,
+  "workers": 2,
+  "imgsz": 640,
+  "primary_endpoint": "Abnormal-cell detection recall and false detections per field at a threshold selected only on development data",
+  "limitation": "Retrospective reanalysis; historical data already examined. Dense fields held out of new training and checkpoint selection. No clinical claim."
+}

@@ -1,4 +1,5 @@
 {
+  "status": "DEVELOPMENT ONLY: historical validation fields; review confirmed by user; model-assisted labels, no independent second review",
   "conf_threshold": 0.111,
   "iou_threshold": 0.5,
   "models": {
@@ -15,16 +16,16 @@
       },
       "per_class": {
         "Normal": {
-          "precision": 0.018518518518518517,
-          "recall": 0.00141643059490085,
-          "f1": 0.002631578947368421,
-          "support": 7
+          "precision": 0.8163934426229508,
+          "recall": 0.3526912181303116,
+          "f1": 0.4925816023738873,
+          "support": 706
         },
         "Abnormal": {
-          "precision": 0.6756756756756757,
-          "recall": 0.2077562326869806,
-          "f1": 0.3177966101694915,
-          "support": 120
+          "precision": 0.7272727272727273,
+          "recall": 0.33240997229916897,
+          "f1": 0.45627376425855515,
+          "support": 361
         }
       }
     },
@@ -44,13 +45,13 @@
           "precision": 0.7555012224938875,
           "recall": 0.4376770538243626,
           "f1": 0.5542600896860986,
-          "support": 313
+          "support": 706
         },
         "Abnormal": {
           "precision": 0.8580246913580247,
           "recall": 0.3850415512465374,
           "f1": 0.5315487571701721,
-          "support": 152
+          "support": 361
         }
       }
     },
@@ -70,15 +71,16 @@
           "precision": 0.915625,
           "recall": 0.415014164305949,
           "f1": 0.571150097465887,
-          "support": 295
+          "support": 706
         },
         "Abnormal": {
           "precision": 0.9629629629629629,
           "recall": 0.5041551246537396,
           "f1": 0.6618181818181817,
-          "support": 189
+          "support": 361
         }
       }
     }
-  }
+  },
+  "_regeneration_note": "Corrected name-based taxonomy; regenerated on CPU with torch threads=2. Small threshold-boundary numerical differences from GPU possible. Historical development data, not independent validation."
 }

@@ -1,0 +1,15 @@
+{
+  "source": "Direct user confirmation in this task on 2026-09-19",
+  "statement": "yes, i did check and correctly annotated all.",
+  "question_context": "Asked who reviewed all 40 fields and whether every field was checked for cells the model missed.",
+  "scope": "User attests review and correction of all 40 dense fields, including checking for missed cells.",
+  "export_sha256": "138363b7007c3afb9ed7632074866da8679be0eca5c437522520c937d1025c9f",
+  "independent_second_reviewer": false,
+  "reviewer_credentials": "Not recorded; no credentials inferred",
+  "review_timestamp": "Original review timestamp not available",
+  "limitations": [
+    "Model-assisted proposals",
+    "Historical model-selection validation fields",
+    "No independent second-review evidence"
+  ]
+}

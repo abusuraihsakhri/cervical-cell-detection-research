@@ -1,0 +1,457 @@
+{
+  "paired_by_seed": {
+    "17": {
+      "dense": {
+        "direction": "second minus first",
+        "groups": 19,
+        "delta": {
+          "localization_precision": 0.03510027481515399,
+          "localization_recall": -0.04123711340206193,
+          "localization_f1": -0.009284370705870737,
+          "abnormal_precision": 0.03201477605048486,
+          "abnormal_recall": -0.0714285714285714,
+          "abnormal_f1": -0.037004168347451905,
+          "abnormal_false_detections_per_field": -0.7999999999999998
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            -0.03377676638837355,
+            0.11740630338271439
+          ],
+          "localization_recall": [
+            -0.09179650788940003,
+            0.00841412536746154
+          ],
+          "localization_f1": [
+            -0.055859505923944064,
+            0.03382719595523073
+          ],
+          "abnormal_precision": [
+            -0.061390770025686416,
+            0.219529375182909
+          ],
+          "abnormal_recall": [
+            -0.18966492432516777,
+            0.044787369684242115
+          ],
+          "abnormal_f1": [
+            -0.12194907766235234,
+            0.03470020449286267
+          ],
+          "abnormal_false_detections_per_field": [
+            -2.3499999999999996,
+            0.9473684210526314
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      },
+      "hmchh": {
+        "direction": "second minus first",
+        "groups": 116,
+        "delta": {
+          "localization_precision": -0.0007497461768278257,
+          "localization_recall": 0.03756124115405557,
+          "localization_f1": -0.0013250743912564603,
+          "abnormal_precision": 0.02404643098084608,
+          "abnormal_recall": -0.12574850299401197,
+          "abnormal_f1": 0.0334589418803523,
+          "abnormal_false_detections_per_field": -9.663881151346335
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            -0.0019635954668730683,
+            0.0006375679063960556
+          ],
+          "localization_recall": [
+            0.00655846239952442,
+            0.07052797715368961
+          ],
+          "localization_f1": [
+            -0.003611957185686501,
+            0.001294362567197901
+          ],
+          "abnormal_precision": [
+            0.016685675098978444,
+            0.03569651687943468
+          ],
+          "abnormal_recall": [
+            -0.17318908079513282,
+            -0.06992871259175609
+          ],
+          "abnormal_f1": [
+            0.021836256724094748,
+            0.04821226459401997
+          ],
+          "abnormal_false_detections_per_field": [
+            -11.9669764304869,
+            -7.569533414127423
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      }
+    },
+    "43": {
+      "dense": {
+        "direction": "second minus first",
+        "groups": 19,
+        "delta": {
+          "localization_precision": 0.10439919865898029,
+          "localization_recall": -0.09278350515463918,
+          "localization_f1": -0.052631709525758796,
+          "abnormal_precision": 0.18253968253968256,
+          "abnormal_recall": -0.1428571428571429,
+          "abnormal_f1": -0.10313986318761481,
+          "abnormal_false_detections_per_field": -1.6500000000000001
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.03489291769941158,
+            0.1678735059853622
+          ],
+          "localization_recall": [
+            -0.14329383971537857,
+            -0.0433992391153633
+          ],
+          "localization_f1": [
+            -0.09481969143872683,
+            -0.008606832648270514
+          ],
+          "abnormal_precision": [
+            0.07734979820216469,
+            0.2540975868103528
+          ],
+          "abnormal_recall": [
+            -0.20750349530630294,
+            -0.04038731687738316
+          ],
+          "abnormal_f1": [
+            -0.17635706468266427,
+            -0.011159122126130508
+          ],
+          "abnormal_false_detections_per_field": [
+            -3.1596291866028707,
+            -0.4994047619047624
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      },
+      "hmchh": {
+        "direction": "second minus first",
+        "groups": 116,
+        "delta": {
+          "localization_precision": 0.00298720407252984,
+          "localization_recall": -0.019052803483941227,
+          "localization_f1": 0.005419335377975905,
+          "abnormal_precision": 0.017123332147863886,
+          "abnormal_recall": -0.14915623298856834,
+          "abnormal_f1": 0.01814828824373163,
+          "abnormal_false_detections_per_field": -9.102135561745591
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            0.0009598719310595105,
+            0.005432731269675462
+          ],
+          "localization_recall": [
+            -0.057279067463673256,
+            0.016907484529775765
+          ],
+          "localization_f1": [
+            0.001611255185634051,
+            0.00982316377552686
+          ],
+          "abnormal_precision": [
+            0.0055006673078262305,
+            0.03975222765951709
+          ],
+          "abnormal_recall": [
+            -0.21128369942824057,
+            -0.09069842197545294
+          ],
+          "abnormal_f1": [
+            0.0013539338585562297,
+            0.04193814869254026
+          ],
+          "abnormal_false_detections_per_field": [
+            -12.44939301378446,
+            -6.384458128078817
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      }
+    },
+    "101": {
+      "dense": {
+        "direction": "second minus first",
+        "groups": 19,
+        "delta": {
+          "localization_precision": -0.22908393810762695,
+          "localization_recall": 0.07216494845360821,
+          "localization_f1": -0.05884442339569029,
+          "abnormal_precision": -0.1154930450137861,
+          "abnormal_recall": -0.0357142857142857,
+          "abnormal_f1": -0.06769060976731356,
+          "abnormal_false_detections_per_field": 1.5
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            -0.296557715326129,
+            -0.1603842682315122
+          ],
+          "localization_recall": [
+            -0.0015483459062202733,
+            0.14544376288317049
+          ],
+          "localization_f1": [
+            -0.09186615709071333,
+            -0.019327646822144464
+          ],
+          "abnormal_precision": [
+            -0.21467949207480572,
+            0.001248650985593089
+          ],
+          "abnormal_recall": [
+            -0.12325025900771268,
+            0.06880290354330702
+          ],
+          "abnormal_f1": [
+            -0.11575972697907402,
+            -0.010120721134007547
+          ],
+          "abnormal_false_detections_per_field": [
+            -0.736842105263158,
+            3.869565217391304
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      },
+      "hmchh": {
+        "direction": "second minus first",
+        "groups": 116,
+        "delta": {
+          "localization_precision": -0.012558282209567173,
+          "localization_recall": 0.10996189439303217,
+          "localization_f1": -0.023238562133526014,
+          "abnormal_precision": -0.004510988285273625,
+          "abnormal_recall": -0.11322808927599348,
+          "abnormal_f1": -0.009108568979551215,
+          "abnormal_false_detections_per_field": -2.4168987929433605
+        },
+        "paired_cluster_bootstrap_95ci": {
+          "localization_precision": [
+            -0.014749013529751788,
+            -0.010429677698821268
+          ],
+          "localization_recall": [
+            0.07228954441630296,
+            0.14644800327236185
+          ],
+          "localization_f1": [
+            -0.027113016517512866,
+            -0.01938662832705807
+          ],
+          "abnormal_precision": [
+            -0.011825074333420688,
+            0.005954111787463583
+          ],
+          "abnormal_recall": [
+            -0.18271366960949048,
+            -0.042314767466672516
+          ],
+          "abnormal_f1": [
+            -0.021562721983521306,
+            0.007866408310768304
+          ],
+          "abnormal_false_detections_per_field": [
+            -5.828661321671526,
+            1.441150234741786
+          ]
+        },
+        "limitation": "Conditional on fixed trained models and development-selected thresholds; not a prospective test or multiple-comparison-adjusted inference"
+      }
+    }
+  },
+  "seed_variability": {
+    "sipakmed_only": {
+      "dense_evaluation": {
+        "localization_precision": {
+          "mean": 0.715991516169941,
+          "min": 0.6394686907020873,
+          "max": 0.7611940298507462,
+          "sample_sd": 0.06663321990976007
+        },
+        "localization_recall": {
+          "mean": 0.5274914089347079,
+          "min": 0.47766323024054985,
+          "max": 0.5790378006872853,
+          "sample_sd": 0.05070912221090622
+        },
+        "localization_f1": {
+          "mean": 0.6041717259418143,
+          "min": 0.5828092243186582,
+          "max": 0.6219512195121951,
+          "sample_sd": 0.019815458787583142
+        },
+        "abnormal_precision": {
+          "mean": 0.6580031863523653,
+          "min": 0.6390532544378699,
+          "max": 0.6888888888888889,
+          "sample_sd": 0.026976741473724208
+        },
+        "abnormal_recall": {
+          "mean": 0.4702380952380953,
+          "min": 0.41517857142857145,
+          "max": 0.5133928571428571,
+          "sample_sd": 0.05017772410740284
+        },
+        "abnormal_f1": {
+          "mean": 0.5466211578918155,
+          "min": 0.5181058495821727,
+          "max": 0.572139303482587,
+          "sample_sd": 0.02714112697318584
+        },
+        "abnormal_false_detections_per_field": {
+          "mean": 2.766666666666667,
+          "min": 2.1,
+          "max": 3.15,
+          "sample_sd": 0.5795112883571235
+        }
+      },
+      "hmchh": {
+        "localization_precision": {
+          "mean": 0.022741744086397984,
+          "min": 0.019632678910702975,
+          "max": 0.02766777824093372,
+          "sample_sd": 0.004314711753318034
+        },
+        "localization_recall": {
+          "mean": 0.5530756668481219,
+          "min": 0.5242242787152966,
+          "max": 0.5781164942841589,
+          "sample_sd": 0.02714743089774998
+        },
+        "localization_f1": {
+          "mean": 0.04365989026883146,
+          "min": 0.03792822185970636,
+          "max": 0.052808234504363394,
+          "sample_sd": 0.008006806439108725
+        },
+        "abnormal_precision": {
+          "mean": 0.04157681948719552,
+          "min": 0.03879820203453986,
+          "max": 0.04306482126854526,
+          "sample_sd": 0.002408376326544822
+        },
+        "abnormal_recall": {
+          "mean": 0.4487388858646344,
+          "min": 0.35710397387044096,
+          "max": 0.5182362547632009,
+          "sample_sd": 0.08281579618139813
+        },
+        "abnormal_f1": {
+          "mean": 0.07602980572387726,
+          "min": 0.06999199786609762,
+          "max": 0.07918486171761281,
+          "sample_sd": 0.005230667278690256
+        },
+        "abnormal_false_detections_per_field": {
+          "mean": 17.55772206747137,
+          "min": 15.090064995357475,
+          "max": 19.736304549675022,
+          "sample_sd": 2.336569833735997
+        }
+      }
+    },
+    "combined": {
+      "dense_evaluation": {
+        "localization_precision": {
+          "mean": 0.6861300279587766,
+          "min": 0.5321100917431193,
+          "max": 0.8517110266159695,
+          "sample_sd": 0.16011381269735217
+        },
+        "localization_recall": {
+          "mean": 0.506872852233677,
+          "min": 0.3848797250859107,
+          "max": 0.5979381443298969,
+          "sample_sd": 0.10984475744621723
+        },
+        "localization_f1": {
+          "mean": 0.5639182247327078,
+          "min": 0.5301775147928994,
+          "max": 0.5984703632887189,
+          "sample_sd": 0.034153654287903575
+        },
+        "abnormal_precision": {
+          "mean": 0.6910236575444925,
+          "min": 0.5235602094240838,
+          "max": 0.8714285714285714,
+          "sample_sd": 0.1742948951432758
+        },
+        "abnormal_recall": {
+          "mean": 0.38690476190476186,
+          "min": 0.27232142857142855,
+          "max": 0.44642857142857145,
+          "sample_sd": 0.0992571794384065
+        },
+        "abnormal_f1": {
+          "mean": 0.47734294412435546,
+          "min": 0.41496598639455784,
+          "max": 0.5351351351351351,
+          "sample_sd": 0.060215622073176385
+        },
+        "abnormal_false_detections_per_field": {
+          "mean": 2.4499999999999997,
+          "min": 0.45,
+          "max": 4.55,
+          "sample_sd": 2.051828452868319
+        }
+      },
+      "hmchh": {
+        "localization_precision": {
+          "mean": 0.019301469315109596,
+          "min": 0.015109496031366548,
+          "max": 0.023911979180087094,
+          "sample_sd": 0.004416141647213194
+        },
+        "localization_recall": {
+          "mean": 0.5958991108691707,
+          "min": 0.5051714752313554,
+          "max": 0.6880783886771911,
+          "sample_sd": 0.09146209704196236
+        },
+        "localization_f1": {
+          "mean": 0.03727845655322927,
+          "min": 0.02956967237083738,
+          "max": 0.04566254982040053,
+          "sample_sd": 0.008067664341161802
+        },
+        "abnormal_precision": {
+          "mean": 0.053796411101674296,
+          "min": 0.03835644687322782,
+          "max": 0.06711125224939134,
+          "sample_sd": 0.014494716938817652
+        },
+        "abnormal_recall": {
+          "mean": 0.3193612774451098,
+          "min": 0.20794774088187262,
+          "max": 0.4050081654872074,
+          "sample_sd": 0.1010254565365466
+        },
+        "abnormal_f1": {
+          "mean": 0.09019602610538817,
+          "min": 0.0700762927380616,
+          "max": 0.11237149946827366,
+          "sample_sd": 0.021222409813328205
+        },
+        "abnormal_false_detections_per_field": {
+          "mean": 10.496750232126276,
+          "min": 5.9879294336118845,
+          "max": 17.319405756731662,
+          "sample_sd": 6.0096557530448
+        }
+      }
+    }
+  },
+  "note": "Three explicitly different seeds. No universal noise floor is inferred."
+}

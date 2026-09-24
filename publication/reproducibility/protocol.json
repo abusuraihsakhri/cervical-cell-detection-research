@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "manifest_sha256": "66208ba5902fbcf3300dc57a5bace07565f3e9be64ce2ebabd31d44ffd47a803",
+  "evaluation_protocol_sha256": "90c144f832db761007fd6f69d3582b2ace4b982fbdc366b5e8085cca6e1f0cd0",
+  "seeds": [
+    17,
+    43,
+    101
+  ],
+  "variants": [
+    "sipakmed_only",
+    "combined"
+  ],
+  "epochs_ceiling": 150,
+  "patience": 30,
+  "workers": 2,
+  "imgsz": 640,
+  "primary_endpoint": "Abnormal-cell detection recall and false detections per field at a threshold selected only on development data",
+  "limitation": "Retrospective reanalysis; dense-field overlap components withheld from training and checkpoint selection. No clinical claim."
+}

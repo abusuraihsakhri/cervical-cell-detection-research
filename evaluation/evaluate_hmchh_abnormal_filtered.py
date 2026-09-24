@@ -24,6 +24,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import config
 from _logging_setup import setup_logging
+from evaluation.taxonomy import binary_index_map
 
 
 def calculate_iou(boxA, boxB):
@@ -94,14 +95,7 @@ def evaluate_model_on_hmchh(model_name: str, weights_path: Path, dataset: list, 
 
     # Determine abnormal class index/indices for this model
     num_classes = len(model.names)
-    if num_classes == 5:
-        # Phase 1 5-class: Koilocytotic (2) and Dyskeratotic (3) are Abnormal
-        abnormal_indices = {2, 3}
-    elif num_classes == 2:
-        # 2-class: index 1 is Abnormal
-        abnormal_indices = {1}
-    else:
-        abnormal_indices = {1} if 1 in model.names else {0}
+    abnormal_indices = {i for i, cls in binary_index_map(model.names).items() if cls == 1}
 
     print(f"\nEvaluating {model_name} (Classes: {num_classes}, Abnormal indices: {abnormal_indices})...")
     t0 = time.time()
@@ -160,7 +154,7 @@ def evaluate_model_on_hmchh(model_name: str, weights_path: Path, dataset: list, 
     print(f"Processed {len(dataset)} images in {elapsed:.1f}s ({len(dataset)/elapsed:.1f} FPS)")
     print(f"  Unfiltered:  Preds={unfiltered_preds_total:5d}, TP={unfiltered_tp_total:4d}, Prec={u_prec:.4f}, Rec={u_rec:.4f}, F1={u_f1:.4f}")
     print(f"  Abn-Filter:  Preds={filtered_preds_total:5d}, TP={filtered_tp_total:4d}, Prec={f_prec:.4f}, Rec={f_rec:.4f}, F1={f_f1:.4f}")
-    print(f"  Normal false alarms eliminated by protocol alignment: {normal_suppressed} ({suppression_pct:.1f}%)")
+    print(f"  Predictions labeled Normal removed (not independently verified normal): {normal_suppressed} ({suppression_pct:.1f}%)")
 
     return {
         "model_name": model_name,
@@ -193,7 +187,7 @@ def main():
     setup_logging("evaluate_hmchh_abnormal_filtered")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--hmchh-dir", type=Path, default=Path("D:/pap_model/HMCHH_YOLO_prepared"))
-    parser.add_argument("--max-images", type=int, default=500, help="Maximum images to evaluate (default 500 for fast high-confidence stats, or 1077 for full split)")
+    parser.add_argument("--max-images", type=int, default=0, help="Maximum images; 0 evaluates the complete available validation split")
     parser.add_argument("--conf", type=float, default=config.DEFAULT_INFERENCE_CONF)
     args = parser.parse_args()
 
@@ -201,7 +195,7 @@ def main():
         print(f"ERROR: HMCHH directory {args.hmchh_dir} is not accessible.", file=sys.stderr)
         sys.exit(1)
 
-    dataset = load_hmchh_val(args.hmchh_dir, max_images=args.max_images)
+    dataset = load_hmchh_val(args.hmchh_dir, max_images=args.max_images or None)
 
     models_to_test = [
         ("Exp C2b (Combined 2-class)", config.RESULTS_DIR / "runs" / "expC2b_combined_150" / "weights" / "best.pt"),

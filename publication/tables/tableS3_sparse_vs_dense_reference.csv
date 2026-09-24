@@ -1,0 +1,13 @@
+Training data,Seed,Reference,Reference cells,Abnormal reference cells,Localization precision %,Localization recall %,Abnormal precision %,Abnormal recall %
+SIPaKMeD only,17,sparse,117,51,20.1,90.6,24.7,86.3
+SIPaKMeD only,17,dense,582,224,63.9,57.9,64.6,51.3
+SIPaKMeD only,43,sparse,117,51,27.4,87.2,29.6,78.4
+SIPaKMeD only,43,dense,582,224,74.7,47.8,68.9,41.5
+SIPaKMeD only,101,sparse,117,51,25.4,87.2,26.0,86.3
+SIPaKMeD only,101,dense,582,224,76.1,52.6,63.9,48.2
+SIPaKMeD + APCData,17,sparse,117,51,23.3,92.3,28.8,82.4
+SIPaKMeD + APCData,17,dense,582,224,67.5,53.8,67.8,44.2
+SIPaKMeD + APCData,43,sparse,117,51,34.6,77.8,45.7,62.7
+SIPaKMeD + APCData,43,dense,582,224,85.2,38.5,87.1,27.2
+SIPaKMeD + APCData,101,sparse,117,51,15.9,88.9,20.4,76.5
+SIPaKMeD + APCData,101,dense,582,224,53.2,59.8,52.4,44.6

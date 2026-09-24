@@ -114,5 +114,7 @@
       "caveat": "SIPaKMeD's classes (cell morphology) and APCData's classes (Bethesda diagnostic categories) are different taxonomies with no defensible 1:1 mapping, so the accuracy/macro_f1 numbers above conflate 'wrong class' with 'meaningless class comparison'. These class-agnostic precision/recall/F1 numbers instead measure only whether the detector localizes a cell-like object at all (IoU>=0.5), independent of class identity, isolating true cross-dataset domain shift from the taxonomy mismatch."
     }
   },
-  "_provenance": "Recovered from logs/cross_dataset_eval_20260827_003056.log on 2026-09-10. The original results/cross_dataset_eval_report.json was overwritten by the later HMCHH-TCT run before per-dataset output filenames existed."
+  "_provenance": "Recovered from logs/cross_dataset_eval_20260827_003056.log on 2026-09-10. The original results/cross_dataset_eval_report.json was overwritten by the later HMCHH-TCT run before per-dataset output filenames existed.",
+  "_audit_status": "SUPERSEDED: historical result; see Critical_Audit_2026-09-19.md and research_v2. Do not cite as corrected validation.",
+  "_historical_archive": "results\\archive_before_corrections_20260919\\cross_dataset_eval_apcdata_cervical_cytology_cells.json"
 }

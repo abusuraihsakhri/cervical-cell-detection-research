@@ -1,0 +1,98 @@
+{
+  "manifest_version": "1.0",
+  "project": "pap-smear-cyto-algo",
+  "description": "Cryptographic weights manifest protecting all trained PyTorch model checkpoints against loss, omission, or corruption",
+  "verification_algorithm": "SHA-256",
+  "checkpoints": [
+    {
+      "name": "v3_combined_seed17",
+      "path": "publication/weights/v3_combined_seed17/weights/best.pt",
+      "sha256": "bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795",
+      "size_bytes": 6241066,
+      "seed": 17,
+      "training_data": "SIPaKMeD derivative + APCData (Combined)",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 55,
+      "primary": true
+    },
+    {
+      "name": "v3_combined_seed43",
+      "path": "publication/weights/v3_combined_seed43/weights/best.pt",
+      "sha256": "474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05",
+      "size_bytes": 6242730,
+      "seed": 43,
+      "training_data": "SIPaKMeD derivative + APCData (Combined)",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 68,
+      "primary": true
+    },
+    {
+      "name": "v3_combined_seed101",
+      "path": "publication/weights/v3_combined_seed101/weights/best.pt",
+      "sha256": "0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13",
+      "size_bytes": 6241706,
+      "seed": 101,
+      "training_data": "SIPaKMeD derivative + APCData (Combined)",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 60,
+      "primary": true
+    },
+    {
+      "name": "v3_sipakmed_only_seed17",
+      "path": "publication/weights/v3_sipakmed_only_seed17/weights/best.pt",
+      "sha256": "ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73",
+      "size_bytes": 6241322,
+      "seed": 17,
+      "training_data": "SIPaKMeD derivative alone",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 57,
+      "primary": true
+    },
+    {
+      "name": "v3_sipakmed_only_seed43",
+      "path": "publication/weights/v3_sipakmed_only_seed43/weights/best.pt",
+      "sha256": "7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b",
+      "size_bytes": 6241322,
+      "seed": 43,
+      "training_data": "SIPaKMeD derivative alone",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 57,
+      "primary": true
+    },
+    {
+      "name": "v3_sipakmed_only_seed101",
+      "path": "publication/weights/v3_sipakmed_only_seed101/weights/best.pt",
+      "sha256": "59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245",
+      "size_bytes": 6241322,
+      "seed": 101,
+      "training_data": "SIPaKMeD derivative alone",
+      "architecture": "YOLOv8n (2-class: 0: Normal, 1: Abnormal)",
+      "best_epoch": 57,
+      "primary": true
+    },
+    {
+      "name": "models_best",
+      "path": "models/best.pt",
+      "sha256": "9f6245bf9d80870155c7edcb4292e3f87deb989e30e7fc0499ebf17aac9597e1",
+      "size_bytes": 6257578,
+      "architecture": "YOLOv8n 5-class baseline model checkpoint",
+      "primary": false
+    },
+    {
+      "name": "yolov8n_base",
+      "path": "yolov8n.pt",
+      "sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+      "size_bytes": 6549796,
+      "architecture": "COCO-pretrained base model",
+      "primary": false
+    },
+    {
+      "name": "yolo26n_base",
+      "path": "yolo26n.pt",
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "size_bytes": 5544453,
+      "architecture": "Alternative lightweight base model",
+      "primary": false
+    }
+  ]
+}

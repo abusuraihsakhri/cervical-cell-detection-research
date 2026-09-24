@@ -1,0 +1,14 @@
+{
+  "model": "yolov8n.pt",
+  "seed": 101,
+  "save_dir": "results/research_v3/runs/v3_combined_seed101",
+  "initial_weights_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "data": "data/research_v3/combined/data.yaml",
+  "batch_used": 16,
+  "workers": 2,
+  "total_wall_clock_seconds": 1048.7116425037384,
+  "epochs_ceiling": 150,
+  "patience": 30,
+  "epochs_run": 90,
+  "note": "Compare epochs_run against --patience/--epochs ceiling to see whether training plateaued early or hit the cap. Check the training log's printed per-epoch time directly for wall-clock figures; results.csv format varies by ultralytics version."
+}

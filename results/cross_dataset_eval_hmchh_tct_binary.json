@@ -83,5 +83,7 @@
         "note": "Class-agnostic: counts a detection as correct if it localizes a GT cell at IoU>=0.5, regardless of predicted class."
       }
     }
-  }
+  },
+  "_audit_status": "SUPERSEDED: historical result; see Critical_Audit_2026-09-19.md and research_v2. Do not cite as corrected validation.",
+  "_historical_archive": "results\\archive_before_corrections_20260919\\cross_dataset_eval_hmchh_tct_binary.json"
 }

@@ -1,0 +1,14 @@
+{
+  "model": "yolov8n.pt",
+  "seed": 17,
+  "save_dir": "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\research_v2\\runs\\v2_combined_seed17",
+  "initial_weights_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "data": "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\data\\research_v2\\combined\\data.yaml",
+  "batch_used": 16,
+  "workers": 2,
+  "total_wall_clock_seconds": 1367.4496612548828,
+  "epochs_ceiling": 150,
+  "patience": 30,
+  "epochs_run": 92,
+  "note": "Compare epochs_run against --patience/--epochs ceiling to see whether training plateaued early or hit the cap. Check the training log's printed per-epoch time directly for wall-clock figures; results.csv format varies by ultralytics version."
+}

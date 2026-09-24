@@ -1,0 +1,31 @@
+[PASS] tracked data manifest matches data/research_v3 manifest
+[PASS] source image and label hashes match manifest: 1370 records; 0 mismatched
+[PASS] no source boxes dropped during binary conversion: 0 files with dropped lines
+[PASS] all converted boxes have valid normalized geometry: 0 files
+[PASS] split files equal a fresh re-conversion of the manifest: 0 mismatches
+[PASS] split folders contain exactly the manifest records: 0 unexpected or missing files
+[PASS] every overlap component lies in exactly one split: 840 groups
+[PASS] no exact duplicate image crosses splits
+[PASS] overlap evidence matches manifest hash
+[PASS] no confirmed overlapping field pair crosses splits: 791 confirmed pairs; 0 crossing
+[PASS] confirmed overlaps agree photometrically (shared-region NCC >= 0.9): 790/791 scored; minimum NCC 0.945
+[PASS] no perceptual near-duplicate (dHash Hamming <= 4) crosses splits: 0 pairs
+[PASS] dense images and labels match frozen protocol hashes: 0 changed
+[PASS] dense development and evaluation fields are disjoint and cover all 40: 20 development / 20 evaluation
+[PASS] no dense field image or overlap component used in training/validation/test
+[PASS] no overlap component spans dense development and evaluation
+[PASS] no dense field has a perceptual near-duplicate in split data: 0 fields
+[PASS] dense Label Studio export matches attested hash
+[PASS] dense reference totals 1,067 cells (706 normal, 361 abnormal): {0: 706, 1: 361}
+[PASS] HMCHH reference files match frozen summary: 1077 fields, 1837 abnormal cells
+[PASS] HMCHH reference excludes organism and flora categories: {'excluded': {'菌群失调': 111, '放线菌': 3, '滴虫': 218}}
+[PASS] training protocol bound to current data manifest
+[PASS] v3_sipakmed_only_seed17: seed, data split, class names, protocol arguments and summary consistent: best epoch 57/87, sha256 ce17ee57eaed
+[PASS] v3_combined_seed17: seed, data split, class names, protocol arguments and summary consistent: best epoch 55/85, sha256 bf1395e4d133
+[PASS] v3_sipakmed_only_seed43: seed, data split, class names, protocol arguments and summary consistent: best epoch 57/87, sha256 7b1dd55ba492
+[PASS] v3_combined_seed43: seed, data split, class names, protocol arguments and summary consistent: best epoch 68/98, sha256 474532ea49ec
+[PASS] v3_sipakmed_only_seed101: seed, data split, class names, protocol arguments and summary consistent: best epoch 57/87, sha256 59389a024247
+[PASS] v3_combined_seed101: seed, data split, class names, protocol arguments and summary consistent: best epoch 60/90, sha256 0ce73504628d
+[PASS] every evaluation result was produced from the released checkpoint: []
+
+29/29 checks passed

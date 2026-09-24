@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "manifest_sha256": "0b96a8beb56a54d5cfa947d3f81d83eabcf95ba364cf95fbd687229255d4a38c",
+  "checks": [
+    "group disjointness",
+    "exact hash disjointness",
+    "dense groups reserved",
+    "image-label pairing",
+    "both classes in each split"
+  ],
+  "limitation": "Source proxies only; not verified patient-level identities"
+}

@@ -1,0 +1,12 @@
+{
+  "paired_comparisons": "combined minus single-source within each matched seed; same evaluation fields and cluster-resampling draws",
+  "seeds": [
+    17,
+    43,
+    101
+  ],
+  "stain_references": "Three disjoint consecutive sets of 50 sorted SIPaKMeD training images; training images only",
+  "stain_evaluation": "All six trained models, dense evaluation fields and APCData sparse test; thresholds frozen on development, not retuned after normalization",
+  "claims": "Descriptive reference and seed sensitivity; no universal stain invariance, no fixed noise floor, no unadjusted claims of statistical significance",
+  "uncertainty": "Percentile cluster bootstrap 1000 draws seed 20260921, conditional on fitted models. Three-seed mean, SD and range separately; seeds not pooled as independent fields."
+}

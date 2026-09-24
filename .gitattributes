@@ -1,0 +1,9 @@
+# Standard line ending normalization
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Git Large File Storage (LFS) for raw evidence matrices > 50MB
+publication/reproducibility/field_overlap.json filter=lfs diff=lfs merge=lfs -text
+results/research_v3/field_overlap.json filter=lfs diff=lfs merge=lfs -text

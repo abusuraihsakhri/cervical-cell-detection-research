@@ -1,3 +1,19 @@
+# Version 3 completed 19 September 2026
+
+Release verification of the version 2 correction found two further errors. First, the SIPaKMeD derivative contains re-captured fields under unrelated identifiers: exhaustive matching confirmed 791 overlapping pairs, and 148 of them crossed v2 partitions, including 10 of 20 dense evaluation fields. Second, the HMCHH conversion labelled 332 organism and flora boxes as abnormal cells and dropped 119 abnormal-cell annotations. v2 training was stopped. Version 3 uses overlap-component splits, a rebuilt HMCHH reference, and six retrained models under a hash-locked protocol. Release verification passes 29/29 checks. The manuscript, supplement, weights and code are in `publication/`. Main results: single-source dense abnormal recall 41.5–51.3%; adding APCData did not improve held-out or external performance; HMCHH abnormal precision 3.8–6.7% for all models; sparse labels overstate recall 1.7–2.3-fold and understate precision.
+
+---
+
+# Current status correction 19 September 2026
+
+The historical entries below are retained as a work log, not current scientific conclusions. The statements of scientific completion, independent-seed replication, validated screening thresholds, confirmed stain invariance, and correct normal-cell suppression are withdrawn. The critical audit found class-index errors and source-overlap risks. See results/Critical_Audit_2026-09-19.md and results/research_v2 for the correction work.
+
+The user subsequently confirmed reviewing and correctly annotating all 40 fields, including checking for missed cells. This is documented in results/annotation_attestation_20260919.json. It is a user-attested, model-assisted review, not evidence of independent second review.
+
+Six paired-seed research runs on source-grouped splits are in progress. No final validation claim should be made before those results and the completion checklist are reviewed.
+
+---
+
 # Session log — Phase 1-3 training, evaluation, and bug fixes
 
 Covers 2026-08-26 evening through 2026-08-27. Chronological record of what was

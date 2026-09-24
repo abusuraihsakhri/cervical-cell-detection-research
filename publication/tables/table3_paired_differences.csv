@@ -1,0 +1,25 @@
+Seed,Evaluation,Metric,Combined − SIPaKMeD-only (95% CI),Clusters
+17,Dense SIPaKMeD,abnormal_recall,−7.1 (−19.0 to 4.5),19
+17,Dense SIPaKMeD,abnormal_precision,3.2 (−6.1 to 22.0),19
+17,Dense SIPaKMeD,abnormal_f1,−0.04 (−0.12 to 0.03),19
+17,Dense SIPaKMeD,abnormal_false_detections_per_field,−0.80 (−2.35 to 0.95),19
+17,HMCHH external,abnormal_recall,−12.6 (−17.3 to −7.0),116
+17,HMCHH external,abnormal_precision,2.4 (1.7–3.6),116
+17,HMCHH external,abnormal_f1,0.03 (0.02–0.05),116
+17,HMCHH external,abnormal_false_detections_per_field,−9.66 (−11.97 to −7.57),116
+43,Dense SIPaKMeD,abnormal_recall,−14.3 (−20.8 to −4.0),19
+43,Dense SIPaKMeD,abnormal_precision,18.3 (7.7–25.4),19
+43,Dense SIPaKMeD,abnormal_f1,−0.10 (−0.18 to −0.01),19
+43,Dense SIPaKMeD,abnormal_false_detections_per_field,−1.65 (−3.16 to −0.50),19
+43,HMCHH external,abnormal_recall,−14.9 (−21.1 to −9.1),116
+43,HMCHH external,abnormal_precision,1.7 (0.6–4.0),116
+43,HMCHH external,abnormal_f1,0.02 (0.00–0.04),116
+43,HMCHH external,abnormal_false_detections_per_field,−9.10 (−12.45 to −6.38),116
+101,Dense SIPaKMeD,abnormal_recall,−3.6 (−12.3 to 6.9),19
+101,Dense SIPaKMeD,abnormal_precision,−11.5 (−21.5 to 0.1),19
+101,Dense SIPaKMeD,abnormal_f1,−0.07 (−0.12 to −0.01),19
+101,Dense SIPaKMeD,abnormal_false_detections_per_field,1.50 (−0.74 to 3.87),19
+101,HMCHH external,abnormal_recall,−11.3 (−18.3 to −4.2),116
+101,HMCHH external,abnormal_precision,−0.5 (−1.2 to 0.6),116
+101,HMCHH external,abnormal_f1,−0.01 (−0.02 to 0.01),116
+101,HMCHH external,abnormal_false_detections_per_field,−2.42 (−5.83 to 1.44),116

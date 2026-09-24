@@ -1,0 +1,133 @@
+{
+  "pid": 8752,
+  "started": 1789759892.771891,
+  "protocol": {
+    "manifest_sha256": "0b96a8beb56a54d5cfa947d3f81d83eabcf95ba364cf95fbd687229255d4a38c",
+    "seeds": [
+      17,
+      43,
+      101
+    ],
+    "variants": [
+      "sipakmed_only",
+      "combined"
+    ],
+    "epochs_ceiling": 150,
+    "patience": 30,
+    "workers": 2,
+    "imgsz": 640,
+    "primary_endpoint": "Abnormal-cell detection recall and false detections per field at a threshold selected only on development data",
+    "limitation": "Retrospective reanalysis; historical data already examined. Dense fields held out of new training and checkpoint selection. No clinical claim."
+  },
+  "runs": [
+    {
+      "name": "v2_sipakmed_only_seed17",
+      "status": "complete",
+      "started": 1789759892.771891,
+      "command": [
+        "C:\\Users\\abusu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\training_pipeline.py",
+        "--data",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\data\\research_v2\\sipakmed_only\\data.yaml",
+        "--project",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\research_v2\\runs",
+        "--name",
+        "v2_sipakmed_only_seed17",
+        "--seed",
+        "17",
+        "--epochs",
+        "150",
+        "--patience",
+        "30",
+        "--workers",
+        "2"
+      ],
+      "pid": 40416,
+      "returncode": 0,
+      "ended": 1789761010.4240103
+    },
+    {
+      "name": "v2_combined_seed17",
+      "status": "complete",
+      "started": 1789761010.4388611,
+      "command": [
+        "C:\\Users\\abusu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\training_pipeline.py",
+        "--data",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\data\\research_v2\\combined\\data.yaml",
+        "--project",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\research_v2\\runs",
+        "--name",
+        "v2_combined_seed17",
+        "--seed",
+        "17",
+        "--epochs",
+        "150",
+        "--patience",
+        "30",
+        "--workers",
+        "2"
+      ],
+      "pid": 8112,
+      "returncode": 0,
+      "ended": 1789762395.399452
+    },
+    {
+      "name": "v2_sipakmed_only_seed43",
+      "status": "complete",
+      "started": 1789762395.4059665,
+      "command": [
+        "C:\\Users\\abusu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\training_pipeline.py",
+        "--data",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\data\\research_v2\\sipakmed_only\\data.yaml",
+        "--project",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\research_v2\\runs",
+        "--name",
+        "v2_sipakmed_only_seed43",
+        "--seed",
+        "43",
+        "--epochs",
+        "150",
+        "--patience",
+        "30",
+        "--workers",
+        "2"
+      ],
+      "pid": 43040,
+      "returncode": 0,
+      "ended": 1789763064.7640457
+    },
+    {
+      "name": "v2_combined_seed43",
+      "status": "stopped_superseded",
+      "started": 1789763064.7721977,
+      "command": [
+        "C:\\Users\\abusu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-u",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\training_pipeline.py",
+        "--data",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\data\\research_v2\\combined\\data.yaml",
+        "--project",
+        "C:\\Users\\abusu\\Desktop\\pap-smear-cyto-algo\\results\\research_v2\\runs",
+        "--name",
+        "v2_combined_seed43",
+        "--seed",
+        "43",
+        "--epochs",
+        "150",
+        "--patience",
+        "30",
+        "--workers",
+        "2"
+      ],
+      "pid": 8412,
+      "ended": 1789764035.7093809
+    }
+  ],
+  "status": "superseded_by_research_v3",
+  "superseded_reason": "Release verification found re-captured overlapping fields crossing splits (e.g. dense evaluation field koil_0061 overlaps training field koil_0062). Filename grouping is insufficient; see results/research_v3."
+}

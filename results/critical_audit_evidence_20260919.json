@@ -1,0 +1,1125 @@
+{
+  "scope": "Audit evidence only; original code and reports unchanged. Corrected baseline uses existing sweep matcher and existing labels, not independent ground truth.",
+  "phase1_checkpoint_sha256": "9f6245bf9d80870155c7edcb4292e3f87deb989e30e7fc0499ebf17aac9597e1",
+  "phase1_model_names": {
+    "0": "Dyskeratotic",
+    "1": "Koilocytotic",
+    "2": "Metaplastic",
+    "3": "Parabasal",
+    "4": "Superficial-Intermediate"
+  },
+  "phase1_corrected_at_004": {
+    "conf": 0.04,
+    "total_pred": 746,
+    "total_gt": 1067,
+    "tp": 509,
+    "fp": 237,
+    "fn": 558,
+    "precision": 0.6823056300268097,
+    "recall": 0.47703842549203374,
+    "f1": 0.56150027578599,
+    "abnormal_total_pred": 279,
+    "abnormal_total_gt": 361,
+    "abnormal_tp": 166,
+    "abnormal_precision": 0.5949820788530465,
+    "abnormal_recall": 0.4598337950138504,
+    "abnormal_f1": 0.51875
+  },
+  "phase1_corrected_at_005": {
+    "conf": 0.05,
+    "total_pred": 683,
+    "total_gt": 1067,
+    "tp": 480,
+    "fp": 203,
+    "fn": 587,
+    "precision": 0.7027818448023426,
+    "recall": 0.4498594189315839,
+    "f1": 0.5485714285714286,
+    "abnormal_total_pred": 252,
+    "abnormal_total_gt": 361,
+    "abnormal_tp": 155,
+    "abnormal_precision": 0.6150793650793651,
+    "abnormal_recall": 0.4293628808864266,
+    "abnormal_f1": 0.5057096247960848
+  },
+  "phase1_corrected_at_0111": {
+    "conf": 0.111,
+    "total_pred": 470,
+    "total_gt": 1067,
+    "tp": 385,
+    "fp": 85,
+    "fn": 682,
+    "precision": 0.8191489361702128,
+    "recall": 0.36082474226804123,
+    "f1": 0.5009759271307743,
+    "abnormal_total_pred": 165,
+    "abnormal_total_gt": 361,
+    "abnormal_tp": 120,
+    "abnormal_precision": 0.7272727272727273,
+    "abnormal_recall": 0.33240997229916897,
+    "abnormal_f1": 0.45627376425855515
+  },
+  "phase1_corrected_best_abnormal_f1_exploratory": {
+    "conf": 0.04,
+    "total_pred": 746,
+    "total_gt": 1067,
+    "tp": 509,
+    "fp": 237,
+    "fn": 558,
+    "precision": 0.6823056300268097,
+    "recall": 0.47703842549203374,
+    "f1": 0.56150027578599,
+    "abnormal_total_pred": 279,
+    "abnormal_total_gt": 361,
+    "abnormal_tp": 166,
+    "abnormal_precision": 0.5949820788530465,
+    "abnormal_recall": 0.4598337950138504,
+    "abnormal_f1": 0.51875
+  },
+  "split_image_counts": {
+    "train": 1105,
+    "valid": 193
+  },
+  "exact_file_hash_overlap": 0,
+  "filename_coordinate_overlap_note": "Inferred from shared source prefixes and coordinate suffixes; verify against original source images.",
+  "filename_coordinate_overlap_pairs": [
+    {
+      "validation": "cell_1_1200_1188_1700_1688_jpg.rf.f3f9731310c4a8bd50e487bf7f822cb6.jpg",
+      "train": "cell_1_800_1188_1300_1688_jpg.rf.dda7100125b30a29b8c1cfd9f683812d.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_1200_1188_1700_1688_jpg.rf.f3f9731310c4a8bd50e487bf7f822cb6.jpg",
+      "train": "cell_1_800_800_1300_1300_jpg.rf.77850e189113ec0f4b72441d93978ff1.jpg",
+      "fraction_validation_area": 0.0448
+    },
+    {
+      "validation": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+      "train": "cell_1_1200_400_1700_900_jpg.rf.bf31be47ad98dff5507e2afcb46eb7e5.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+      "train": "cell_1_1600_400_2100_900_jpg.rf.eb95c4d01652547ca04bae3bfc794fbf.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+      "train": "cell_1_800_1188_1300_1688_jpg.rf.dda7100125b30a29b8c1cfd9f683812d.jpg",
+      "fraction_validation_area": 0.0448
+    },
+    {
+      "validation": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+      "train": "cell_1_800_400_1300_900_jpg.rf.873d61e0ffaca8db675f3254abe622ab.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_1200_800_1700_1300_jpg.rf.6b8afe3b1cb1190a26452816b94252d9.jpg",
+      "train": "cell_1_800_800_1300_1300_jpg.rf.77850e189113ec0f4b72441d93978ff1.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_1600_1188_2100_1688_jpg.rf.18091d31f6d4a927ce7a79639774bfbf.jpg",
+      "train": "cell_1_2000_1188_2500_1688_jpg.rf.4f2faa181bac918dba164b092357ef02.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_1600_1188_2100_1688_jpg.rf.18091d31f6d4a927ce7a79639774bfbf.jpg",
+      "train": "cell_1_2000_800_2500_1300_jpg.rf.3c1292da3025f8535d817adc49068145.jpg",
+      "fraction_validation_area": 0.0448
+    },
+    {
+      "validation": "cell_1_2000_0_2500_500_jpg.rf.7a9a0d2a807977beb33e00917daeaef6.jpg",
+      "train": "cell_1_1600_400_2100_900_jpg.rf.eb95c4d01652547ca04bae3bfc794fbf.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_2000_0_2500_500_jpg.rf.7a9a0d2a807977beb33e00917daeaef6.jpg",
+      "train": "cell_1_2000_400_2500_900_jpg.rf.eb3111f87302d935a4d718e81d154ec6.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_2000_0_2500_500_jpg.rf.7a9a0d2a807977beb33e00917daeaef6.jpg",
+      "train": "cell_1_2400_0_2900_500_jpg.rf.3a96e498d76c00cc15582ead09799492.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_2000_0_2500_500_jpg.rf.7a9a0d2a807977beb33e00917daeaef6.jpg",
+      "train": "cell_1_2400_400_2900_900_jpg.rf.455731e0e387d33b01e95ab58138e97e.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_2400_0_2900_500_jpg.rf.3a96e498d76c00cc15582ead09799492.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_2400_400_2900_900_jpg.rf.455731e0e387d33b01e95ab58138e97e.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_2400_800_2900_1300_jpg.rf.2e6b4e19a39b89fced976b562b87e208.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_2800_0_3300_500_jpg.rf.bc80ac664c65e04d80dd54dc1d9c1078.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_2800_800_3300_1300_jpg.rf.2e883c3bdf51950dfb6410f6a73085ae.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_1_2800_400_3300_900_jpg.rf.264a58b9dd68c69011717949084530fc.jpg",
+      "train": "cell_1_3052_800_3552_1300_jpg.rf.7eb8830edf33b65593eb89eb1cc40320.jpg",
+      "fraction_validation_area": 0.0992
+    },
+    {
+      "validation": "cell_1_3052_0_3552_500_jpg.rf.a2129409ad5680798f0a89c6d492cd64.jpg",
+      "train": "cell_1_2800_0_3300_500_jpg.rf.bc80ac664c65e04d80dd54dc1d9c1078.jpg",
+      "fraction_validation_area": 0.496
+    },
+    {
+      "validation": "cell_2_0_1184_500_1684_jpg.rf.0bc6c0d3973ed89fc094ed71cc7dc3b2.jpg",
+      "train": "cell_2_0_800_500_1300_jpg.rf.aef69caaf043311597013213eddd8839.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_0_1184_500_1684_jpg.rf.0bc6c0d3973ed89fc094ed71cc7dc3b2.jpg",
+      "train": "cell_2_400_1184_900_1684_jpg.rf.c43c0123352ef3ce00c0940cf713bb74.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_0_1184_500_1684_jpg.rf.0bc6c0d3973ed89fc094ed71cc7dc3b2.jpg",
+      "train": "cell_2_400_800_900_1300_jpg.rf.5457b232af85a961128a1cacb4f9a888.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_1200_1184_1700_1684_jpg.rf.99b1e0d619f069fcc19e26172b0f7ed3.jpg",
+      "train": "cell_2_1200_800_1700_1300_jpg.rf.ed2df684703c6f0cdae5dd84ccce97aa.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_1200_1184_1700_1684_jpg.rf.99b1e0d619f069fcc19e26172b0f7ed3.jpg",
+      "train": "cell_2_1600_1184_2100_1684_jpg.rf.d6620f08a43cdf391c472b291e7cec0c.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_1200_1184_1700_1684_jpg.rf.99b1e0d619f069fcc19e26172b0f7ed3.jpg",
+      "train": "cell_2_1600_800_2100_1300_jpg.rf.6ae865b0c5d576b385f6679f0391cff4.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_1200_1184_1700_1684_jpg.rf.99b1e0d619f069fcc19e26172b0f7ed3.jpg",
+      "train": "cell_2_800_1184_1300_1684_jpg.rf.0357b4706123123753b074c6e89a6e3a.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_3600_1184_4100_1684_jpg.rf.2f425ded0ebe0c1aed9de526371a42d8.jpg",
+      "train": "cell_2_3200_1184_3700_1684_jpg.rf.1ba37590e041530fa89c703bff59d14a.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_3600_1184_4100_1684_jpg.rf.2f425ded0ebe0c1aed9de526371a42d8.jpg",
+      "train": "cell_2_3200_800_3700_1300_jpg.rf.69ef2e148c3af2df11e9c3bbc694a576.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_3600_1184_4100_1684_jpg.rf.2f425ded0ebe0c1aed9de526371a42d8.jpg",
+      "train": "cell_2_4000_1184_4500_1684_jpg.rf.7b62f3bb0d718782869f92bb347f4ac6.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_3600_1184_4100_1684_jpg.rf.2f425ded0ebe0c1aed9de526371a42d8.jpg",
+      "train": "cell_2_4000_800_4500_1300_jpg.rf.5186b7dae5b380b8e346a71156db8042.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_4400_400_4900_900_jpg.rf.1bc1d014bf236ce8379e13f750b0fcb3.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_4400_800_4900_1300_jpg.rf.c3b9b59e458665db8d1e135b3e218941.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_4800_0_5300_500_jpg.rf.c901603afb6bcd5dcdf4f7293eb8f31d.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_5200_0_5700_500_jpg.rf.8919f9c27fe5f1cf17f4faca492373df.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_5200_400_5700_900_jpg.rf.65a3a57d9d42bf85546fa5e8d4243ab5.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_4800_400_5300_900_jpg.rf.58faa649eeecfab24549830d93928a9f.jpg",
+      "train": "cell_2_5200_800_5700_1300_jpg.rf.e2fc02531f5cb1b161317cde45a06914.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_4400_1184_4900_1684_jpg.rf.0bdc9c66d5aa9f0699c2e8cbcbb08e6d.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_4400_400_4900_900_jpg.rf.1bc1d014bf236ce8379e13f750b0fcb3.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_4400_800_4900_1300_jpg.rf.c3b9b59e458665db8d1e135b3e218941.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_4800_1184_5300_1684_jpg.rf.02dba5eda8f5908fbe227318f97fa18c.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_5200_1184_5700_1684_jpg.rf.0840d68ef4578e3b8ad1aabc939f23f0.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_5200_400_5700_900_jpg.rf.65a3a57d9d42bf85546fa5e8d4243ab5.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_4800_800_5300_1300_jpg.rf.85318702e03e41705c52b37cd9cab30d.jpg",
+      "train": "cell_2_5200_800_5700_1300_jpg.rf.e2fc02531f5cb1b161317cde45a06914.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+      "train": "cell_2_5200_0_5700_500_jpg.rf.8919f9c27fe5f1cf17f4faca492373df.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+      "train": "cell_2_5200_400_5700_900_jpg.rf.65a3a57d9d42bf85546fa5e8d4243ab5.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+      "train": "cell_2_5600_400_6100_900_jpg.rf.ad5707b66e0af663c1c7fd4b2f58b8d7.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+      "train": "cell_2_6000_0_6500_500_jpg.rf.f441ce282eabe0f1c5e227bacbe330c2.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_5600_0_6100_500_jpg.rf.cb6cf6396fb7a468935a930702bbf253.jpg",
+      "train": "cell_2_6000_400_6500_900_jpg.rf.02203c3f55e6973173fa459c80358a07.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_5600_1184_6100_1684_jpg.rf.81448c23ea97571dc5f64ca1469a6283.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_5600_400_6100_900_jpg.rf.ad5707b66e0af663c1c7fd4b2f58b8d7.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_5600_800_6100_1300_jpg.rf.6c25b006b04c0dd88a9fd6846ab1bfff.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_6000_1184_6500_1684_jpg.rf.e6e8788122b9f27e57365fcb8909b719.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_6000_400_6500_900_jpg.rf.02203c3f55e6973173fa459c80358a07.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_6400_1184_6900_1684_jpg.rf.ecf96f596d7f2dc86602750d882f4383.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_6400_400_6900_900_jpg.rf.c37b20524d63b9bc18560661d4acf50b.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_6000_800_6500_1300_jpg.rf.8e276d5a327d97b07619903a2205a7c7.jpg",
+      "train": "cell_2_6400_800_6900_1300_jpg.rf.353b49454c2c4e7f2222a9c6e9b950af.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+      "train": "cell_2_6400_1184_6900_1684_jpg.rf.ecf96f596d7f2dc86602750d882f4383.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+      "train": "cell_2_6400_800_6900_1300_jpg.rf.353b49454c2c4e7f2222a9c6e9b950af.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+      "train": "cell_2_6800_800_7300_1300_jpg.rf.002b3916eefc74ee8ca9126a261b84f7.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+      "train": "cell_2_7200_1184_7700_1684_jpg.rf.00cf5ffaf974682d8bc7b3387dc010ca.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_6800_1184_7300_1684_jpg.rf.155c7884e28de2fc89b23e2d39f96dd5.jpg",
+      "train": "cell_2_7200_800_7700_1300_jpg.rf.d88cf4269db6d2506ce5227f4bcf7805.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_7200_1184_7700_1684_jpg.rf.00cf5ffaf974682d8bc7b3387dc010ca.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_7200_400_7700_900_jpg.rf.a729a4cc6979c232679be9df0e4d5989.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_7200_800_7700_1300_jpg.rf.d88cf4269db6d2506ce5227f4bcf7805.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_7600_1184_8100_1684_jpg.rf.de50d8853f8410a91679650ce08491cc.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_7600_400_8100_900_jpg.rf.97aa9fd77abd5e7cda3981e76782c273.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_7600_800_8100_1300_jpg.rf.b54a22ce4cc04b88389451c9388fee04.jpg",
+      "train": "cell_2_8000_800_8500_1300_jpg.rf.556ccfdc3f88c93dfbe84f6b27c518e0.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_8000_1184_8500_1684_jpg.rf.9c8b27a9a0730a9d3a56976af7a0e10b.jpg",
+      "train": "cell_2_7600_1184_8100_1684_jpg.rf.de50d8853f8410a91679650ce08491cc.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_8000_1184_8500_1684_jpg.rf.9c8b27a9a0730a9d3a56976af7a0e10b.jpg",
+      "train": "cell_2_8000_800_8500_1300_jpg.rf.556ccfdc3f88c93dfbe84f6b27c518e0.jpg",
+      "fraction_validation_area": 0.232
+    },
+    {
+      "validation": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+      "train": "cell_2_7600_0_8100_500_jpg.rf.d361c97692311cc6a8e1c5378fa624b7.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+      "train": "cell_2_7600_400_8100_900_jpg.rf.97aa9fd77abd5e7cda3981e76782c273.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+      "train": "cell_2_8000_0_8500_500_jpg.rf.468a8662f79913e6c19bdbee1815237b.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+      "train": "cell_2_8000_800_8500_1300_jpg.rf.556ccfdc3f88c93dfbe84f6b27c518e0.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_8000_400_8500_900_jpg.rf.e3bf5e13af1f483227d4dd8367080629.jpg",
+      "train": "cell_2_8400_0_8900_500_jpg.rf.d84fa2ca07108f8b93248136c85b55ee.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_8400_1184_8900_1684_jpg.rf.26a38ae6f475205584f33f06f106ff97.jpg",
+      "train": "cell_2_8000_800_8500_1300_jpg.rf.556ccfdc3f88c93dfbe84f6b27c518e0.jpg",
+      "fraction_validation_area": 0.0464
+    },
+    {
+      "validation": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+      "train": "cell_2_9200_0_9700_500_jpg.rf.ebdae864f7fec5f33080a743bf4cae98.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+      "train": "cell_2_9600_800_10100_1300_jpg.rf.816aff5ff815c16c154a1219cebfa86d.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+      "train": "cell_2_9652_0_10152_500_jpg.rf.251cbc998021b80c97e1269cc5e12806.jpg",
+      "fraction_validation_area": 0.1792
+    },
+    {
+      "validation": "cell_2_9600_400_10100_900_jpg.rf.df8dcd106adc53fd300e53984d3c357c.jpg",
+      "train": "cell_2_9652_400_10152_900_jpg.rf.5f12d2b72e991952e796e256af71b949.jpg",
+      "fraction_validation_area": 0.896
+    },
+    {
+      "validation": "cell_2_9652_800_10152_1300_jpg.rf.c035ce84baaea03a78be06c376897fda.jpg",
+      "train": "cell_2_9600_800_10100_1300_jpg.rf.816aff5ff815c16c154a1219cebfa86d.jpg",
+      "fraction_validation_area": 0.896
+    },
+    {
+      "validation": "cell_2_9652_800_10152_1300_jpg.rf.c035ce84baaea03a78be06c376897fda.jpg",
+      "train": "cell_2_9652_400_10152_900_jpg.rf.5f12d2b72e991952e796e256af71b949.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+      "train": "cell_3_0_0_500_500_jpg.rf.6a744015813e53ca3c4dfe891f0c6a0b.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+      "train": "cell_3_0_800_500_1300_jpg.rf.02107aa775267103a7847ebaf365bdcb.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+      "train": "cell_3_400_0_900_500_jpg.rf.05d06ab981d0d7fabe33849bff1088e5.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+      "train": "cell_3_400_400_900_900_jpg.rf.53e48e13d329931fc4ad27e6c78c67d7.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_0_400_500_900_jpg.rf.77a8c947300f5083e4d0194faedb6822.jpg",
+      "train": "cell_3_400_800_900_1300_jpg.rf.b2a43412f0cd79fef156164f4a8b89e2.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_1200_1200_1700_1700_jpg.rf.6b0c8c9ef4c196e963867916bba27807.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_1200_400_1700_900_jpg.rf.b7bfcb833d4dfbbfd20b34ce9562ef8c.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_1200_800_1700_1300_jpg.rf.407c73d9981b86cf643de14a560b5909.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_1600_1200_2100_1700_jpg.rf.67549df019565eaaaae471d49bce8d30.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_1600_400_2100_900_jpg.rf.4f90edd539001ce63bd2f816a14e1012.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_1600_800_2100_1300_jpg.rf.d7b2f3971769a4f60ac0b7decf5ed49b.jpg",
+      "train": "cell_3_2000_800_2500_1300_jpg.rf.911ec763f2175c44b1ef9affbcc0111f.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_1600_0_2100_500_jpg.rf.1c153912d658f14027d6e0ef8c87d3cb.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_1600_400_2100_900_jpg.rf.4f90edd539001ce63bd2f816a14e1012.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_2000_0_2500_500_jpg.rf.cf337c894261aaf264305d73e8c0f27f.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_2000_800_2500_1300_jpg.rf.911ec763f2175c44b1ef9affbcc0111f.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_2400_0_2900_500_jpg.rf.ff92e626bdc3d2073051e19556c09e2d.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_2400_400_2900_900_jpg.rf.4e6fb196182cc0d8a72898009d753a17.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2000_400_2500_900_jpg.rf.e29c68fbed233d43df2e58b1df33f33f.jpg",
+      "train": "cell_3_2400_800_2900_1300_jpg.rf.b88627e48d35125d3064ddee1c2d2bf4.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+      "train": "cell_3_2400_1200_2900_1700_jpg.rf.f62853c98ef0f61d25991a837fada694.jpg",
+      "fraction_validation_area": 0.0588
+    },
+    {
+      "validation": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+      "train": "cell_3_2400_1553_2900_2053_jpg.rf.6266ec369c19fad4444a1b509267a8b1.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+      "train": "cell_3_2800_1200_3300_1700_jpg.rf.3142a3725459b47cd68e558488c98800.jpg",
+      "fraction_validation_area": 0.294
+    },
+    {
+      "validation": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+      "train": "cell_3_3093_1200_3593_1700_jpg.rf.9be084430482b03e3dd355da031bc4f6.jpg",
+      "fraction_validation_area": 0.121716
+    },
+    {
+      "validation": "cell_3_2800_1553_3300_2053_jpg.rf.0b5668a90d161c9488918f9263ef0294.jpg",
+      "train": "cell_3_3093_1553_3593_2053_jpg.rf.879bc84d67e4c043e382b6b144aaf744.jpg",
+      "fraction_validation_area": 0.414
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_2400_1200_2900_1700_jpg.rf.f62853c98ef0f61d25991a837fada694.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_2400_400_2900_900_jpg.rf.4e6fb196182cc0d8a72898009d753a17.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_2400_800_2900_1300_jpg.rf.b88627e48d35125d3064ddee1c2d2bf4.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_2800_1200_3300_1700_jpg.rf.3142a3725459b47cd68e558488c98800.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_3093_1200_3593_1700_jpg.rf.9be084430482b03e3dd355da031bc4f6.jpg",
+      "fraction_validation_area": 0.0828
+    },
+    {
+      "validation": "cell_3_2800_800_3300_1300_jpg.rf.2545889ad4cffaec4644b3767d174c52.jpg",
+      "train": "cell_3_3093_800_3593_1300_jpg.rf.14ffa8b6b943ef342a56baf27cfd827f.jpg",
+      "fraction_validation_area": 0.414
+    },
+    {
+      "validation": "Cito-4_0_0_500_500_jpg.rf.40680b06e462e1b26a111d15b5926dc2.jpg",
+      "train": "Cito-4_0_400_500_900_jpg.rf.bb1a6cc31a3f7e5156f87d887a6b9130.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "Cito-4_0_0_500_500_jpg.rf.40680b06e462e1b26a111d15b5926dc2.jpg",
+      "train": "Cito-4_400_0_900_500_jpg.rf.e5f644f9273dfee18769893180ebbecb.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_1200_0_1700_500_jpg.rf.876e5548c907cca35be1d76876c12184.jpg",
+      "fraction_validation_area": 0.04
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_1200_652_1700_1152_jpg.rf.d3470fec7acac0f9e5264d0d88db49d3.jpg",
+      "fraction_validation_area": 0.0992
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_1600_0_2100_500_jpg.rf.b6ef05ca3d0db13e21d3dec3f8573d4c.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_1600_652_2100_1152_jpg.rf.d7f8f8ef205f2bc6c7e37151a2238bb3.jpg",
+      "fraction_validation_area": 0.496
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_2000_400_2500_900_jpg.rf.0bf233ef25717b38bcf7a905456da6b5.jpg",
+      "fraction_validation_area": 0.2
+    },
+    {
+      "validation": "Cito-4_1600_400_2100_900_jpg.rf.df41316c6eeaf2b47ee196bfa890f03d.jpg",
+      "train": "Cito-4_2000_652_2500_1152_jpg.rf.69780ac76379d47dce7dae245035feaf.jpg",
+      "fraction_validation_area": 0.0992
+    },
+    {
+      "validation": "CV1_0_3920_1400_5320_jpg.rf.d03188122fadb0f9dc941c08a5e36eb5.jpg",
+      "train": "CV1_0_2940_1400_4340_jpg.rf.53308a10b4829df437d47900ae7e5274.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_0_3920_1400_5320_jpg.rf.d03188122fadb0f9dc941c08a5e36eb5.jpg",
+      "train": "CV1_0_4900_1400_6300_jpg.rf.7cb03240d36feb100cd6f7366f717a47.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_1960_4900_3360_6300_jpg.rf.46f92d46c5b939191e4c4c3f48d3da87.jpg",
+      "train": "CV1_1960_3920_3360_5320_jpg.rf.c70ef6dc4c53d62da108f7490010d1e2.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_1960_4900_3360_6300_jpg.rf.46f92d46c5b939191e4c4c3f48d3da87.jpg",
+      "train": "CV1_1960_5880_3360_7280_jpg.rf.2bf60136e08b592d137aae847ecc5cee.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_1960_4900_3360_6300_jpg.rf.46f92d46c5b939191e4c4c3f48d3da87.jpg",
+      "train": "CV1_2940_5880_4340_7280_jpg.rf.8682700e49355b3defec68af1f325157.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_2940_0_4340_1400_jpg.rf.f89894b3d0c1ad351c7c337847c598b2.jpg",
+      "train": "CV1_2940_980_4340_2380_jpg.rf.965a3050535b2807a8f3eb580a33e8d1.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_2940_0_4340_1400_jpg.rf.f89894b3d0c1ad351c7c337847c598b2.jpg",
+      "train": "CV1_3920_0_5320_1400_jpg.rf.a6155707e57af784a5e26fd93b114363.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_2940_0_4340_1400_jpg.rf.f89894b3d0c1ad351c7c337847c598b2.jpg",
+      "train": "CV1_3920_980_5320_2380_jpg.rf.545a1d7c9a3116f1dcdf44ba59f16fa6.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+      "train": "CV1_1960_5880_3360_7280_jpg.rf.2bf60136e08b592d137aae847ecc5cee.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+      "train": "CV1_1960_6860_3360_8260_jpg.rf.8bdf0f4a61771dd4527bccc3f9de4edd.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+      "train": "CV1_1960_7496_3360_8896_jpg.rf.83a652b8380b49474f6cff5d731a6cab.jpg",
+      "fraction_validation_area": 0.1637142857142857
+    },
+    {
+      "validation": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+      "train": "CV1_2940_5880_4340_7280_jpg.rf.8682700e49355b3defec68af1f325157.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_2940_6860_4340_8260_jpg.rf.d4b488b006cfaa8e2ad6048f170d8a4a.jpg",
+      "train": "CV1_2940_7496_4340_8896_jpg.rf.b4c8316ee86dc108f34b84053f061e41.jpg",
+      "fraction_validation_area": 0.5457142857142857
+    },
+    {
+      "validation": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+      "train": "CV1_3920_2940_5320_4340_jpg.rf.cc07423661d3f5086143703e58d36346.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+      "train": "CV1_3920_4900_5320_6300_jpg.rf.2e5d1dc4d6d2cf3bfcaaf0f857f3d77d.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+      "train": "CV1_4900_2940_6300_4340_jpg.rf.095002baf86862fbf13446de678ab58d.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+      "train": "CV1_4900_3920_6300_5320_jpg.rf.c648e84b5bb76f4453313a1d104355a8.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_3920_3920_5320_5320_jpg.rf.a5034acc5e5a835bd18eeb6eb25af273.jpg",
+      "train": "CV1_4900_4900_6300_6300_jpg.rf.ed86d7efec65b9270918d939d1533f8e.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+      "train": "CV1_3920_4900_5320_6300_jpg.rf.2e5d1dc4d6d2cf3bfcaaf0f857f3d77d.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+      "train": "CV1_4900_4900_6300_6300_jpg.rf.ed86d7efec65b9270918d939d1533f8e.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+      "train": "CV1_4900_6860_6300_8260_jpg.rf.d5333c717fe45709ca69d79849140b3b.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+      "train": "CV1_5880_5880_7280_7280_jpg.rf.ba2c70783f02a6e6b4a1c401babec9ae.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_4900_5880_6300_7280_jpg.rf.f81411fd3e2558d417e4bfc6b25f9b17.jpg",
+      "train": "CV1_5880_6860_7280_8260_jpg.rf.791c1919e3fae8d9682f4a97f1a6cbed.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_5880_1960_7280_3360_jpg.rf.8f2877a7b7b216069a4a7c2a0cdb42b7.jpg",
+      "fraction_validation_area": 0.08785714285714286
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_5880_2940_7280_4340_jpg.rf.49b94bd364fd6fc03aebb810521fdd2b.jpg",
+      "fraction_validation_area": 0.026357142857142857
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_6860_1960_8260_3360_jpg.rf.6601a02c863fbcf52753042a69f4beb6.jpg",
+      "fraction_validation_area": 0.7878571428571428
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_6860_2940_8260_4340_jpg.rf.8f9e62d028c70328fa3d45511e0a9685.jpg",
+      "fraction_validation_area": 0.23635714285714285
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_6860_980_8260_2380_jpg.rf.5e255d029019a2e4a3f71e168e440ad7.jpg",
+      "fraction_validation_area": 0.23635714285714285
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_7157_2940_8557_4340_jpg.rf.35a591321a837d545e6bf675265fa13c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_7157_1960_8557_3360_jpg.rf.ba3a1cc9d98eebd19495af3c5f0dc67a.jpg",
+      "train": "CV1_7157_980_8557_2380_jpg.rf.6bc4e1cfa48d52e44554f9b0c768e09c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_7157_7496_8557_8896_jpg.rf.c415ebb11b42c5141cb7048d7352459e.jpg",
+      "train": "CV1_5880_6860_7280_8260_jpg.rf.791c1919e3fae8d9682f4a97f1a6cbed.jpg",
+      "fraction_validation_area": 0.04794489795918367
+    },
+    {
+      "validation": "CV1_7157_7496_8557_8896_jpg.rf.c415ebb11b42c5141cb7048d7352459e.jpg",
+      "train": "CV1_6860_6860_8260_8260_jpg.rf.00725c54dbacf331c40c6f2d82564a0f.jpg",
+      "fraction_validation_area": 0.42994489795918367
+    },
+    {
+      "validation": "CV1_7157_7496_8557_8896_jpg.rf.c415ebb11b42c5141cb7048d7352459e.jpg",
+      "train": "CV1_6860_7496_8260_8896_jpg.rf.de84197b0c95d277ad712b0c8af85616.jpg",
+      "fraction_validation_area": 0.7878571428571428
+    },
+    {
+      "validation": "CV1_7157_7496_8557_8896_jpg.rf.c415ebb11b42c5141cb7048d7352459e.jpg",
+      "train": "CV1_7157_6860_8557_8260_jpg.rf.375eda5e6036c0b3d336c5abdea06634.jpg",
+      "fraction_validation_area": 0.5457142857142857
+    },
+    {
+      "validation": "CV1_980_1960_2380_3360_jpg.rf.1a482e787c566038b4dec4106e5c2b85.jpg",
+      "train": "CV1_0_1960_1400_3360_jpg.rf.b7dcac4e3d2b6a45b72428ee5c11a0c1.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_980_1960_2380_3360_jpg.rf.1a482e787c566038b4dec4106e5c2b85.jpg",
+      "train": "CV1_0_2940_1400_4340_jpg.rf.53308a10b4829df437d47900ae7e5274.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_980_1960_2380_3360_jpg.rf.1a482e787c566038b4dec4106e5c2b85.jpg",
+      "train": "CV1_0_980_1400_2380_jpg.rf.e603b85832e46d3c02ce30494d14d457.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_0_6860_1400_8260_jpg.rf.fea68c2481181e283cba493366ffb245.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_0_7496_1400_8896_jpg.rf.1cb4ce65f9813a1dd9930c696dd4ba91.jpg",
+      "fraction_validation_area": 0.1637142857142857
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_1960_5880_3360_7280_jpg.rf.2bf60136e08b592d137aae847ecc5cee.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_1960_6860_3360_8260_jpg.rf.8bdf0f4a61771dd4527bccc3f9de4edd.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_1960_7496_3360_8896_jpg.rf.83a652b8380b49474f6cff5d731a6cab.jpg",
+      "fraction_validation_area": 0.1637142857142857
+    },
+    {
+      "validation": "CV1_980_6860_2380_8260_jpg.rf.e85258fb593c29153fb69eaeca301659.jpg",
+      "train": "CV1_980_7496_2380_8896_jpg.rf.ea220fdbcd8d12171507815c4bbbe865.jpg",
+      "fraction_validation_area": 0.5457142857142857
+    },
+    {
+      "validation": "CV1_980_980_2380_2380_jpg.rf.0531b2cc4785f48727229eabb47d4963.jpg",
+      "train": "CV1_0_1960_1400_3360_jpg.rf.b7dcac4e3d2b6a45b72428ee5c11a0c1.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "CV1_980_980_2380_2380_jpg.rf.0531b2cc4785f48727229eabb47d4963.jpg",
+      "train": "CV1_0_980_1400_2380_jpg.rf.e603b85832e46d3c02ce30494d14d457.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "CV1_980_980_2380_2380_jpg.rf.0531b2cc4785f48727229eabb47d4963.jpg",
+      "train": "CV1_980_0_2380_1400_jpg.rf.69aa15a97621a393380f86c1901b315e.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_1960_7840_3360_9240_jpg.rf.3ea1c94dcf9a45cdd7895dea86db9ea5.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_1960_8820_3360_10220_jpg.rf.beb8aa087daf031e2d53bcdc53b6dbc2.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_1960_9609_3360_11009_jpg.rf.8cb171ed2cfcaec8dc28c077f3ee580c.jpg",
+      "fraction_validation_area": 0.13092857142857142
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_2940_9609_4340_11009_jpg.rf.d65a84770ec56f4e60ab38df719e94f5.jpg",
+      "fraction_validation_area": 0.43642857142857144
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_3920_7840_5320_9240_jpg.rf.4a868c15a505f59999404e813e2ea4b1.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_2940_8820_4340_10220_jpg.rf.78c5de02b5ef46d6207dc13b8cbca6ff.jpg",
+      "train": "cv2_3920_8820_5320_10220_jpg.rf.168fa90d3909cce4ba6eb74c32d0e5af.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_2940_1960_4340_3360_jpg.rf.102c428f76b2f601cc988771b6801651.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_2940_980_4340_2380_jpg.rf.a51cbb3663c9c6660c60969ce51608f3.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_3920_0_5320_1400_jpg.rf.030700877e41467a7eb7363d0d084cfb.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_3920_1960_5320_3360_jpg.rf.1ed6364d37bf6632c60bdaee73779eb0.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_4900_1960_6300_3360_jpg.rf.63e9e47ba6664d81e74ad71ec2717359.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_3920_980_5320_2380_jpg.rf.6d08a3edec9d22982129a15b26b7cbc2.jpg",
+      "train": "cv2_4900_980_6300_2380_jpg.rf.a47a4d37c47c0cc36d1f3b9cc46b36cb.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_0_6300_1400_jpg.rf.6fa10ebb7f48cf9fe780cf29bf2a5e27.jpg",
+      "train": "cv2_3920_0_5320_1400_jpg.rf.030700877e41467a7eb7363d0d084cfb.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_0_6300_1400_jpg.rf.6fa10ebb7f48cf9fe780cf29bf2a5e27.jpg",
+      "train": "cv2_4900_980_6300_2380_jpg.rf.a47a4d37c47c0cc36d1f3b9cc46b36cb.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_0_6300_1400_jpg.rf.6fa10ebb7f48cf9fe780cf29bf2a5e27.jpg",
+      "train": "cv2_5880_0_7280_1400_jpg.rf.4a99976ab7b30224dad177b6bd933f2b.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_0_6300_1400_jpg.rf.6fa10ebb7f48cf9fe780cf29bf2a5e27.jpg",
+      "train": "cv2_5880_980_7280_2380_jpg.rf.7f472ba7d57e45d427fc1a2249d1832b.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_3920_5880_5320_7280_jpg.rf.e40fea57099bdf727d71c0aaf2f085d4.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_3920_6860_5320_8260_jpg.rf.38e7d1442d3da4473e4d9bb46510c45d.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_4900_4900_6300_6300_jpg.rf.47de8bcc3a39d5ce3a0d67d67a95ba10.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_4900_6860_6300_8260_jpg.rf.5c597a3328faea8ee791987496ac338c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_5880_4900_7280_6300_jpg.rf.19449369fba7993751f3dfc2f44e0ebe.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_5880_5880_7280_7280_jpg.rf.9040bfc77b1b069a3618fc538ccdae12.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_5880_6300_7280_jpg.rf.fbcf593ca6df6d8cf2f2c442a4eced5a.jpg",
+      "train": "cv2_5880_6860_7280_8260_jpg.rf.63ff026f88b865cf0543f8f8ba6c75bd.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_3920_6860_5320_8260_jpg.rf.38e7d1442d3da4473e4d9bb46510c45d.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_3920_7840_5320_9240_jpg.rf.4a868c15a505f59999404e813e2ea4b1.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_3920_8820_5320_10220_jpg.rf.168fa90d3909cce4ba6eb74c32d0e5af.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_4900_6860_6300_8260_jpg.rf.5c597a3328faea8ee791987496ac338c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_4900_8820_6300_10220_jpg.rf.db77f1078b259d37f7d87b3fc1f77386.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_5880_6860_7280_8260_jpg.rf.63ff026f88b865cf0543f8f8ba6c75bd.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_5880_7840_7280_9240_jpg.rf.f200046aa7a3f770d4ab53ae261dd88a.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_4900_7840_6300_9240_jpg.rf.25f52099944222031fd8bcb9010a0410.jpg",
+      "train": "cv2_5880_8820_7280_10220_jpg.rf.c67a7ad2f418644641c30a5fd50c84e1.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_4900_9609_6300_11009_jpg.rf.b03d25465776fe24a46d1280b90b2655.jpg",
+      "train": "cv2_3920_8820_5320_10220_jpg.rf.168fa90d3909cce4ba6eb74c32d0e5af.jpg",
+      "fraction_validation_area": 0.13092857142857142
+    },
+    {
+      "validation": "cv2_4900_9609_6300_11009_jpg.rf.b03d25465776fe24a46d1280b90b2655.jpg",
+      "train": "cv2_4900_8820_6300_10220_jpg.rf.db77f1078b259d37f7d87b3fc1f77386.jpg",
+      "fraction_validation_area": 0.43642857142857144
+    },
+    {
+      "validation": "cv2_4900_9609_6300_11009_jpg.rf.b03d25465776fe24a46d1280b90b2655.jpg",
+      "train": "cv2_5880_8820_7280_10220_jpg.rf.c67a7ad2f418644641c30a5fd50c84e1.jpg",
+      "fraction_validation_area": 0.13092857142857142
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_5880_5880_7280_7280_jpg.rf.9040bfc77b1b069a3618fc538ccdae12.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_5880_6860_7280_8260_jpg.rf.63ff026f88b865cf0543f8f8ba6c75bd.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_5880_7840_7280_9240_jpg.rf.f200046aa7a3f770d4ab53ae261dd88a.jpg",
+      "fraction_validation_area": 0.09
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_6860_5880_8260_7280_jpg.rf.c4bf4e2c9687f3c9b5db424c9d1e604c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_6860_7840_8260_9240_jpg.rf.0f9550003ae562839a290177a903284c.jpg",
+      "fraction_validation_area": 0.3
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_7741_5880_9141_7280_jpg.rf.7a0461f1f996ec54932936b82ccc992b.jpg",
+      "fraction_validation_area": 0.11121428571428571
+    },
+    {
+      "validation": "cv2_6860_6860_8260_8260_jpg.rf.b6a4ef953ed1678707f77f2858570d9f.jpg",
+      "train": "cv2_7741_7840_9141_9240_jpg.rf.b06f317fb095e89c0faae47cff23614c.jpg",
+      "fraction_validation_area": 0.11121428571428571
+    }
+  ],
+  "validation_tiles_with_coordinate_overlap": 45,
+  "dense_fields_with_coordinate_overlap": 8,
+  "annotation_origin_counts": {
+    "prediction": 688,
+    "manual": 346,
+    "prediction-changed": 33
+  },
+  "annotation_metadata_keys_except_result": []
+}

@@ -1,0 +1,5 @@
+Source,Role,Train,Validation,Test,Excluded,Grouping unit
+SIPaKMeD (Roboflow derivative),Training/validation/test,634,123,140,340,Field name + image-overlap component
+SIPaKMeD dense subset,Threshold development / evaluation,,20,20,,Overlap component (withheld from training)
+APCData,Training/validation/test (combined variant),317,50,45,5,Specimen code + image-overlap component
+HMCHH-TCT-CellDet,External evaluation only,,,1077,,Filename slide prefix

@@ -1,84 +1,121 @@
-# pap-smear-cyto-algo
+# Cervical Cell Detection Research: Retrospective Evaluation & Reproducibility
 
-## Scope statement
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Research%20Site-14685e?style=flat&logo=github)](https://abusuraihsakhri.github.io/pap-smear-cyto-algo/)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+[![Release Verification](https://img.shields.io/badge/Verification-29%2F29%20PASS-success)](publication/reproducibility/release_verification.json)
+[![Weights Integrity](https://img.shields.io/badge/Model%20Weights-SHA--256%20Certified-blue)](publication/weights/WEIGHTS_MANIFEST.json)
 
-This project trains a YOLO-based cell detector on public cervical cytology datasets (SIPaKMeD, optionally CRIC/Herlev/Mendeley LBC) and tests whether it generalizes across datasets.
+> **Research Use Only:** This repository contains retrospective scientific evaluation code and trained models. These models are not medical devices and have not been validated for screening, diagnosis, or patient-level clinical decision-making.
 
-**This is a replication-plus-architecture-variant study, not a novel contribution to the core science.** A systematic literature check (via Consensus, Aug 2026) found that cross-dataset generalization for cervical cytology *classification* is an active, already-published area — a 2026 Bioengineering study (Coskun et al.) combined SIPaKMeD + Herlev + CRIC + 416 proprietary multi-center WSIs and reported ResNet50 reaching 91% accuracy / 0.91 macro-F1 on an independent test set. What the literature check did *not* find is a YOLO-based *detection* architecture (as opposed to classification-on-precropped-cells) tested for cross-dataset generalization using public data only, under a hard low-VRAM constraint.
+---
 
-**This project's contribution, stated honestly:** we test whether a lightweight, public-data-only, YOLO-based detection pipeline trained under a 6GB VRAM constraint can approach the ~91% cross-dataset accuracy benchmark set by better-resourced, classification-based, proprietary-data studies. A result well below 91% is not a failure — it is the honest finding about the cost of public-only, low-compute constraints, and is itself worth reporting.
+## 🌐 Live Research Site (GitHub Pages)
 
-This is **not** a clinical-grade or WHO-compliant diagnostic tool, and does not claim to close an unaddressed research gap. Any cross-dataset numbers reported here should be read alongside, and explicitly compared against, the Coskun et al. 2026 benchmark.
+An interactive, editorial presentation of this research project, including interactive figure viewers, full metrics tables, and direct checkpoint download cards, is hosted on GitHub Pages:
 
-## Hardware target
+👉 **[https://abusuraihsakhri.github.io/pap-smear-cyto-algo/](https://abusuraihsakhri.github.io/pap-smear-cyto-algo/)** (source in `docs/`)
 
-Single GPU, 6GB VRAM. Primary model: YOLOv8n. See `config.py` for the full rationale and the mandatory training flags (`--half`, batch-size fallback, `--imgsz 640`, `--cache disk`).
+---
 
-## Setup
+## 🎯 Project Overview & Core Question
+
+This project investigates how **microscope field overlap**, **incomplete cell annotations (sparse vs. dense)**, and **cross-dataset taxonomy conversions** affect the measured performance of lightweight object detectors (YOLOv8n).
+
+### Key Empirical Findings
+
+1. **Microscope Field Overlap Leakage:** Image comparison and normalized cross-correlation (NCC) identified **791 confirmed overlapping microscope field pairs**. Naive filename-based splitting allowed 10 of 20 evaluation fields to cross partition boundaries. Connected component grouping is required to guarantee strict partition independence.
+2. **Annotation Completeness Inversion:** For identical detections on 20 held-out evaluation fields, abnormal-cell precision was **52.4%–87.1%** evaluated against the 1,067-cell human-verified dense reference, but dropped to **20.4%–45.7%** against native sparse labels because valid, unannotated cells were erroneously penalized as false positives.
+3. **Cross-Center Domain Degradation:** External evaluation on **1,077 HMCHH fields** (1,837 abnormal cells) revealed abnormal-cell recall between **20.8% and 51.8%**, with reference-matched abnormal precision of only **3.8%–6.7%**, demonstrating significant domain shift across preparation and staining protocols.
+
+---
+
+## 🛡️ Model Checkpoints & Weights Safeguard
+
+To ensure that trained model weights (`.pt`) are **never lost, omitted, or corrupted**, all 6 primary research checkpoints and baselines are permanently tracked in this repository, cataloged in `publication/weights/WEIGHTS_MANIFEST.json`, and un-ignored in `.gitignore`.
+
+### Certified Checkpoints Manifest
+
+| Model Checkpoint | Training Data | Seed | Best Epoch | Size | SHA-256 Checksum |
+|---|---|---|---|---|---|
+| `publication/weights/v3_combined_seed17/weights/best.pt` | SIPaKMeD + APCData | 17 | 55 | 5.95 MB | `bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795` |
+| `publication/weights/v3_combined_seed43/weights/best.pt` | SIPaKMeD + APCData | 43 | 68 | 5.95 MB | `474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05` |
+| `publication/weights/v3_combined_seed101/weights/best.pt` | SIPaKMeD + APCData | 101 | 60 | 5.95 MB | `0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13` |
+| `publication/weights/v3_sipakmed_only_seed17/weights/best.pt` | SIPaKMeD Only | 17 | 57 | 5.95 MB | `ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73` |
+| `publication/weights/v3_sipakmed_only_seed43/weights/best.pt` | SIPaKMeD Only | 43 | 57 | 5.95 MB | `7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b` |
+| `publication/weights/v3_sipakmed_only_seed101/weights/best.pt` | SIPaKMeD Only | 101 | 57 | 5.95 MB | `59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245` |
+| `models/best.pt` | SIPaKMeD (5-class baseline) | -- | -- | 5.97 MB | `9f6245bf9d80870155c7edcb4292e3f87deb989e30e7fc0499ebf17aac9597e1` |
+
+### Audit & Verify Model Weights
+
+Run the automated integrity and safeguard audit anytime:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # or .venv\Scripts\activate on Windows
-pip install -r requirements.txt
-cp .env.example .env        # then fill in ROBOFLOW_API_KEY
+python verify_weights.py
 ```
 
-## Pipeline
+This verifies that:
+- Every `.pt` checkpoint exists and is non-empty.
+- Every checkpoint's SHA-256 hash matches `WEIGHTS_MANIFEST.json`.
+- `.gitignore` is properly configured so weights are actively tracked in Git.
 
-1. **Acquire SIPaKMeD:** `python download_datasets.py`
-   Downloads both SIPaKMeD Roboflow mirrors, diffs them, picks the more complete one as primary, and creates a stratified 85/15 train/val split if the export doesn't include one (it didn't, for mirror_a — see `prepare_splits.py`). Also checks whether APCData (Phase 2 dataset, see below) is already on disk and prints the manual download step if not. Writes a dataset status report to `results/dataset_status_report.json` — review this before starting training.
+---
 
-   **Phase 2 second dataset — resolved via research, not the original spec placeholder:** CRIC turned out to use point-click cell-center coordinates, not bounding boxes, and the "Mendeley LBC" dataset the spec's literature review referenced turned out to be classification-labeled only — neither is directly usable for YOLO detection. **APCData** (Mendeley Data, [DOI 10.17632/ytd568rh3p.1](https://data.mendeley.com/datasets/ytd568rh3p/1)) has genuine YOLO-format bounding boxes and was selected instead: 425 images, ~3,619 annotated cells, 6-class Bethesda system (NILM/ASC-US/ASC-H/LSIL/HSIL/SCC). Since its class taxonomy doesn't match SIPaKMeD's 5-class native scheme, cross-dataset comparison uses the 2-class (Normal/Abnormal) roll-up (`config.ROLLUP_APCDATA_6_TO_2`). Mendeley Data has no download API to automate — download it manually from the link above and place the `APCData_YOLO` folder at `data/apcdata/APCData_YOLO`. Full citation trail for all four candidates considered is in `config.PHASE2_DATASET_SOURCES`.
+## ⚡ Quickstart Inference
 
-2. **Train (Phase 1):** `python training_pipeline.py --data data/sipakmed/mirror_a/data.yaml`
-   YOLOv8n, ImageNet-pretrained init, early stopping on validation mAP@50 (`--epochs 200` is a ceiling, `--patience 30`, not a target). Automatically falls back through batch sizes 16 → 8 → 4 on CUDA OOM. Copy the resulting `best.pt` into `models/` before evaluation.
+To load any certified checkpoint and run detection on a microscope image:
 
-3. **Evaluate — Section 6a (confusion matrix):**
-   `python evaluation/confusion_matrix.py --weights models/best.pt --data data/sipakmed/mirror_a/data.yaml`
-   Full 5-class confusion matrix and per-class precision/recall, plus post-hoc 3-class and 2-class roll-ups derived from the same model. Explicitly reports Dyskeratotic ↔ Koilocytotic/Metaplastic confusion.
+```python
+from ultralytics import YOLO
 
-4. **Evaluate — Section 6b (cross-dataset generalization, Phase 2):**
-   `python evaluation/cross_dataset_eval.py --weights models/best.pt --phase1-data data/sipakmed/mirror_a/data.yaml --phase2-data data/apcdata/APCData_YOLO/data.yaml --phase2-dataset-name "APCData"`
-   Zero-shot evaluation, no fine-tuning. Reports delta vs. Phase 1 and vs. the Coskun et al. 2026 benchmark. If the second dataset is unavailable, this is recorded as a stated limitation, not omitted.
+# 1. Load certified research checkpoint
+model = YOLO("publication/weights/v3_combined_seed17/weights/best.pt")
 
-5. **Evaluate — Section 6c (calibration, Phase 3):**
-   `python evaluation/calibration.py --weights models/best.pt --data data/sipakmed/mirror_a/data.yaml`
-   Reliability diagram + ECE, with temperature scaling applied and re-reported. Compared against a published classification-based ECE (0.030) as a reference point.
+# 2. Predict on image field (frozen development threshold = 0.08, IoU = 0.50)
+results = model.predict("microscope_field.jpg", conf=0.08, iou=0.50, imgsz=640)
 
-6. **Evaluate — Section 6d (operating point, Phase 3):**
-   `python evaluation/pr_curve_threshold.py --weights models/best.pt --data data/sipakmed/mirror_a/data.yaml --target-class Dyskeratotic`
-   Full PR curve plus a threshold chosen by an explicit, stated false-negative-to-false-positive cost ratio (default N=10, a placeholder pending Ares's confirmation — see the script for the full rationale).
-
-## Repo structure
-
-```
-pap-smear-cyto-algo/
-├── config.py
-├── download_datasets.py
-├── training_pipeline.py
-├── evaluation/
-│   ├── confusion_matrix.py
-│   ├── cross_dataset_eval.py
-│   ├── calibration.py
-│   └── pr_curve_threshold.py
-├── models/                # checkpoints, gitignored except best.pt
-├── results/                # generated reports (gitignored runs/, kept json reports)
-├── requirements.txt
-└── README.md
+# 3. Print detections (0: Normal, 1: Abnormal)
+for box in results[0].boxes:
+    cls_id = int(box.cls[0])
+    conf = float(box.conf[0])
+    print(f"Cell: {model.names[cls_id]} | Confidence: {conf:.3f} | Box: {box.xyxy[0].tolist()}")
 ```
 
-## Non-goals (v1)
+---
 
-- No WSI tiling — single-cell/field images only.
-- No HITL active-learning UI.
-- No model larger than YOLOv8s without an explicit, documented decision to accept slower training / smaller batch.
-- No "clinical," "diagnostic," or "closes a research gap" language anywhere until Sections 6b–6d are complete with documented results, including negative/underwhelming ones.
-- No claim of novelty for cross-dataset generalization testing itself.
+## 🔬 Reproducibility & Research Protocol
 
-## Open items (as of last spec update)
+All publication materials, manuscripts, supplementary documents, tables, and verification scripts are centralized in `publication/`.
 
-- [x] CRIC dataset label verification — RESOLVED via web research: CRIC uses point-click cell-center coordinates, not bounding boxes; not directly usable for YOLO detection. See `config.PHASE2_DATASET_SOURCES`.
-- [x] Roboflow API key — confirmed available
-- [x] Phase 2 dataset — switched from Mendeley LBC/CRIC to **APCData** (genuine YOLO bounding boxes, see Pipeline step 1 above); requires one manual download step, no automated API for Mendeley Data
-- [ ] APCData manual download not yet performed — needed before Phase 2 (`cross_dataset_eval.py`) can run; Phase 1 training is unaffected and can proceed now
-- [ ] Whether this project proceeds in parallel with, or instead of, the pending AFB-engine validation/publication work
+To re-run the full evaluation and verification pipeline:
+
+```bash
+# 1. Run unit and integrity tests
+python -m pytest tests
+
+# 2. Verify all release artifacts, split disjointness, and model weights
+python publication/scripts/verify_release.py
+```
+
+### Dataset Accession
+- **SIPaKMeD:** Marina et al., [SIPaKMeD Database](https://www.cs.uoi.gr/~marina/sipakmed.html).
+- **APCData:** Mendeley Data, [doi:10.17632/ytd568rh3p.1](https://doi.org/10.17632/ytd568rh3p.1).
+- **HMCHH-TCT-CellDet:** Nature Scientific Data, [doi:10.1038/s41597-025-04374-5](https://doi.org/10.1038/s41597-025-04374-5).
+
+---
+
+## 📜 Publication Package & Artifacts
+
+- `publication/manuscript/`: Manuscript markdown and compiled Word documents.
+- `publication/supplementary/`: Supplementary materials, statistical methods, and proof of overlap.
+- `publication/figures/`: High-resolution vector PDF and PNG figures (Figures 1–4, Figure S1).
+- `publication/tables/`: Complete numerical tables in CSV format (Tables 1–3, Tables S2–S7).
+- `publication/weights/`: Certified PyTorch `.pt` checkpoints, args.yaml, and training summaries.
+- `publication/reproducibility/`: Automated audit reports, data manifests, and SHA-256 sums.
+
+---
+
+## ⚖️ License & Ethical Declarations
+
+- **Code & Benchmarks:** Released under the MIT License.
+- **Model Checkpoints:** Research use only under CC BY-NC 4.0.
+- **Author:** abusuraihsakhri (`abusuraihsakhri@gmail.com`)

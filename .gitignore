@@ -1,16 +1,44 @@
+# Environment & Secrets (OWASP A02:2025)
 .env
+*.env
+!.env.example
+
+# Raw image datasets (keep repository code and annotations lightweight)
 data/
-models/*
-!models/.gitkeep
-!models/best.pt
-results/runs/
+
+# Python & Environment artifacts
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
 .venv/
 venv/
 .venv-labelstudio/
 .commandcode/
 .impeccable/
 logs/
+
+# Intermediate exploratory runs and large caches
+results/runs/
+results/research_v2/runs/
+results/research_v2/prediction_cache/
+results/research_v3/runs/
+results/research_v3/prediction_cache/
+results/archive_before_corrections_20260919/
+
+# Large reproducibility calibration screen matrices (over GitHub size thresholds)
+results/research_v3/overlap_calibration/
+publication/reproducibility/overlap_calibration/
+
+# Large uncompressed evidence files (compressed .json.gz are tracked instead)
+results/research_v3/field_overlap.json
+publication/reproducibility/field_overlap.json
+
+# Checkpoints & Weights safeguard:
+# Block untracked exploratory / temporary checkpoints, but explicitly PRESERVE all
+# canonical research publication weights and baselines so they are NEVER lost on git push.
 *.pt
 !models/best.pt
+!yolov8n.pt
+!yolo26n.pt
+!publication/weights/**/best.pt

@@ -192,5 +192,7 @@
     "ece": 0.03,
     "note": "Classification-based approach; comparison point for this project's detection-based ECE."
   },
-  "method_note": "Temperature fit is a simplified 1D scaling over YOLO's exported box confidence (treated as a sigmoid probability), not a full multi-class logit temperature scaling. Documented as a known simplification, not a full calibration-literature implementation."
+  "method_note": "Temperature fit is a simplified 1D scaling over YOLO's exported box confidence (treated as a sigmoid probability), not a full multi-class logit temperature scaling. Documented as a known simplification, not a full calibration-literature implementation.",
+  "_audit_status": "SUPERSEDED: historical result; see Critical_Audit_2026-09-19.md and research_v2. Do not cite as corrected validation.",
+  "_historical_archive": "results\\archive_before_corrections_20260919\\calibration_report.json"
 }
