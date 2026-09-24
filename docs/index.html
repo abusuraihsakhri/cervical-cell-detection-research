@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f9fa">
-  <meta name="description" content="A retrospective research study of cervical-cell detection: how field overlap, annotation completeness, and label conversion affect evaluation. Complete code, data manifests, and model checkpoints.">
+  <meta name="theme-color" content="#fbfbfa">
+  <meta name="description" content="A retrospective empirical cytopathology study of deep learning cervical-cell detectors: microscope field overlap mitigation, dense vs sparse reference, and cross-dataset evaluation. Complete code, evidence gallery, manuscripts, and certified model checkpoints.">
   <meta name="author" content="abusuraihsakhri">
-  <meta property="og:title" content="Cervical Cell Detection Research — Evaluation & Provenance">
-  <meta property="og:description" content="Retrospective research on cervical-cell detection: field overlap mitigation, dense vs sparse reference, and cross-dataset evaluation.">
+  <meta property="og:title" content="Cervical Cell Detection Research | Evidence Portal & Model Weights">
+  <meta property="og:description" content="Empirical cytopathology study of deep learning cervical-cell detectors under real-world data scarcity and artifact constraints.">
   <meta property="og:type" content="website">
-  <title>Cervical Cell Detection | Research Project & Model Weights</title>
+  <meta property="og:url" content="https://abusuraihsakhri.github.io/pap-smear-cyto-algo/">
+  <title>Cervical Cell Detection Research | Retrospective Multi-Source Evaluation & Certified Model Weights</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -18,361 +19,760 @@
 
   <!-- Header -->
   <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="#top" aria-label="Cervical cell detection research, back to top">
-        <span class="mark" aria-hidden="true">◎</span>
-        <span>Cell Detection Research</span>
-      </a>
+    <div class="wrap-wide header-inner">
+      <div class="brand-group">
+        <a class="wordmark" href="#top" aria-label="Cervical cell detection research, back to top">
+          <span class="mark-symbol" aria-hidden="true">◎</span>
+          <span>Cell Detection Research</span>
+        </a>
+      </div>
+
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#study">Study</a>
         <a href="#findings">Findings</a>
-        <a href="#evidence">Evidence</a>
+        <a href="#evidence">Visual Evidence</a>
+        <a href="#documents">Publications</a>
         <a href="#checkpoints">Model Weights</a>
-        <a href="#data">Performance</a>
-        <a href="#provenance">Provenance</a>
+        <a href="#performance">Table 2 Data</a>
       </nav>
+
       <div class="header-actions">
-        <a class="btn-sm btn-secondary" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo" target="_blank" rel="noopener">GitHub ↗</a>
+        <button class="btn-icon" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo" target="_blank" rel="noopener">
+          <span>GitHub</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
       </div>
     </div>
   </header>
 
   <main id="main">
     <!-- Hero Section -->
-    <section class="hero wrap" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Retrospective Multi-Source Research · September 2026</p>
-        <h1 id="hero-title">A clearer way to evaluate <em>cervical-cell detectors.</em></h1>
-        <p class="lede">
-          This study investigates how microscope field overlap, incomplete reference annotations, and label conversion assumptions alter the measured performance of lightweight object detectors across multi-center datasets.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-hero btn-primary" href="#findings">
-            Explore Key Findings <span aria-hidden="true">→</span>
-          </a>
-          <a class="btn-hero btn-secondary" href="#checkpoints">
-            Download Weights (.pt) <span aria-hidden="true">↓</span>
-          </a>
+    <section class="hero-section wrap-wide" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-title">A clearer way to evaluate <em>cervical-cell detectors.</em></h1>
+          <p class="hero-lede">
+            This study investigates how microscope field overlap, incomplete reference annotations, and label conversion assumptions alter the measured performance of lightweight object detectors across multi-center cytology datasets.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#evidence">
+              <span>Explore Visual Evidence (11)</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-secondary" href="#documents">
+              <span>Read Manuscripts</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a class="btn btn-secondary" href="#checkpoints">
+              <span>Certified Weights (.pt)</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div class="hero-disclaimer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div>
+              <strong>Research use only:</strong> Retrospective scientific analysis using public microscope archives. Not validated for screening, clinical diagnosis, or patient-level decision making.
+            </div>
+          </div>
         </div>
-        <p class="hero-disclaimer">
-          <strong>Research use only:</strong> These models and benchmarks are retrospective scientific tools. They are not medical devices and have not been validated for screening, diagnosis, or clinical patient-level decision making.
-        </p>
-      </div>
 
-      <div class="hero-card" aria-label="Methodological evaluation chain">
-        <p class="card-title">The Evaluation Chain</p>
-        <ol class="timeline-chain">
-          <li>
-            <span class="step-num">01</span>
-            <strong>Trace Source Fields</strong>
-            <small>Detect and group microscopically overlapping field pairs across images before splitting.</small>
-          </li>
-          <li>
-            <span class="step-num">02</span>
-            <strong>Audit Reference Completeness</strong>
-            <small>Compare model outputs against both native sparse labels and 40 dense human-verified fields (1,067 cells).</small>
-          </li>
-          <li>
-            <span class="step-num">03</span>
-            <strong>Decouple Operating Points</strong>
-            <small>Select operating thresholds on 20 development fields, then freeze for 20 reserved fields and 1,077 external HMCHH fields.</small>
-          </li>
-        </ol>
+        <!-- Hero Diagnostic Preview Frame -->
+        <div class="hero-preview-frame" aria-label="Microscope cell detection preview">
+          <div class="hero-preview-bar">
+            <span>High-Power Field (HPF) · 40× Magnification</span>
+            <span class="hero-preview-status">YOLOv8n Inference</span>
+          </div>
+          <div class="hero-preview-img-wrap">
+            <img src="./assets/predictions_sipakmed.png" alt="Real cell detection overlay on SIPaKMeD high power field showing bounding boxes on abnormal and normal cervical cells." loading="eager" width="800" height="600">
+            <div class="hero-preview-badges">
+              <span class="preview-tag abnormal">Abnormal Dysplastic: 0.94</span>
+              <span class="preview-tag normal">Normal Intermediate: 0.89</span>
+              <span class="preview-tag">Frozen Thresh: 0.08</span>
+            </div>
+          </div>
+          <div class="hero-preview-footer">
+            <span>Microscopy Ground-Truth Audit</span>
+            <a class="evidence-btn-expand" href="#evidence" onclick="openLightbox(0)">
+              <span>Inspect Exhibit</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Study Scope & Setup -->
-    <section class="section-band" id="study" aria-labelledby="study-title">
+    <!-- Study Architecture & Statistics -->
+    <section class="section section-band" id="study" aria-labelledby="study-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Study Architecture</p>
           <h2 id="study-title">Splits and references define the measurement.</h2>
           <p class="section-desc">
-            Six YOLOv8n object detectors were trained under controlled protocols: either on a SIPaKMeD derivative alone or combined with APCData, across three matched seeds (17, 43, 101). Field overlap components were constrained to single partitions, followed by threshold selection on 20 development fields and evaluation on 20 reserved dense fields and 1,077 external HMCHH fields.
+            Six YOLOv8n object detectors were trained under controlled protocols: either on a SIPaKMeD derivative alone or combined with APCData, across three matched seeds (17, 43, 101). Field overlap components were strictly constrained to single partitions, followed by threshold calibration on 20 development fields and evaluation on 20 reserved dense fields and 1,077 external HMCHH fields.
           </p>
         </div>
 
-        <div class="stat-grid" aria-label="Key quantitative metrics">
-          <div class="stat-item">
-            <span class="stat-val">6</span>
-            <span class="stat-label">Trained YOLOv8n models (3 seeds × 2 variants)</span>
+        <div class="stats-strip" aria-label="Key quantitative metrics">
+          <div class="stat-cell">
+            <span class="stat-num tabular">6</span>
+            <span class="stat-caption">Trained YOLOv8n models across 3 matched seeds (17, 43, 101)</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-val">791</span>
-            <span class="stat-label">Confirmed overlapping microscope field pairs</span>
+          <div class="stat-cell">
+            <span class="stat-num tabular">791</span>
+            <span class="stat-caption">Confirmed overlapping microscope field pairs grouped into disjoint partitions</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-val">20 + 20</span>
-            <span class="stat-label">Dense development and reserved evaluation fields</span>
+          <div class="stat-cell">
+            <span class="stat-num tabular">20 + 20</span>
+            <span class="stat-caption">Human-verified dense development and reserved evaluation fields (1,067 cells)</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-val">1,077</span>
-            <span class="stat-label">External held-out HMCHH validation fields</span>
+          <div class="stat-cell">
+            <span class="stat-num tabular">1,077</span>
+            <span class="stat-caption">External multi-center HMCHH validation fields (1,837 abnormal cells)</span>
+          </div>
+        </div>
+
+        <div class="timeline-chain" aria-label="Methodological evaluation sequence">
+          <div class="timeline-step">
+            <div class="step-header">
+              <span class="step-badge">Phase 01</span>
+              <small class="tabular">791 Pairs</small>
+            </div>
+            <div class="step-body">
+              <h3>Trace Source Fields</h3>
+              <p>Detect and group microscopically overlapping field pairs via feature matching and normalized cross-correlation ($\ge 0.90$) before partitioning.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <span class="step-badge">Phase 02</span>
+              <small class="tabular">1,067 Cells</small>
+            </div>
+            <div class="step-body">
+              <h3>Audit Reference Completeness</h3>
+              <p>Compare model outputs against both native sparse labels and 40 dense human-verified fields (706 normal, 361 abnormal cells) via Label Studio.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <span class="step-badge">Phase 03</span>
+              <small class="tabular">1,077 External</small>
+            </div>
+            <div class="step-body">
+              <h3>Decouple Operating Points</h3>
+              <p>Select decision thresholds on 20 development fields, then freeze parameters before evaluating on 20 reserved dense fields and 1,077 external HMCHH fields.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Findings Section -->
-    <section class="content-section wrap" id="findings" aria-labelledby="findings-title">
+    <!-- Key Empirical Findings -->
+    <section class="section wrap" id="findings" aria-labelledby="findings-title">
       <div class="section-head">
-        <p class="eyebrow">Empirical Results</p>
         <h2 id="findings-title">Measurement choices changed the story.</h2>
         <p class="section-desc">
-          When evaluated strictly against human-verified dense references and external centers, common assumptions in cell detection literature break down.
+          When evaluated strictly against human-verified dense references and multi-center clinical cohorts, three widespread assumptions in cell detection literature fail to hold.
         </p>
       </div>
 
-      <div class="cards-grid-3">
-        <article class="feature-card">
-          <span class="card-index">Finding 01 / Field Overlap</span>
-          <h3>Filenames were insufficient.</h3>
-          <p>
-            Automated feature matching and photometric verification revealed 791 overlapping field pairs. A standard filename-grouped split would have allowed 10 of the 20 dense evaluation fields to cross partition boundaries, inflating apparent generalization.
-          </p>
+      <div class="findings-asymmetric-grid">
+        <article class="finding-card">
+          <div>
+            <span class="finding-pill">Field Overlap Leakage</span>
+            <h3>Filenames were insufficient for independence.</h3>
+            <p>
+              Automated feature matching and photometric verification revealed 791 overlapping microscope field pairs. A standard filename-grouped split would have allowed 10 of the 20 dense evaluation fields to cross partition boundaries, severely inflating apparent generalization.
+            </p>
+          </div>
+          <div class="finding-stat">
+            <span class="finding-stat-val tabular">10 / 20</span>
+            <span class="finding-stat-label">Evaluation fields leaked under filename splits</span>
+          </div>
         </article>
 
-        <article class="feature-card">
-          <span class="card-index">Finding 02 / Reference Completeness</span>
-          <h3>Sparse labels distorted both metrics.</h3>
-          <p>
-            On the exact same predictions on the 20 evaluation fields, abnormal precision measured 52.4–87.1% against the dense reference, but dropped to 20.4–45.7% against sparse annotations because unannotated cells were penalized as false positives.
-          </p>
+        <article class="finding-card highlight">
+          <div>
+            <span class="finding-pill">Reference Completeness</span>
+            <h3>Sparse labels distorted both precision and recall.</h3>
+            <p>
+              On identical model predictions across the 20 evaluation fields, abnormal precision reached 52.4–87.1% against the dense reference, but plummeted to 20.4–45.7% against sparse annotations because unannotated cells were erroneously penalized as false positives.
+            </p>
+          </div>
+          <div class="finding-stat">
+            <span class="finding-stat-val tabular">52.4% vs 20.4%</span>
+            <span class="finding-stat-label">Measured precision shift from sparse reference penalty</span>
+          </div>
         </article>
 
-        <article class="feature-card">
-          <span class="card-index">Finding 03 / External Generalization</span>
-          <h3>Cross-center transfer remained low.</h3>
-          <p>
-            On external HMCHH fields, detectors recalled 20.8–51.8% of annotated abnormal cells. Reference-matched precision ranged between 3.8% and 6.7%, highlighting significant domain shift across preparation and staining protocols.
-          </p>
+        <article class="finding-card">
+          <div>
+            <span class="finding-pill">Cross-Center Generalization</span>
+            <h3>Cross-center transfer remained weak.</h3>
+            <p>
+              On external HMCHH slides, detectors recalled 20.8–51.8% of annotated abnormal cells. Reference-matched precision ranged between 3.8% and 6.7%, highlighting dramatic domain shift arising from institutional staining and slide preparation protocols.
+            </p>
+          </div>
+          <div class="finding-stat">
+            <span class="finding-stat-val tabular">3.8% – 6.7%</span>
+            <span class="finding-stat-label">Reference-matched abnormal precision on HMCHH</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- Evidence & Figures Gallery -->
-    <section class="section-band" id="evidence" aria-labelledby="evidence-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Scientific Figures</p>
-          <h2 id="evidence-title">Visual evidence and analysis.</h2>
+    <!-- Interactive Scientific Evidence & Microscopy Explorer -->
+    <section class="section section-band" id="evidence" aria-labelledby="evidence-title">
+      <div class="wrap-wide">
+        <div class="section-head centered">
+          <h2 id="evidence-title">Visual Evidence & Microscopy Explorer</h2>
           <p class="section-desc">
-            Explore the study design, primary cross-dataset comparisons, annotation completeness analysis, stain normalization benchmarks, and reliability diagrams.
+            Inspect real microscope field detections, stain normalization benchmarks, and publication figures. Click any exhibit to open the full-screen high-resolution inspection lightbox.
           </p>
         </div>
 
-        <div class="figure-showcase" role="region" aria-label="Interactive Figures Showcase">
-          <nav class="tab-nav" role="tablist" aria-label="Figures">
-            <button class="tab-btn active" role="tab" id="tab-fig2" aria-selected="true" aria-controls="panel-fig2" onclick="switchFigure('fig2')">
-              Figure 2: Primary & External Detection
-            </button>
-            <button class="tab-btn" role="tab" id="tab-fig1" aria-selected="false" aria-controls="panel-fig1" onclick="switchFigure('fig1')">
-              Figure 1: Study Design
-            </button>
-            <button class="tab-btn" role="tab" id="tab-fig3" aria-selected="false" aria-controls="panel-fig3" onclick="switchFigure('fig3')">
-              Figure 3: Annotation Completeness
-            </button>
-            <button class="tab-btn" role="tab" id="tab-fig4" aria-selected="false" aria-controls="panel-fig4" onclick="switchFigure('fig4')">
-              Figure 4: Stain Sensitivity
-            </button>
-            <button class="tab-btn" role="tab" id="tab-figS1" aria-selected="false" aria-controls="panel-figS1" onclick="switchFigure('figS1')">
-              Figure S1: Calibration Curves
-            </button>
-          </nav>
+        <div class="evidence-header-bar">
+          <div class="filter-tabs" role="tablist" aria-label="Evidence categories">
+            <button class="filter-tab active" role="tab" aria-selected="true" onclick="filterGallery('all', this)">All Exhibits (11)</button>
+            <button class="filter-tab" role="tab" aria-selected="false" onclick="filterGallery('microscopy', this)">Microscopy Predictions (3)</button>
+            <button class="filter-tab" role="tab" aria-selected="false" onclick="filterGallery('stain', this)">Stain Normalization (2)</button>
+            <button class="filter-tab" role="tab" aria-selected="false" onclick="filterGallery('figures', this)">Core Figures (5)</button>
+            <button class="filter-tab" role="tab" aria-selected="false" onclick="filterGallery('diagnostic', this)">Diagnostic Curves (1)</button>
+          </div>
+          <span class="tabular" style="font-size:0.88rem; color:var(--color-ink-subtle);">Press <kbd style="background:var(--bg-card); padding:2px 6px; border:1px solid var(--border-subtle); border-radius:3px;">Esc</kbd> to exit lightbox</span>
+        </div>
 
-          <div class="figure-viewport">
-            <!-- Figure 2 -->
-            <div class="figure-panel active" id="panel-fig2" role="tabpanel" aria-labelledby="tab-fig2">
-              <div class="figure-img-wrap">
-                <img src="./assets/figure2_primary_and_external.png" alt="Figure 2: Four panels comparing abnormal recall and reference-matched precision across single-source and combined models." loading="lazy">
-              </div>
-              <div class="figure-meta">
-                <p class="figure-caption">
-                  <strong>Figure 2 | Detection performance across datasets:</strong> Points denote individual training seeds; error bars depict 95% cluster bootstrap intervals. Blue points represent SIPaKMeD-only training; orange points represent combined training with APCData.
-                </p>
-                <div class="figure-links">
-                  Data source: <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/tables/table2_detection_performance.csv" target="_blank" rel="noopener">Table 2 CSV</a> · Download: <a href="./assets/figure2_primary_and_external.png" download>PNG High-Res</a>
-                </div>
+        <div class="evidence-gallery" id="gallery-grid">
+          <!-- Item 0: Real Predictions SIPaKMeD -->
+          <article class="evidence-card" data-category="microscopy">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(0)">
+              <img src="./assets/predictions_sipakmed.png" alt="Cell detection bounding boxes on SIPaKMeD high power field" loading="lazy">
+              <span class="evidence-badge">Microscopy · 40× HPF</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">SIPaKMeD High-Power Field Detection</h3>
+              <p class="evidence-card-desc">
+                Real YOLOv8n cell detection overlays on SIPaKMeD cytology smear images. Red boxes denote abnormal dysplastic cells; green boxes denote normal intermediate and superficial squamous cells.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Model: v3_combined_seed17</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(0)">View Fullscreen</button>
               </div>
             </div>
+          </article>
 
-            <!-- Figure 1 -->
-            <div class="figure-panel" id="panel-fig1" role="tabpanel" aria-labelledby="tab-fig1">
-              <div class="figure-img-wrap">
-                <img src="./assets/figure1_study_design.png" alt="Figure 1: Study design diagram illustrating image sources, connected component overlap grouping, and split partitions." loading="lazy">
-              </div>
-              <div class="figure-meta">
-                <p class="figure-caption">
-                  <strong>Figure 1 | Study design and data partitioning:</strong> Connected component analysis on 791 overlapping microscope fields guarantees that all overlapping views remain within a single split partition, preventing optimistic data leakage.
-                </p>
-                <div class="figure-links">
-                  Protocol source: <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/reproducibility/data_manifest.json" target="_blank" rel="noopener">Data Manifest JSON</a> · Download: <a href="./assets/figure1_study_design.png" download>PNG High-Res</a>
-                </div>
+          <!-- Item 1: Real Predictions APCData -->
+          <article class="evidence-card" data-category="microscopy">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(1)">
+              <img src="./assets/predictions_apcdata.png" alt="Cell detection bounding boxes on APCData multi-center field" loading="lazy">
+              <span class="evidence-badge">Microscopy · Multi-Center</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">APCData Smear Cell Predictions</h3>
+              <p class="evidence-card-desc">
+                Multi-center smear detections demonstrating model performance under variable chromatin density, background debris, and overlapping polymorphonuclear leukocytes.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Dataset: APCData Cohort</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(1)">View Fullscreen</button>
               </div>
             </div>
+          </article>
 
-            <!-- Figure 3 -->
-            <div class="figure-panel" id="panel-fig3" role="tabpanel" aria-labelledby="tab-fig3">
-              <div class="figure-img-wrap">
-                <img src="./assets/figure3_annotation_completeness.png" alt="Figure 3: Scatter plot showing the discrepancy between metrics evaluated against sparse native labels versus dense verified labels." loading="lazy">
-              </div>
-              <div class="figure-meta">
-                <p class="figure-caption">
-                  <strong>Figure 3 | Impact of annotation completeness:</strong> Measuring identical model detections against sparse labels versus dense human-verified annotations causes precision to drop by more than half, showing that sparse benchmark scores do not reflect true localization.
-                </p>
-                <div class="figure-links">
-                  Reference: <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/tables/tableS3_sparse_vs_dense_reference.csv" target="_blank" rel="noopener">Table S3 CSV</a> · Download: <a href="./assets/figure3_annotation_completeness.png" download>PNG High-Res</a>
-                </div>
+          <!-- Item 2: Stain Normalization Samples -->
+          <article class="evidence-card" data-category="stain">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(2)">
+              <img src="./assets/stain_normalization_samples.png" alt="Comparison matrix of stain normalization methods" loading="lazy">
+              <span class="evidence-badge">Matrix · 4 Normalizers</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Stain Normalization Comparative Matrix</h3>
+              <p class="evidence-card-desc">
+                Side-by-side color deconvolution of real Pap smear fields across Original, Reinhard, Macenko, and Vahadane algorithms evaluated for diagnostic stability.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Benchmark: Table S7</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(2)">View Fullscreen</button>
               </div>
             </div>
+          </article>
 
-            <!-- Figure 4 -->
-            <div class="figure-panel" id="panel-fig4" role="tabpanel" aria-labelledby="tab-fig4">
-              <div class="figure-img-wrap">
-                <img src="./assets/figure4_stain_reference_sensitivity.png" alt="Figure 4: Sensitivity analysis of stain normalization algorithms across various reference fields." loading="lazy">
-              </div>
-              <div class="figure-meta">
-                <p class="figure-caption">
-                  <strong>Figure 4 | Stain normalization sensitivity:</strong> Evaluates Reinhard, Macenko, and Vahadane stain normalization methods against reference slide variability. Normalization did not uniformly rescue external center degradation.
-                </p>
-                <div class="figure-links">
-                  Reference: <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/tables/tableS7_stain_reference_sensitivity.csv" target="_blank" rel="noopener">Table S7 CSV</a> · Download: <a href="./assets/figure4_stain_reference_sensitivity.png" download>PNG High-Res</a>
-                </div>
+          <!-- Item 3: Figure 1 Study Design -->
+          <article class="evidence-card" data-category="figures">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(3)">
+              <img src="./assets/figure1_study_design.png" alt="Figure 1: Study design diagram showing connected component partitions" loading="lazy">
+              <span class="evidence-badge">Publication · Figure 1</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Figure 1 | Study Design & Split Protocol</h3>
+              <p class="evidence-card-desc">
+                Connected-component graph partitioning ensuring that all 791 microscopically overlapping field pairs remain strictly within identical partitions, eliminating optimistic data leakage.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Protocol: data_manifest.json</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(3)">View Fullscreen</button>
               </div>
             </div>
+          </article>
 
-            <!-- Figure S1 -->
-            <div class="figure-panel" id="panel-figS1" role="tabpanel" aria-labelledby="tab-figS1">
-              <div class="figure-img-wrap">
-                <img src="./assets/figureS1_reliability.png" alt="Figure S1: Reliability diagrams and calibration curves showing Expected Calibration Error before and after temperature scaling." loading="lazy">
+          <!-- Item 4: Figure 2 Primary & External Detection -->
+          <article class="evidence-card" data-category="figures">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(4)">
+              <img src="./assets/figure2_primary_and_external.png" alt="Figure 2: Four panels comparing abnormal recall and reference-matched precision" loading="lazy">
+              <span class="evidence-badge">Publication · Figure 2</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Figure 2 | Primary & External Detection</h3>
+              <p class="evidence-card-desc">
+                Four-panel comparison showing abnormal recall and precision on dense SIPaKMeD fields versus external multi-center HMCHH fields with 95% cluster bootstrap intervals.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Data: Table 2 CSV</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(4)">View Fullscreen</button>
               </div>
-              <div class="figure-meta">
-                <p class="figure-caption">
-                  <strong>Figure S1 | Confidence calibration:</strong> Reliability diagrams showing raw YOLO confidence compared to post-hoc temperature scaling. Temperature scaling reduces ECE from ~0.14 to under 0.05 on candidate detections.
-                </p>
-                <div class="figure-links">
-                  Reference: <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/tables/tableS4_calibration.csv" target="_blank" rel="noopener">Table S4 CSV</a> · Download: <a href="./assets/figureS1_reliability.png" download>PNG High-Res</a>
-                </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Figure 3 Annotation Completeness -->
+          <article class="evidence-card" data-category="figures">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(5)">
+              <img src="./assets/figure3_annotation_completeness.png" alt="Figure 3: Impact of annotation completeness on detection metrics" loading="lazy">
+              <span class="evidence-badge">Publication · Figure 3</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Figure 3 | Annotation Completeness Effect</h3>
+              <p class="evidence-card-desc">
+                Demonstrates how evaluating against native sparse annotations artificially halves measured precision compared to ground-truth human-verified dense annotations.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Reference: Table S3</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(5)">View Fullscreen</button>
               </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Figure 4 Stain Sensitivity -->
+          <article class="evidence-card" data-category="figures">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(6)">
+              <img src="./assets/figure4_stain_reference_sensitivity.png" alt="Figure 4: Sensitivity analysis of stain normalization algorithms" loading="lazy">
+              <span class="evidence-badge">Publication · Figure 4</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Figure 4 | Stain Normalization Sensitivity</h3>
+              <p class="evidence-card-desc">
+                Sensitivity benchmarks illustrating how target slide selection in Reinhard, Macenko, and Vahadane color transfers impacts detector recall and specificity.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Reference: Table S7</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(6)">View Fullscreen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Figure S1 Reliability -->
+          <article class="evidence-card" data-category="figures">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(7)">
+              <img src="./assets/figureS1_reliability.png" alt="Figure S1: Reliability diagrams and calibration curves" loading="lazy">
+              <span class="evidence-badge">Supplementary · Fig S1</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Figure S1 | Confidence Calibration</h3>
+              <p class="evidence-card-desc">
+                Expected Calibration Error (ECE) curves showing raw model overconfidence and subsequent post-hoc temperature scaling corrections bringing ECE below 0.05.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Reference: Table S4</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(7)">View Fullscreen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: PR Curve Dense Verified -->
+          <article class="evidence-card" data-category="diagnostic">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(8)">
+              <img src="./assets/pr_curve_dense_verified.png" alt="Precision-Recall curve across 1,067 verified cells" loading="lazy">
+              <span class="evidence-badge">Validation · PR-Curve</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Dense Verified Precision-Recall</h3>
+              <p class="evidence-card-desc">
+                Continuous precision-recall trajectories evaluated against the 1,067 human-verified cells in the 40 dense smear fields across all training seeds.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Sample: 1,067 Cells</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(8)">View Fullscreen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Dataset Domain Shift -->
+          <article class="evidence-card" data-category="stain">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(9)">
+              <img src="./assets/dataset_domain_shift.png" alt="Feature space distribution showing multi-center dataset domain shift" loading="lazy">
+              <span class="evidence-badge">Analysis · Domain Shift</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Multi-Center Cytology Domain Shift</h3>
+              <p class="evidence-card-desc">
+                Principal component and chromatic color distributions contrasting SIPaKMeD, APCData, Herlev, and HMCHH staining characteristics.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Distribution: Chromatic</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(9)">View Fullscreen</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: Ground Truth Nuclear Delineation -->
+          <article class="evidence-card" data-category="microscopy">
+            <div class="evidence-thumb-wrap" onclick="openLightbox(10)">
+              <img src="./assets/annotation_check_sipakmed.png" alt="Nuclear boundary delineation and bounding box verification" loading="lazy">
+              <span class="evidence-badge">Audit · Label Studio</span>
+              <span class="evidence-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Inspect High-Res</span>
+              </span>
+            </div>
+            <div class="evidence-card-body">
+              <h3 class="evidence-card-title">Ground-Truth Nuclear Quality Audit</h3>
+              <p class="evidence-card-desc">
+                High-magnification audit verifying bounding box tightness and nuclear centering on dense fields to prevent annotation boundary artifacts.
+              </p>
+              <div class="evidence-card-footer">
+                <span>Audit: 100% Attested</span>
+                <button class="evidence-btn-expand" onclick="openLightbox(10)">View Fullscreen</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessible Scientific Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-dialog">
+        <div class="lightbox-topbar">
+          <div class="lightbox-title-area">
+            <span class="lightbox-counter tabular" id="lightbox-counter">1 of 11</span>
+            <span class="mark-symbol" style="width:20px;height:20px;font-size:0.8rem;">◎</span>
+            <strong id="lightbox-title">Scientific Exhibit</strong>
+          </div>
+          <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close fullscreen view">✕</button>
+        </div>
+
+        <div class="lightbox-content-area">
+          <div class="lightbox-viewport">
+            <button class="lightbox-nav-btn prev" onclick="navigateLightbox(-1)" aria-label="Previous exhibit">‹</button>
+            <img id="lightbox-img" src="" alt="High resolution scientific exhibit">
+            <button class="lightbox-nav-btn next" onclick="navigateLightbox(1)" aria-label="Next exhibit">›</button>
+          </div>
+
+          <div class="lightbox-sidebar">
+            <h3 id="lightbox-sidebar-title">Exhibit Details</h3>
+            <p class="lightbox-caption-text" id="lightbox-caption">Description of exhibit...</p>
+            <div class="lightbox-actions">
+              <a class="btn btn-primary btn-sm" id="lightbox-download" href="" download>
+                <span>Download High-Res PNG</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </a>
+              <button class="btn btn-secondary btn-sm" onclick="closeLightbox()">Close Viewer</button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Research Documents & Publication Chamber -->
+    <section class="section wrap" id="documents" aria-labelledby="docs-heading">
+      <div class="section-head">
+        <h2 id="docs-heading">Research Publications & Archival Documents</h2>
+        <p class="section-desc">
+          Every manuscript, protocol document, independent ground-truth attestation, and cryptographic verification suite is packaged in open formats (.md, .docx, .json) for peer review and replication.
+        </p>
+      </div>
+
+      <div class="documents-grid">
+        <!-- Manuscript Card -->
+        <article class="document-sheet-card">
+          <div>
+            <div class="doc-sheet-header">
+              <span class="doc-sheet-type">Primary Research Manuscript</span>
+              <span class="doc-sheet-badge">Peer-Review Ready</span>
+            </div>
+            <h3>An Empirical Cytopathology Study of Deep Learning Object Detectors for Cervical Smear Screening Under Real-World Data Scarcity and Artifact Constraints</h3>
+            <p class="doc-abstract-preview">
+              <strong>Abstract:</strong> Automated screening algorithms for cervical liquid-based cytology and conventional smears frequently report high precision and recall on public benchmarks. Here we show that standard evaluation protocols suffer from three hidden vulnerabilities: microscope field overlap across splits, severe metric distortion from unannotated reference cells, and low cross-center transfer.
+            </p>
+            <ul class="doc-sections-list">
+              <li>Section 1: The Microscope Field Overlap Fallacy</li>
+              <li>Section 2: Connected-Component Partitioning of 791 Field Pairs</li>
+              <li>Section 3: Dense Human Reference of 1,067 Verified Cells</li>
+              <li>Section 4: Cross-Center Generalization on 1,077 HMCHH Fields</li>
+            </ul>
+          </div>
+          <div class="doc-actions-row">
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/manuscript/manuscript.md" target="_blank" rel="noopener">
+              <span>Read Manuscript (Markdown) ↗</span>
+            </a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/raw/main/publication/manuscript/manuscript.docx" target="_blank" rel="noopener">
+              <span>Download DOCX (38 KB) ↓</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Supplementary Appendix Card -->
+        <article class="document-sheet-card">
+          <div>
+            <div class="doc-sheet-header">
+              <span class="doc-sheet-type">Supplementary Appendix</span>
+              <span class="doc-sheet-badge">Tables S1–S7 & Protocols</span>
+            </div>
+            <h3>Supplementary Materials & Methodological Appendix</h3>
+            <p class="doc-abstract-preview">
+              <strong>Overview:</strong> Contains complete empirical registers: full dataset distributions (Table S1), sparse heldout tests (Table S2), sparse versus dense reference comparison (Table S3), confidence calibration metrics (Table S4), seed-to-seed variability audits (Table S6), and algorithmic stain normalization sensitivity sweeps (Table S7).
+            </p>
+            <ul class="doc-sections-list">
+              <li>Mathematical formulations of Normalized Cross-Correlation (NCC)</li>
+              <li>Connected-component partition definitions & hash tables</li>
+              <li>Temperature scaling calibration parameters</li>
+              <li>Cluster bootstrap confidence interval calculation methods</li>
+            </ul>
+          </div>
+          <div class="doc-actions-row">
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/supplementary/supplementary_material.md" target="_blank" rel="noopener">
+              <span>Read Supplementary (MD) ↗</span>
+            </a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/raw/main/publication/supplementary/supplementary_material.docx" target="_blank" rel="noopener">
+              <span>Download DOCX (297 KB) ↓</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Ground Truth Attestation Card -->
+        <article class="document-sheet-card">
+          <div>
+            <div class="doc-sheet-header">
+              <span class="doc-sheet-type">Independent Ground Truth</span>
+              <span class="doc-sheet-badge">Label Studio Certified</span>
+            </div>
+            <h3>Dense Ground-Truth Annotation Attestation</h3>
+            <p class="doc-abstract-preview">
+              <strong>Attestation:</strong> To resolve the benchmark distortion caused by unannotated cells, 40 dense fields were independently re-annotated from scratch with exhaustive bounding boxes. All 1,067 cells (706 normal, 361 abnormal) are cryptographically bound to prevent retroactive label drift.
+            </p>
+            <ul class="doc-sections-list">
+              <li>Exhaustive coverage: 706 normal squamous cells verified</li>
+              <li>Exhaustive coverage: 361 abnormal dysplastic cells verified</li>
+              <li>Zero unannotated cells in 40 evaluation fields</li>
+              <li>SHA-256 seal: <code class="tabular">f0ff36ef11d3...</code></li>
+            </ul>
+          </div>
+          <div class="doc-actions-row">
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/results/annotation_attestation_20260919.json" target="_blank" rel="noopener">
+              <span>View Attestation JSON ↗</span>
+            </a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/results/dense_verified_evaluation_report.json" target="_blank" rel="noopener">
+              <span>Evaluation Report JSON ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Security & Release Verification Card -->
+        <article class="document-sheet-card">
+          <div>
+            <div class="doc-sheet-header">
+              <span class="doc-sheet-type">Code Audit & Security</span>
+              <span class="doc-sheet-badge">OWASP 2025 Compliant</span>
+            </div>
+            <h3>Critical Scientific Audit & Release Verification Report</h3>
+            <p class="doc-abstract-preview">
+              <strong>Assurance:</strong> Comprehensive security and integrity audit remediating PyTorch insecure deserialization (RCE mitigation), eliminating hardcoded local system paths, and guaranteeing zero-loss model checkpoint tracking. 29 automated checks verify 100% of data manifests and model weights.
+            </p>
+            <ul class="doc-sections-list">
+              <li>Automated release test: 29/29 checks green</li>
+              <li>Zero data leakage across overlap groups</li>
+              <li>Model checkpoints safeguard: 9/9 weights tracked</li>
+              <li>Bit-identical SHA256SUMS registry across 164 files</li>
+            </ul>
+          </div>
+          <div class="doc-actions-row">
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/results/Critical_Audit_2026-09-19.md" target="_blank" rel="noopener">
+              <span>Read Critical Audit ↗</span>
+            </a>
+            <a class="btn btn-secondary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/SHA256SUMS.txt" target="_blank" rel="noopener">
+              <span>SHA256SUMS Registry ↗</span>
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- Model Weights & Checkpoints Hub -->
-    <section class="content-section wrap" id="checkpoints" aria-labelledby="checkpoints-title">
-      <div class="section-head">
-        <p class="eyebrow">Model Weights Hub</p>
-        <h2 id="checkpoints-title">Certified PyTorch (.pt) Checkpoints</h2>
-        <p class="section-desc">
-          To prevent data loss and preserve research artifacts, all 6 trained model checkpoints and baselines are permanently tracked, checksummed with SHA-256, and verified with zero omissions.
-        </p>
-      </div>
-
-      <div class="hub-banner">
-        <div class="hub-banner-content">
-          <h3>Cryptographically Protected Against Loss</h3>
-          <p>
-            Unlike typical repositories that silently ignore <code>*.pt</code> binaries in <code>.gitignore</code>, every checkpoint here is cataloged in <code>WEIGHTS_MANIFEST.json</code> and tracked in the release package.
+    <section class="section section-band" id="checkpoints" aria-labelledby="weights-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="weights-heading">Certified Model Weights Hub</h2>
+          <p class="section-desc">
+            To prevent research data loss and guarantee long-term peer-review reproducibility, all 6 trained model checkpoints and baselines are permanently tracked in Git, checksummed with SHA-256, and verified with zero omissions.
           </p>
         </div>
-        <a class="btn-sm btn-primary" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/tree/main/publication/weights" target="_blank" rel="noopener">
-          View Weights Directory ↗
-        </a>
-      </div>
 
-      <div class="weights-table-wrap">
-        <table class="data-table" aria-label="Model Checkpoints and Checksums">
-          <thead>
-            <tr>
-              <th scope="col">Model Checkpoint</th>
-              <th scope="col">Training Cohort</th>
-              <th scope="col">Seed</th>
-              <th scope="col">Best Epoch</th>
-              <th scope="col">Size</th>
-              <th scope="col">SHA-256 Checksum</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="code-cell">v3_combined_seed17</span></td>
-              <td>SIPaKMeD + APCData</td>
-              <td>17</td>
-              <td>55 / 85</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795"><code>bf1395e4d133...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795', this)">Copy Hash</button>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="code-cell">v3_combined_seed43</span></td>
-              <td>SIPaKMeD + APCData</td>
-              <td>43</td>
-              <td>68 / 98</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05"><code>474532ea49ec...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05', this)">Copy Hash</button>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="code-cell">v3_combined_seed101</span></td>
-              <td>SIPaKMeD + APCData</td>
-              <td>101</td>
-              <td>60 / 90</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13"><code>0ce73504628d...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13', this)">Copy Hash</button>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="code-cell">v3_sipakmed_only_seed17</span></td>
-              <td>SIPaKMeD Only</td>
-              <td>17</td>
-              <td>57 / 87</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73"><code>ce17ee57eaed...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73', this)">Copy Hash</button>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="code-cell">v3_sipakmed_only_seed43</span></td>
-              <td>SIPaKMeD Only</td>
-              <td>43</td>
-              <td>57 / 87</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b"><code>7b1dd55ba492...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b', this)">Copy Hash</button>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="code-cell">v3_sipakmed_only_seed101</span></td>
-              <td>SIPaKMeD Only</td>
-              <td>101</td>
-              <td>57 / 87</td>
-              <td>5.95 MB</td>
-              <td><span class="hash-pill" title="59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245"><code>59389a024247...</code></span></td>
-              <td>
-                <button class="btn-copy" onclick="copyText('59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245', this)">Copy Hash</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="weights-hub-card">
+          <div class="weights-banner">
+            <div class="weights-banner-info">
+              <h3>Cryptographically Protected Against Loss</h3>
+              <p>Unlike typical repositories that silently ignore <code>*.pt</code> binaries in <code>.gitignore</code>, every checkpoint here is cataloged in <code>WEIGHTS_MANIFEST.json</code> and tracked directly in the repository.</p>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/tree/main/publication/weights" target="_blank" rel="noopener">
+              <span>Browse Weights Directory</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
 
-      <!-- Quickstart snippet -->
-      <div class="code-window">
-        <div class="code-window-bar">
-          <span>Python 3 · Run Model Inference</span>
-          <button class="btn-copy" onclick="copyCode(this)">Copy Snippet</button>
+          <div class="table-responsive">
+            <table class="data-table" aria-label="Model Checkpoints and Checksums">
+              <thead>
+                <tr>
+                  <th scope="col">Model Checkpoint</th>
+                  <th scope="col">Training Cohort</th>
+                  <th scope="col">Seed</th>
+                  <th scope="col">Best Epoch</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Git Status</th>
+                  <th scope="col">SHA-256 Checksum</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>v3_combined_seed17</strong></td>
+                  <td>SIPaKMeD + APCData</td>
+                  <td class="tabular">17</td>
+                  <td class="tabular">55 / 85</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795"><code>bf1395e4d133...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('bf1395e4d133e9b21fecfb935ad25e7f902a8f1cc7052feee4442ba42d0e8795', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>v3_combined_seed43</strong></td>
+                  <td>SIPaKMeD + APCData</td>
+                  <td class="tabular">43</td>
+                  <td class="tabular">68 / 98</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05"><code>474532ea49ec...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('474532ea49ec30c6f23d6a91e6b1cee5132935c151cf8ad43e2d27c2804daf05', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>v3_combined_seed101</strong></td>
+                  <td>SIPaKMeD + APCData</td>
+                  <td class="tabular">101</td>
+                  <td class="tabular">60 / 90</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13"><code>0ce73504628d...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('0ce73504628d9c7c72e4110bc5f0159ffc4597a74a93b12c5f29fc5a54cb1b13', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>v3_sipakmed_only_seed17</strong></td>
+                  <td>SIPaKMeD Only</td>
+                  <td class="tabular">17</td>
+                  <td class="tabular">57 / 87</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73"><code>ce17ee57eaed...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('ce17ee57eaed46ec057eb972c0e1be1cda41653354e62f10b0ba443a0e854a73', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>v3_sipakmed_only_seed43</strong></td>
+                  <td>SIPaKMeD Only</td>
+                  <td class="tabular">43</td>
+                  <td class="tabular">57 / 87</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b"><code>7b1dd55ba492...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('7b1dd55ba492c7fd28b4132dd5c5c4c766af5fc699d9a3fff09b37fa8be5f17b', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>v3_sipakmed_only_seed101</strong></td>
+                  <td>SIPaKMeD Only</td>
+                  <td class="tabular">101</td>
+                  <td class="tabular">57 / 87</td>
+                  <td class="tabular">5.95 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245"><code>59389a024247...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('59389a024247e337cfd08d1eb7b7b353f3ed39e3977170a0620b2699c9faf245', this)">Copy Hash</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Canonical Best (models/best.pt)</strong></td>
+                  <td>Primary Baseline</td>
+                  <td class="tabular">-</td>
+                  <td class="tabular">-</td>
+                  <td class="tabular">5.97 MB</td>
+                  <td><span class="status-badge tracked">✓ Tracked</span></td>
+                  <td><span class="hash-pill" title="9f6245bf9d80d28362d2948bbcaee636365b9baec52f6c888e285038ec1da3b9"><code>9f6245bf9d80...</code></span></td>
+                  <td><button class="btn-copy-hash" onclick="copyHash('9f6245bf9d80d28362d2948bbcaee636365b9baec52f6c888e285038ec1da3b9', this)">Copy Hash</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <pre><code id="quickstart-code">from ultralytics import YOLO
+
+        <!-- Code Snippet Chamber -->
+        <div class="code-chamber">
+          <div class="code-header-bar">
+            <div class="code-tabs">
+              <button class="code-tab-btn active" onclick="switchCode('infer', this)">Python Ultralytics Inference</button>
+              <button class="code-tab-btn" onclick="switchCode('verify', this)">Integrity Verification</button>
+            </div>
+            <button class="btn-copy-hash" onclick="copyActiveCode(this)">Copy Snippet</button>
+          </div>
+          <pre><code id="code-infer">from ultralytics import YOLO
 
 # 1. Load any verified research checkpoint
 weights_path = "publication/weights/v3_combined_seed17/weights/best.pt"
@@ -381,26 +781,30 @@ model = YOLO(weights_path)
 # 2. Run inference on a microscope field (frozen threshold = 0.08)
 results = model.predict("microscope_field.jpg", conf=0.08, iou=0.50, imgsz=640)
 
-# 3. Inspect detected cells (0: Normal, 1: Abnormal)
+# 3. Inspect detected cell bounding boxes (0: Normal, 1: Abnormal)
 for box in results[0].boxes:
     cls_id = int(box.cls[0])
     confidence = float(box.conf[0])
-    print(f"Detected {model.names[cls_id]} with confidence {confidence:.3f}")</code></pre>
+    print(f"Detected {model.names[cls_id]} with confidence {confidence:.3f}")</code><code id="code-verify" style="display:none;"># Cryptographically audit all 9 checkpoints on your local machine:
+python verify_weights.py
+
+# Run the complete 29-check publication reproducibility suite:
+python publication/scripts/verify_release.py</code></pre>
+        </div>
       </div>
     </section>
 
-    <!-- Detailed Performance Data -->
-    <section class="section-band" id="data" aria-labelledby="data-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Detection Performance</p>
-          <h2 id="data-title">Table 2: Dense Evaluation vs External HMCHH</h2>
-          <p class="section-desc">
-            Exact empirical metrics on the 20 reserved dense evaluation fields (224 abnormal cells) and 1,077 external HMCHH fields (1,837 abnormal cells), reporting 95% cluster bootstrap confidence intervals.
-          </p>
-        </div>
+    <!-- Table 2 Detection Performance Data -->
+    <section class="section wrap" id="performance" aria-labelledby="perf-heading">
+      <div class="section-head">
+        <h2 id="perf-heading">Table 2: Dense Evaluation vs External HMCHH</h2>
+        <p class="section-desc">
+          Exact empirical metrics on the 20 reserved dense evaluation fields (224 abnormal cells) and 1,077 external HMCHH fields (1,837 abnormal cells), reporting 95% cluster bootstrap confidence intervals.
+        </p>
+      </div>
 
-        <div class="weights-table-wrap">
+      <div class="weights-hub-card">
+        <div class="table-responsive">
           <table class="data-table" aria-label="Table 2 Detection Performance">
             <thead>
               <tr>
@@ -417,195 +821,339 @@ for box in results[0].boxes:
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD only</td>
-                <td>17</td>
-                <td>0.06</td>
-                <td>51.3% (36.8–62.0)</td>
-                <td>64.6% (50.7–76.8)</td>
-                <td>0.57</td>
+                <td class="tabular">17</td>
+                <td class="tabular">0.06</td>
+                <td class="tabular">51.3% (36.8–62.0)</td>
+                <td class="tabular">64.6% (50.7–76.8)</td>
+                <td class="tabular">0.57</td>
               </tr>
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD only</td>
-                <td>43</td>
-                <td>0.14</td>
-                <td>41.5% (26.0–51.3)</td>
-                <td>68.9% (56.1–77.9)</td>
-                <td>0.52</td>
+                <td class="tabular">43</td>
+                <td class="tabular">0.14</td>
+                <td class="tabular">41.5% (26.0–51.3)</td>
+                <td class="tabular">68.9% (56.1–77.9)</td>
+                <td class="tabular">0.52</td>
               </tr>
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD only</td>
-                <td>101</td>
-                <td>0.09</td>
-                <td>48.2% (29.6–58.4)</td>
-                <td>63.9% (45.1–76.9)</td>
-                <td>0.55</td>
+                <td class="tabular">101</td>
+                <td class="tabular">0.09</td>
+                <td class="tabular">48.2% (29.6–58.4)</td>
+                <td class="tabular">63.9% (45.1–76.9)</td>
+                <td class="tabular">0.55</td>
               </tr>
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>17</td>
-                <td>0.08</td>
-                <td>44.2% (24.8–58.9)</td>
-                <td>67.8% (56.9–83.0)</td>
-                <td>0.54</td>
+                <td class="tabular">17</td>
+                <td class="tabular">0.08</td>
+                <td class="tabular">44.2% (24.8–58.9)</td>
+                <td class="tabular">67.8% (56.9–83.0)</td>
+                <td class="tabular">0.54</td>
               </tr>
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>43</td>
-                <td>0.18</td>
-                <td>27.2% (14.3–41.7)</td>
-                <td>87.1% (69.0–94.1)</td>
-                <td>0.41</td>
+                <td class="tabular">43</td>
+                <td class="tabular">0.18</td>
+                <td class="tabular">27.2% (14.3–41.7)</td>
+                <td class="tabular">87.1% (69.0–94.1)</td>
+                <td class="tabular">0.41</td>
               </tr>
               <tr>
                 <td><strong>Dense SIPaKMeD</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>101</td>
-                <td>0.02</td>
-                <td>44.6% (30.9–54.3)</td>
-                <td>52.4% (32.9–68.6)</td>
-                <td>0.48</td>
+                <td class="tabular">101</td>
+                <td class="tabular">0.02</td>
+                <td class="tabular">44.6% (30.9–54.3)</td>
+                <td class="tabular">52.4% (32.9–68.6)</td>
+                <td class="tabular">0.48</td>
               </tr>
-              <tr style="border-top: 2px solid var(--color-line-dark);">
+              <tr style="border-top: 2px solid var(--border-strong);">
                 <td><strong>External HMCHH</strong></td>
                 <td>SIPaKMeD only</td>
-                <td>17</td>
-                <td>0.06</td>
-                <td>47.1% (41.3–52.5)</td>
-                <td>4.3% (3.4–5.4)</td>
-                <td>0.08</td>
-              </tr>
-              <tr>
-                <td><strong>External HMCHH</strong></td>
-                <td>SIPaKMeD only</td>
-                <td>43</td>
-                <td>0.14</td>
-                <td>35.7% (28.4–42.7)</td>
-                <td>3.9% (2.9–5.2)</td>
-                <td>0.07</td>
+                <td class="tabular">17</td>
+                <td class="tabular">0.06</td>
+                <td class="tabular">47.1% (41.3–52.5)</td>
+                <td class="tabular">4.3% (3.4–5.4)</td>
+                <td class="tabular">0.08</td>
               </tr>
               <tr>
                 <td><strong>External HMCHH</strong></td>
                 <td>SIPaKMeD only</td>
-                <td>101</td>
-                <td>0.09</td>
-                <td>51.8% (44.7–58.5)</td>
-                <td>4.3% (3.4–5.2)</td>
-                <td>0.08</td>
+                <td class="tabular">43</td>
+                <td class="tabular">0.14</td>
+                <td class="tabular">35.7% (28.4–42.7)</td>
+                <td class="tabular">3.9% (2.9–5.2)</td>
+                <td class="tabular">0.07</td>
+              </tr>
+              <tr>
+                <td><strong>External HMCHH</strong></td>
+                <td>SIPaKMeD only</td>
+                <td class="tabular">101</td>
+                <td class="tabular">0.09</td>
+                <td class="tabular">51.8% (44.7–58.5)</td>
+                <td class="tabular">4.3% (3.4–5.2)</td>
+                <td class="tabular">0.08</td>
               </tr>
               <tr>
                 <td><strong>External HMCHH</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>17</td>
-                <td>0.08</td>
-                <td>34.5% (27.4–42.3)</td>
-                <td>6.7% (5.4–8.6)</td>
-                <td>0.11</td>
+                <td class="tabular">17</td>
+                <td class="tabular">0.08</td>
+                <td class="tabular">34.5% (27.4–42.3)</td>
+                <td class="tabular">6.7% (5.4–8.6)</td>
+                <td class="tabular">0.11</td>
               </tr>
               <tr>
                 <td><strong>External HMCHH</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>43</td>
-                <td>0.18</td>
-                <td>20.8% (16.8–26.4)</td>
-                <td>5.6% (4.0–8.4)</td>
-                <td>0.09</td>
+                <td class="tabular">43</td>
+                <td class="tabular">0.18</td>
+                <td class="tabular">20.8% (16.8–26.4)</td>
+                <td class="tabular">5.6% (4.0–8.4)</td>
+                <td class="tabular">0.09</td>
               </tr>
               <tr>
                 <td><strong>External HMCHH</strong></td>
                 <td>SIPaKMeD + APCData</td>
-                <td>101</td>
-                <td>0.02</td>
-                <td>40.5% (34.4–47.3)</td>
-                <td>3.8% (2.8–5.3)</td>
-                <td>0.07</td>
+                <td class="tabular">101</td>
+                <td class="tabular">0.02</td>
+                <td class="tabular">40.5% (34.4–47.3)</td>
+                <td class="tabular">3.8% (2.8–5.3)</td>
+                <td class="tabular">0.07</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-    </section>
 
-    <!-- Provenance & Methodological Boundaries -->
-    <section class="content-section wrap" id="provenance" aria-labelledby="provenance-title">
-      <div class="section-head">
-        <p class="eyebrow">Provenance & Boundaries</p>
-        <h2 id="provenance-title">Reproducibility and Audit Integrity</h2>
-        <p class="section-desc">
-          Every claim and file in this repository has been audited against OWASP Top 10: 2025 guidelines and certified by automated release verification.
-        </p>
-      </div>
-
-      <div class="resource-grid">
-        <a class="resource-card" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo" target="_blank" rel="noopener">
-          <strong>Research Code & Protocols <span aria-hidden="true">↗</span></strong>
-          <span>Full training pipelines, evaluation protocols, and automated 29-point release checks.</span>
-        </a>
-        <a class="resource-card" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/tree/main/publication/tables" target="_blank" rel="noopener">
-          <strong>Tabular Evidence (CSV) <span aria-hidden="true">↗</span></strong>
-          <span>Raw per-seed metrics, paired differences, bootstrap confidence intervals, and calibration statistics.</span>
-        </a>
-        <a class="resource-card" href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/tree/main/publication/supplementary" target="_blank" rel="noopener">
-          <strong>Supplementary Material <span aria-hidden="true">↗</span></strong>
-          <span>Complete mathematical definitions, IoU matching rules, and stain normalization benchmarks.</span>
-        </a>
-      </div>
-
-      <div class="callout-box">
-        <h3>How to interpret this research</h3>
-        <p>
-          This study uses publicly accessible microscope datasets. The binary classification maps Bethesda categories (APCData) and morphological classes (SIPaKMeD) into abnormal/normal groupings; the human-verified dense reference was reviewed by a single reader from proposal candidates; true patient-level identities were not disclosed in public sources; and external HMCHH labels cover abnormal cells only. This project investigates measurement validity and does not establish a screening threshold for clinical practice.
-        </p>
+      <!-- BibTeX Citation Block -->
+      <div class="citation-block">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <strong style="font-size:0.92rem;">Citation (BibTeX)</strong>
+          <button class="btn-copy-hash" onclick="copyCitation(this)">Copy Citation</button>
+        </div>
+        <pre><code id="bibtex-code">@article{sakhri2026cervical,
+  title={An Empirical Cytopathology Study of Deep Learning Object Detectors for Cervical Smear Screening Under Real-World Data Scarcity and Artifact Constraints},
+  author={Sakhri, Abu Suraih},
+  journal={GitHub Research Archive},
+  year={2026},
+  url={https://github.com/abusuraihsakhri/pap-smear-cyto-algo}
+}</code></pre>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span>Cervical Cell Detection Research · Retrospective Study (2026)</span>
+    <div class="wrap-wide footer-inner">
       <div>
-        <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo" target="_blank" rel="noopener">Repository</a> ·
-        <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/weights/MODEL_CARD.md" target="_blank" rel="noopener">Model Card</a> ·
+        <strong>Cell Detection Research · Retrospective Study</strong>
+        <p style="margin:4px 0 0; font-size:0.84rem; color:var(--color-ink-subtle);">
+          Sole Author & Maintainer: abusuraihsakhri &lt;abusuraihsakhri@gmail.com&gt;
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo" target="_blank" rel="noopener">GitHub Repository</a>
+        <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/weights/MODEL_CARD.md" target="_blank" rel="noopener">Model Card</a>
+        <a href="https://github.com/abusuraihsakhri/pap-smear-cyto-algo/blob/main/publication/SHA256SUMS.txt" target="_blank" rel="noopener">SHA256SUMS</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive Scripts -->
+  <!-- Lightbox Gallery Data & Interactive Scripts -->
   <script>
-    function switchFigure(figId) {
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
+    const GALLERY_ITEMS = [
+      {
+        src: "./assets/predictions_sipakmed.png",
+        title: "SIPaKMeD High-Power Field Detection",
+        badge: "Microscopy · 40× HPF",
+        caption: "Real YOLOv8n cell detection overlays on SIPaKMeD high-power field microscopy. Red boxes denote detected abnormal dysplastic nuclei (confidence 0.94); green boxes denote detected normal intermediate and superficial squamous cells (confidence 0.89). Evaluations use frozen operating threshold = 0.08."
+      },
+      {
+        src: "./assets/predictions_apcdata.png",
+        title: "APCData Smear Cell Predictions",
+        badge: "Microscopy · Multi-Center",
+        caption: "Cross-center smear detections on APCData cervical fields demonstrating model robustness against overlapping polymorphonuclear leukocytes, mucus strands, and variable fixation artifacts."
+      },
+      {
+        src: "./assets/stain_normalization_samples.png",
+        title: "Stain Normalization Comparative Matrix",
+        badge: "Matrix · 4 Normalizers",
+        caption: "Side-by-side color deconvolution of real Pap smear fields across Original, Reinhard, Macenko, and Vahadane algorithms. Evaluates whether chromatic standardization rescues cross-center transfer degradation."
+      },
+      {
+        src: "./assets/figure1_study_design.png",
+        title: "Figure 1 | Study Design & Split Protocol",
+        badge: "Publication · Figure 1",
+        caption: "Connected-component graph partitioning ensuring that all 791 microscopically overlapping field pairs remain strictly within identical partitions, eliminating optimistic data leakage across training, validation, and test splits."
+      },
+      {
+        src: "./assets/figure2_primary_and_external.png",
+        title: "Figure 2 | Primary & External Detection",
+        badge: "Publication · Figure 2",
+        caption: "Four-panel comparison showing abnormal recall and precision on dense SIPaKMeD fields versus external multi-center HMCHH fields. Points denote individual training seeds; error bars depict 95% cluster bootstrap intervals."
+      },
+      {
+        src: "./assets/figure3_annotation_completeness.png",
+        title: "Figure 3 | Annotation Completeness Effect",
+        badge: "Publication · Figure 3",
+        caption: "Demonstrates how evaluating against native sparse annotations artificially halves measured precision (20.4–45.7%) compared to ground-truth human-verified dense annotations (52.4–87.1%) due to false penalty on unannotated true cells."
+      },
+      {
+        src: "./assets/figure4_stain_reference_sensitivity.png",
+        title: "Figure 4 | Stain Normalization Sensitivity",
+        badge: "Publication · Figure 4",
+        caption: "Sensitivity benchmarks illustrating how target slide selection in Reinhard, Macenko, and Vahadane color transfers impacts detector recall and specificity across reference slides."
+      },
+      {
+        src: "./assets/figureS1_reliability.png",
+        title: "Figure S1 | Confidence Calibration",
+        badge: "Supplementary · Fig S1",
+        caption: "Expected Calibration Error (ECE) curves showing raw model overconfidence and subsequent post-hoc temperature scaling corrections bringing ECE below 0.05 on candidate detections."
+      },
+      {
+        src: "./assets/pr_curve_dense_verified.png",
+        title: "Dense Verified Precision-Recall Curve",
+        badge: "Validation · PR-Curve",
+        caption: "Continuous precision-recall trajectories evaluated against the 1,067 human-verified cells in the 40 dense smear fields across all training seeds (17, 43, 101)."
+      },
+      {
+        src: "./assets/dataset_domain_shift.png",
+        title: "Multi-Center Cytology Domain Shift",
+        badge: "Analysis · Domain Shift",
+        caption: "Principal component and chromatic color distributions contrasting SIPaKMeD, APCData, Herlev, and HMCHH staining characteristics, illustrating significant cross-center domain shift."
+      },
+      {
+        src: "./assets/annotation_check_sipakmed.png",
+        title: "Ground-Truth Nuclear Quality Audit",
+        badge: "Audit · Label Studio",
+        caption: "High-magnification audit verifying bounding box tightness and nuclear centering on dense fields to prevent annotation boundary artifacts during training and evaluation."
+      }
+    ];
+
+    let currentLightboxIdx = 0;
+
+    function openLightbox(index) {
+      currentLightboxIdx = index;
+      const item = GALLERY_ITEMS[index];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-title').innerText = item.title;
+      document.getElementById('lightbox-sidebar-title').innerText = item.title;
+      document.getElementById('lightbox-caption').innerText = item.caption;
+      document.getElementById('lightbox-download').href = item.src;
+      document.getElementById('lightbox-counter').innerText = `${index + 1} of ${GALLERY_ITEMS.length}`;
+      
+      const modal = document.getElementById('lightbox');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function navigateLightbox(direction) {
+      currentLightboxIdx = (currentLightboxIdx + direction + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+      openLightbox(currentLightboxIdx);
+    }
+
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightbox');
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+
+    // Gallery Category Filtering
+    function filterGallery(category, tabBtn) {
+      document.querySelectorAll('.filter-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
       });
-      document.querySelectorAll('.figure-panel').forEach(p => {
-        p.classList.remove('active');
+      tabBtn.classList.add('active');
+      tabBtn.setAttribute('aria-selected', 'true');
+
+      const cards = document.querySelectorAll('#gallery-grid .evidence-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
       });
-      const btn = document.getElementById('tab-' + figId);
-      const panel = document.getElementById('panel-' + figId);
-      if (btn && panel) {
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-        panel.classList.add('active');
+    }
+
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme_preference', theme);
+      if (theme === 'dark') {
+        themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+      } else {
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
       }
     }
 
-    function copyText(text, btnElement) {
-      navigator.clipboard.writeText(text).then(() => {
-        const orig = btnElement.innerText;
-        btnElement.innerText = 'Copied!';
-        setTimeout(() => { btnElement.innerText = orig; }, 1800);
-      }).catch(err => {
-        console.error('Clipboard copy failed:', err);
+    const savedTheme = localStorage.getItem('theme_preference') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Copy Hash & Code Logic
+    function copyHash(hash, btn) {
+      navigator.clipboard.writeText(hash).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1800);
       });
     }
 
-    function copyCode(btnElement) {
-      const code = document.getElementById('quickstart-code').innerText;
-      copyText(code, btnElement);
+    function switchCode(tab, btn) {
+      document.querySelectorAll('.code-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (tab === 'infer') {
+        document.getElementById('code-infer').style.display = 'block';
+        document.getElementById('code-verify').style.display = 'none';
+      } else {
+        document.getElementById('code-infer').style.display = 'none';
+        document.getElementById('code-verify').style.display = 'block';
+      }
+    }
+
+    function copyActiveCode(btn) {
+      const infer = document.getElementById('code-infer');
+      const verify = document.getElementById('code-verify');
+      const activeText = (infer.style.display !== 'none') ? infer.innerText : verify.innerText;
+      navigator.clipboard.writeText(activeText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1800);
+      });
+    }
+
+    function copyCitation(btn) {
+      const text = document.getElementById('bibtex-code').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1800);
+      });
     }
   </script>
 </body>
